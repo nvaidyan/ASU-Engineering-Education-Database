@@ -1,0 +1,3218 @@
+CourseID,universityName,courseDepartment,courseTitle,courseURL,ProfessorID,offeringPeriod,offeringYear,content,objectives,outcomes
+1,Massachusetts Institute of Technology,Department of Electrical Engineering and Computer Science,6.004 Computation Structures,http://6004.lcs.mit.edu/,1,Fall,2009,"Introduces architecture of digital systems, emphasizing structural principles common to a wide range of technologies. Multilevel implementation strategies; definition of new primitives (e.g., gates, instructions, procedures, processes) and their mechanization using lower-level elements. Analysis of potential concurrency; precedence constraints and performance measures; pipelined and multidimensional systems. Instruction set design issues; architectural support for contemporary software structures. 4 Engineering Design Points.
+
+6.004 offers an introduction to the engineering of digital systems. Starting with MOS transistors, the course develops of series of building blocks -- logic gates, combinational and sequential circuits, finite-state machines, computers and finally complete systems. Both hardware and software mechanisms are explored through a series of design examples.
+
+6.004 is required material for any EECS undergraduate who wants to understand (and ultimately design) digital systems. A good grasp of the material is essential for later courses in digital design, computer architecture and systems. Before taking 6.004, students should feel comfortable using computers; a rudimentary knowledge of programming language concepts (6.001) and electrical fundamentals (6.002) is assumed.
+
+The problem sets and lab exercises are intended to give students ""hands-on"" experience in designing digital systems; each student completes a gate-level design for a RISC processor during the semester. Access to workstations as well as help from the course staff is provided in the lab but it is possible to complete the assignments using Athena machines or one's home computer. Students are encouraged to get help from others in understanding the material, but the designs and measurements they hand in must be their own work. 
+
+6.004 at a glance: Fall 2009
+
+Tue 	Wed 	Thu 	Fri
+Registration Day 	NO CLASS 	
+L1 	Sep 10
+Course overiew & mechanics. Basics of information. 	
+R1 	Sep 11
+L2 	Sep 15
+Digital abstraction, combinational logic, voltage-based encoding. 	
+R2 	Sep 16
+	
+L3 	Sep 17
+CMOS technology; gate design; timing 	
+R3 	Sep 18
+L4 	Sep 22
+Canonical forms; synthesis, simplification 	
+R4 	Sep 23
+	
+L5 	Sep 24
+Sequential logic.
+Lab 1 (CMOS) due
+	
+R5 	Sep 25
+QUIZ 1
+L6 	Sep 29
+Storage elements, finite state machines. 	
+R6 	Sep 30
+	
+L7 	Oct 01
+Synchronization, metastability.
+Lab 2 (Adder) due
+	
+R7 	Oct 02
+L8 	Oct 06
+Pipelining; throughput and latency. 	
+R8 	Oct 07
+	
+L9 	Oct 08
+Case study: multipliers.
+Lab 3 (ALU) due
+	
+R9 	Oct 09
+No Lecture: Monday Schedule! 	
+R10 	Oct 14
+	
+L10 	Oct 15
+Models of computation, programmable architectures. 	
+R11 	Oct 16
+QUIZ 2
+L11 	Oct 20
+Beta instruction set architecture, compilation. 	
+R12 	Oct 21
+	
+L12 	Oct 22
+Machine language programming issues.
+Lab 4 (TM) due
+	
+R13 	Oct 23
+L13 	Oct 27
+Stacks and procedures. 	
+R14 	Oct 28
+	
+L14 	Oct 29
+Beta implementation.
+Lab 5 (Assy Lang) due
+	
+R15 	Oct 30
+L15 	Nov 03
+Multilevel memories; locality, performance, caches 	
+R16 	Nov 04
+	
+L16 	Nov 05
+Cache design issues 	
+R17 	Nov 06
+QUIZ 3
+L17 	Nov 10
+Virtual memory: mapping, protection, contexts 	Veteran's Day 	
+L18 	Nov 12
+Virtual machines: timesharing, OS kernels, supervisor calls
+Lab 6 (Beta) due
+	
+R18 	Nov 13
+L19 	Nov 17
+Devices and interrupt handlers, preemptive interrupts, real-time issues 	
+R19 	Nov 18
+	
+L20 	Nov 19
+Communication issues: busses, networks, protocols
+Lab 7 (Trap Handler) due
+	
+R20 	Nov 20
+QUIZ 4
+L21 	Nov 24
+Communicating processes: semaphores, synchronization, atomicity, deadlock 	
+R21 	Nov 25
+	Thanksgiving
+L22 	Dec 01
+Pipelined Beta implementation, bypassing 	
+R22 	Dec 02
+	
+L23 	Dec 03
+Pipeline issues: delay slots, annulment, exceptions
+Lab 8 (Tiny OS) due
+	
+R23 	Dec 04
+QUIZ 5
+L24 	Dec 08
+Parallel processing, shared memory, cache coherence, consistency criteria 	No recitation 	
+L25 	Dec 10
+Wrapup Lecture!
+PROJECT due
+Finals Week - 6.004 is over! ","Learning Objectives
+
+On completion of 6.004, students will be able to
+
+   1. understand the role of abstraction in the design of large digital systems, and explain the major software and hardware abstractions in contemporary computer systems.
+
+   2. analyze the performance of digital systems using measures such as latency and throughput.
+
+   3. design simple hardware systems based on a variety of digital abstractions such as ROMs and logic arrays, logic trees, state machines, pipelining, and buses.
+
+   4. synthesize digital systems from a library of representative components and test the designs under simulation.
+
+   5. understand the operation of a moderately complex digital system -- a simple RISC-based computer -- down to the gate level, and be able to synthesize, implement, and debug its components.
+
+   6. appreciate the technical skills necessary to be a capable digital systems engineer. ","Measurable Outcomes
+
+Upon completion of 6.004, students will be able to
+
+   1. Identify flaws and limitations in simple systems implemented using the static discipline (noise assumptions, etc)
+
+   2. Identify flaws and limitations in simple systems implemented using clocked registers with asynchronous inputs (metastability issues).
+
+   3. Identify flaws and limitations in simple systems implemented using pipelined processors (pipeline hazards).
+
+   4. Identify flaws and limitations in simple systems implemented using semaphores for process synchronization (deadlocks).
+
+   5. Identify flaws and limitations in simple systems implemented using shared-memory multiprocessors (sequential inconsistency).
+
+   6. Characterize the logic function of combinational devices using CMOS, ROM, or PLA technologies.
+
+   7. Explain synthesis issues for combinational devices using CMOS, ROM, or PLA technologies from their functional specification.
+
+   8. Explain synthesis of acyclic circuits from combinational components.
+
+   9. Calculate performance characteristics of acyclic circuits with combinational components.
+
+  10. Explain and calculate performance characteristics of single-clock sequential circuits.
+
+  11. Design, debug, and test combinational circuits of the complexity of an arithmetic logic unit.
+
+  12. Design, debug, and test a controller for a finite-state machine.
+
+  13. Pipeline a combinational circuit for improved throughput.
+
+  14. Understand issues affecting microprocessor instruction set design.
+
+  15. Complete and debug the design of a simple CPU with a given RISC-based intruction set.
+
+  16. Measure the memory access performance of a processor, and tune cache design parameters to improve performance.
+
+  17. Analyze the operation of page-based virtual memory systems.
+
+  18. Translate simple programs from C to machine language.
+
+  19. Deduce processor state from a memory snapshot during execution. "
+2,Stanford University,Department of Computer Science,CS107 Computer Organization and Systems,https://courseware.stanford.edu/info/course/CS107,2,Fall,2009,"Week Topics
+  1  Admin, intro to systems, C basics, UNIX development tools
+  2  C pointers/arrays, C-strings
+  3  C generics, void *, function pointers, data representation
+  4  Computer architecture, IA32 introduction
+  5  IA32: addressing, arithmetic
+  6  IA32: control function calls, runtime stack
+     Midterm: Fri Oct 30 11am-12:15pm
+  7  Compilation tool chain, linkers, loaders, address space
+  8  Memory hierarchy, caches, pipelining
+  9  Concurrency, synchronization
+     Thanksgiving recess
+ 10  Advanced topics: implementation of higher-level abstractions, virtual
+     machines
+     Final: Fri Dec 11 8:30-11:30 am",NULL,NULL
+3,Stanford University,Department of Electrical Engineering,EE282 Computer Systems Architecture,NULL,3,Fall,2009,"Course description: EE282 focuses on advanced architecture topics for systems such as personal computers, servers, and embedded or portable devices. It covers topics such as cache hierarchies, memory systems, storage and IO systems, clusters, fault-tolerance, and low power design. In addition, the programming assignments provide an introduction to performance analysis and optimization techniques for small-scale and large-scale systems. At the completion of the course, you will understand basic principles such as locality, coarse-grain parallelism, overlapping communication and computation, performance/power trade-offs, and reliability. Overall, you will understand how computer systems are organized and, more importantly, why they are organized that way. EE282 discusses the characteristics of modern processors that affect system architecture, but does not provide detailed coverage of their internal microarchitecture (see EE382A). The prerequisite course is EE108B  or an equivalent course in computer organization. CS140 or an equivalent on operating systems is strongly recommended but not officially required.  ",NULL,NULL
+4,Stanford University,Department of Electrical Engineering,EE108B - Digital Systems II,https://ccnet.stanford.edu/ee108b/,76,Fall,2009,"EE108B
+Tentative Course Schedule
+Fall 2009/10
+
+Date
+
+Lecture
+
+Subject
+Reading
+HW /PA/LB
+Assigned
+HW/PA/LB
+Due
+Tue Sep 22
+1
+Introduction, course overview
+1
+
+
+Thu Sep 24
+2
+MIPS ISA I: operands and operations
+2.1 - 2.3
+HW1
+
+Tue Sep 29
+3
+MIPS ISA II: data and control transfer
+2.5 - 2.7
+LB1
+
+Thu Oct 1
+4
+MIPS ISA III: loops, case stmts, procedures
+2.8 - 2.10
+PA1
+
+Tue Oct 6
+5
+ Performance
+1.4
+
+HW2
+HW1
+Thu Oct 8
+6
+Compiler optimization
+2.12­ - 2.15
+
+
+Tue Oct 13
+7
+Processor building block: simple processor
+4.1 - 4.4
+LB2
+LB1
+Thu Oct 15
+8
+Improving performance with parallelism/pipelining
+4.5 - 4.6
+
+HW2
+NO late day
+Tue Oct 20
+9
+Pipeline Hazards I
+4.7 - 4.8
+
+
+Thu Oct 22
+
+Midterm Exam, 7:00pm-9:00pm
+   TBD
+Lectures 1-8
+
+
+Tue Oct 27
+10
+Pipeline Hazards II
+4.7 – 4.8
+LB3, HW3
+LB2/PA1
+Thu Oct 29
+11
+Memory Hierarchy I
+5.1 – 5.3
+
+
+Tue Nov 3
+12
+Memory Hierarchy II
+5.4 – 5.5
+HW4, PA2
+HW3
+Thu Nov 5
+13
+Interrupts and Exceptions 
+5.4, 4.9
+
+
+Tue Nov 10
+14
+Operating System basics I: Virtual memory
+5.4
+LB4
+LB3, PA2.1
+Thu Nov 12
+15
+Operating system basics II: Processes
+
+
+
+Tue Nov 17
+16
+I/O devices 
+6.1 – 6.3
+HW5
+PA2.2, HW4
+
+Thu Nov 19
+17
+Buses and Interfacing 
+6.5 – 6.6
+
+
+Tue Dec 1
+18
+I/O system design 
+
+
+HW5
+NO late day
+Thu Dec 3
+
+19
+Multiprocessors & Review
+7.1 – 7.8
+
+LB4
+Mon Dec. 9 
+
+Final Exam,  TBD
+Lectures 1-19",NULL,NULL
+5,Stanford University,Department of Electrical Engineering,EE382A Advanced Processor Architecture,http://www.stanford.edu/class/ee382a/,3,Autumn,2009,"Course description:  EE382A provides in-depth coverage of fundamental architecture and implementation techniques for modern processor chips. It covers topics such as advanced pipelining, superscalar execution, out-of-order processing, speculative execution, VLIW, data parallelism, multithreading, graphics processors, and multi-core chips. The students will become familiar with complex trade-offs between performance-power-complexity and the common techniques for addressing the challenges in historical and modern processors. A central part of EE382A is a group project on an open research question. EE382A assumes a solid background on basic computer organization including instruction set design, pipelining, caching, virtual memory. EE108B, or an equivalent class, is a prerequisite. EE382a touches on the topic of advanced caching hierarchies covered in EE282. However, EE282 is not a prerequisite.",NULL,NULL
+6,California Institute of Technology,Department of Computer Science,CS 24. Introduction to Computing Systems,https://courses.caltech.edu/course/view.php?id=221,77,Spring,2009,"	Lecture 1 PDF - 2009-03-30	Introduction. Overview of instruction set architecture. Basic processor components. Data representation for unsigned integers, and two's complement signed integers.
+	Lecture 2 PDF - 2009-04-01	Branching instruction support. Memory architectures. Harvard architecture vs. Von Neumann architecture. Load/Store architecture vs. operand types. Register file and main memory.
+	cs24hw1.tgz	
+	Assignment 1 Solutions	
+2	Lecture 3 PDF - 2009-04-08	Subroutines. Stacks. Stack frames, frame pointers. IA32 overview and instructions. Operand types, memory addressing modes.
+	Lecture 4 PDF - 2009-04-10	
+	cs24hw2.tgz	
+	Intel 64/IA-32 Dev Manual Vol.1 - Basic Architecture	Intel 64 and IA-32 Architectures Software Developer's Manual, Volume 1 - Basic Architecture
+	Intel 64/IA-32 Dev Manual Vol.2A - Instruction Set Reference A-M	The Intel 64 and IA-32 Architectures Software Developer’s Manual, Volumes 2A & 2B: Instruction Set Reference
+	Intel 64/IA-32 Dev Manual Vol.2B - Instruction Set Reference N-Z	The Intel 64 and IA-32 Architectures Software Developer’s Manual, Volumes 2A & 2B: Instruction Set Reference
+	Assignment 2 Solutions	
+3	Lecture 5 PDF - 2009-04-13	
+	Lecture 6 PDF - 2009-04-17	C structs, unions. Data alignment and optimization. Buffer overflows and overflow exploits. Higher-level language facilities: bounds checking, garbage collection, exception handling.
+	cs24hw3.tgz	
+	Assignment 3 Solutions	
+4	Lecture 7 PDF - 2009-04-20	Object-oriented programming paradigm. Objects, classes. Polymorphism. Garbage collecting allocators. Mark-and-sweep, stop-and-copy, generational garbage collection.
+	Lecture 8 PDF -2009-04-22	Reference counting. Exception handling mechanisms: stack cutting, stack unwinding.
+	Memory Management in the Java HotSpot Virtual Machine	
+	A Study of Exception Handling and Its Dynamic Optimization in Java	
+	cs24hw4.tgz	
+	Assignment 4 Solutions	
+5	Lecture 9 PDF - 2009-04-27	Physical constraints on memory. Memory technologies: SRAM, DRAM, magnetic disks. Caching: motivations, general approach. Memory hierarchy.
+	Lecture 10 PDF - 2009-04-29	Cache design and layout. Direct-mapped caches, fully associative caches, set-associative caches. Cache performance analysis. Cache utilization and memory mountain.
+	Midterm Solutions	
+6	Lecture 11 PDF - 2009-05-04	Midterm review. Impact of multi-core on hardware caching. Cache coherence protocols. False sharing.
+	Lecture 12 PDF - 2009-05-06	Virtualization. Virtual processors, processes. Context-switch. Control process, privilege levels, operating modes. Exceptional control flow: interrupts, traps, faults, aborts. IA32 privilege modes, gates.
+	cs24hw5.tgz	
+	The SimpleScalar Tool Set, Version 2.0	
+	Assignment 5 Solutions	
+7	Please Fill Out the Webcast Survey!	
+	Lecture 13 PDF - 2009-05-11	
+	Lecture 14 PDF - 2009-05-13	
+	cs24hw6.tgz	
+	Assignment 6 Solutions	
+8	Lecture 15 PDF - 2009-05-20	Process states (implementation), state transition diagram. Process Control Blocks. Scheduling. Interactive processes, long-running processes, real-time processes. Scheduling algorithms: Round Robin, Shortest Jobs First, Earliest Deadline First, Multilevel Feedback Queues.
+9	Lecture 16 PDF - 2009-05-29	Virtual memory. CPU hardware: Memory Management Unit (MMU), address translation. Page tables, page faults, general protection faults. Process virtual-memory uses. ",NULL,NULL
+7,University of California-Berkeley,Department of Electrical Engineering and Computer Science,"CS 61CL 	Machine Structures",http://inst.eecs.berkeley.edu/~cs61c/current/,5,Summer,2009,"Wk  	Date  	Lecture Topic  	Reading  	Homework Due
+1
+	06.22 M
+	Course Introduction, Beginning C 	--- 	
+06.24 W
+	The C Programming Language 	K&R: 1.1-1.9, All of Chapter 2, 3.1-3.7, 4.1, 4.2, 5.1-5.10, 6.1-6.3, 7.5
+	HW0
+2
+	06.29 M
+	Memory Management
+	K&R: 6.4-6.7, appendices B1, B2, B3, B5, and B11
+Pointer Fun with Binky	HW1
+TA: Josh
+07.01 W
+	MIPS I: Registers, Memory, and Decisions 	P&H (4th): 2.1-2.3, 2.7
+P&H (3rd): 2.1-2.3, 2.6
+	HW2 (Due Thursday)
+TA: James
+3 	07.06 M 	MIPS II: Procedures, Logic, and Instruction Format 	P&H (4th): 2.5-2.8, 2.10, 2.14
+P&H (3rd): 2.4-2.7, 2.9, 2.15 	HW3
+TA: James
+07.08 W 	Number Representation, Floating Point 	P&H (4th): 2.4, 3.2, 3.5, 3.7, 3.8, 2.12, B1-B3
+P&H (3rd): 3.2, 3.3, 3.6, 3.7, 3.8, 2.10, A.1-A.3
+	Proj 1 (Due Friday)
+TA: James
+4
+	07.13 M
+	Compilation, Assembly, Linking 	P&H (4th): C.1-C.3, C.5-C.8
+P&H (3rd): B.1-B.3, B.5-.B.8
+	HW4
+TA: James
+07.15 W
+	State Elements, Combinational Logic 	P&H (4th): C.9-C.11
+P&H (3rd): B.9-B.11
+	Proj 2 (Due Friday)
+TA: Josh
+5
+	07.20 M
+	Midterm (covers lectures 1-7) Solutions 	---
+	
+07.22 W
+	CPU Design I 	P&H (4th): 4.1-4.4
+P&H (3rd): 5.1-5.4 	HW5 (Due Thursday)
+TA: Josh
+6 	07.27 M 	CPU Design II 	P&H (4th): 4.5-4.8
+P&H (3rd): 6.1-6.6
+	HW6
+TA: Paul
+07.29 W 	Caches 	P&H (4th): 5.1-5.3
+P&H (3rd): 7.1-7.3 	HW7 (Due Thursday)
+TA: Paul
+7 	08.03 M 	Virtual Memory 	P&H (4th): 5.4-5.5
+P&H (3rd): 7.4-7.5
+	Proj 3 (Due Monday)
+TA: Paul
+08.05 W 	More Caching/VM, Evaluation 	--- 	HW8 (Due Thursday)
+TA: James
+8 	08.10 M 	I/O 	P&H (4th): 6.1-6.7. B.7, B.8
+P&H (3rd): 8.1-8.6, A.7, A.8
+	Proj 4
+TA: James
+08.12 W 	Parallelism, Final Review 	---
+	
+08.13 Th 	Final (9-12 277 Cory) 	
+	
+",NULL,NULL
+8,University of California-Berkeley,Department of Electrical Engineering and Computer Science,Computer Science 152: Computer Architecture and Engineering,http://www-inst.eecs.berkeley.edu/~cs152/,4,Spring,2009,"Week   	 Date   	 Lecture   	 Readings   	 Assignments
+1 	Tue Jan 20 	L1: Introduction, ISA Design PPT PDF 	  	 
+Thu Jan 22 	S1: Introduction to Simics simulator PPT PDF 	  	 
+Fri Jan 23 	No section 	  	 
+2 	Tue Jan 27 	L2: Simple Machine Implementations PPT PDF 	Ch. 1, App. B 	 
+Thu Jan 29 	L3: From CISC to RISC PPT PDF 	  	Lab 1 PDF ZIP tar.gz
+PS 1 ZIP tar.gz
+Fri Jan 30 	S2: Lab 1 overview PDF solutions 	  	 
+3 	Tue Feb 3 	L4: Pipelining PPT PDF 	A.1-A.3 	 
+Thu Feb 5 	L5: Pipelining part II PPT PDF 	A.4 	 
+Fri Feb 6 	S3: Pipelining review PDF 	  	 
+4 	Tue Feb 10 	L6: Memory Hierarchy PPT PDF 	C.1-C.3 	PS 1 due, Lab 1 due
+Wed Feb 11 	S4: PS 1 review 3111 Etcheverry, 12-1pm 	  	PS 1 solutions DOC PDF
+Thu Feb 12 	Quiz 1: ISAs, microcode, simple pipelines
+Solutions: DOC PDF 	  	 
+5 	Mon Feb 16 	President's Day Holiday 	No Office Hours 	 
+Tue Feb 17 	L7: Memory Hierarchy II (in 320 Soda) PPT PDF 	  	PS 2 ZIP tar.gz
+Lab 2 PDF ZIP tar.gz
+Thu Feb 19 	L8: Memory Hierarchy III PPT PDF 	  	 
+Fri Feb 20 	S5: Lab 2 overview PDF solutions 		 
+6 	Tue Feb 24 	L9: Address Translation and Protection PPT PDF 	  	 
+Thu Feb 26 	L10: Virtual Memory PPT PDF 	  	PS 2 due, Lab 2 due
+Fri Feb 27 	S6: PS 2 review 	  	PS 2 solutions DOC PDF
+7 	Tue Mar 3 	Quiz 2: Memory Hierarchies
+Solutions: DOC PDF 	  	PS 3 ZIP tar.gz
+Lab 3 PDF ZIP tar.gz
+Thu Mar 5 	L11: Virtual Memory and Caches PPT PDF 	  	 
+Fri Mar 6 	S7: Lab 3 overview PDF 	  	 
+8 	Tue Mar 10 	L12: Complex pipelines PPT PDF 	A.5-A.8 	 
+Thu Mar 12 	L13: Out-of-order issue, register renaming, branch prediction PPT PDF 	Ch 2.1-2.5 	PS 3 due, Lab 3 due
+Fri Mar 13 	S8: PS 3 review 	  	PS 3 solutions DOC PDF
+9 	Tue Mar 17 	L14: Advanced Out-of-Order Superscalars (in 320 Soda) PPT PDF 	  	 
+Thu Mar 19 	Quiz 3: Virtual Memory
+Solutions: DOC PDF 	  	PS 4 DOC PDF
+Lab 4 PDF ZIP tar.gz
+Fri Mar 20 	S9: Lab 4 overview PDF solutions 	  	 
+10 	Mar 23-27 	Spring Break 	  	 
+11 	Tue Mar 31 	L15: Out-of-Order Memory Accesses, Complex Superscalar Review PPT PDF 	  	 
+Thu Apr 2 	L16: VLIW PPT PDF 	  	PS 4 due, Lab 4 due
+Fri Apr 3 	S10: PS 4 review 	  	PS 4 solutions DOC PDF
+12 	Tue Apr 7 	Quiz 4: Complex Pipelining
+Solutions: DOC PDF 	  	PS 5 DOC PDF
+Lab 5 PDF ZIP tar.gz
+Thu Apr 9 	L17: Vectors PPT PDF 	App. F 	 
+Fri Apr 10 	S11: Lab 5 overview PDF 	  	 
+13 	Tue Apr 14 	L18: Multithreading PPT PDF 	  	 
+Thu Apr 16 	L19: Synchronization and Sequential Consistency PPT PDF 	  	 
+Fri Apr 17 	  	  	 
+14 	Tue Apr 21 	L20: Snoopy Caches PPT PDF 	  	PS 5 due, Lab 5 due
+Wed Apr 22 	S12: PS 5 review (in 310 Soda) 	  	PS 5 solutions DOC PDF
+Thu Apr 23 	Quiz 5: VLIW, Vectors, Multithreading
+Solutions: DOC PDF 	  	PS 6 ZIP tar.gz
+Lab 6 PDF ZIP tar.gz
+Fri Apr 24 	S13: Lab 6 overview PDF 	  	 
+15 	Tue Apr 28 	L21: Directory Protocols (Scott) PPT PDF 	  	 
+Thu Apr 30 	L22: Virtual Machines PPT PDF 	  	 
+Fri May 1 	  	  	 
+16 	Tue May 5 	L23: Putting it all Together: Nehalem 	  	PS 6 due, Lab 6 due
+Wed May 6 	S14: PS 6 review (405 Soda, 12-1p) 	  	PS 6 solutions DOC PDF
+Thu May 7 	Quiz 6: Parallel Architectures
+Solutions: DOC PDF",NULL,NULL
+9,Georgia Institute of Technology-Main Campus,Department of Electrical Engineering,ECE 3055 Computer Architecture and Operating Systems,http://users.ece.gatech.edu/~hamblen/3055/,78,Fall,2009,"Topical Outline: 
+
+Instruction Set Architectures (2 weeks)
+  CISC and RISC: ISA evolution and tradeoffs
+  Instruction formats, number of operands, addressing modes
+  Controller implementation: state machine vs. microprogramming
+  Effect of ISA on microarchitecture implementation
+  Effect of ISA on the compiler 
+
+Pipelining (4 weeks)
+  Pipelining basics
+  Pipeline stages: fetch, decode, execute, memory write-back
+  Hazards and solutions
+  Branch prediction and delayed branches
+  Case Studies
+
+Memory Systems (3 weeks)
+  Memory hierarchy
+  Basic organization of caches, interleaved memory
+  Virtual memory basics, memory management
+  Deadlocks
+  Segmentation and protection
+  Case Studies
+
+Process Management (3 weeks)
+  Processes, threads, and CPU scheduling
+  Synchronization and concurrency management
+  Deadlocks, protection, and security
+  Case Studies
+
+I/O Architectures (2 weeks)
+  Bus hierarchies, device drives
+  Interrupts, DMA, polling
+  Disk structures, I/O scheduling
+  File allocation and file systems
+  LANs, network interfaces, basic interprocessor communciation
+  Case Studies
+
+Laboratory Assignments
+  Architecture simulation
+  Operating system project","ourse Objectives - As part of this course, students:
+
+    1.  build on ECE 2030 to enhance their understanding of core concepts of computer architecture related to processor, memory, and I/O subsystems. [6,8,11]
+    2.  are introduced to core concepts of operating systems related to memory management, process and thread management, and I/O. [6]
+    3.  will understand the interactions of hardware and software in a general-purpose computer system. [6,8,11]
+    4.  gain laboratory-based experience in designing, implementing, and simulating hardware and software components of a computer system. [7,10,11]
+    5.  utilize modern hardware and software design tools and languages in state-of-the-art facilities. [1,7,11]
+    		","Course Outcomes - Upon successful completion of this course, students should be able to:
+
+    1.  evaluate cycles per instruction (CPI) for multi-cycle and pipelined data paths.
+    2.  schedule machine-instruction-level programs on a pipelined datapath both with and without hazard handling.
+    3.  define different types of data and control dependences and describe multiple methods of handling them.
+    4.  design, using standard digital components, cache memories of different sizes and associativities.
+    5.  describe several replacement policies for associative memory structures; e.g., set-associative caches or virtual memory pages.
+    6.  determine the contents of a cache after execution of a memory trace.
+    7.  define and understand virtual memory, including the concepts of paging, TLB, and page table.
+    8.  determine the contents of a page table and TLB after execution of a memory trace.
+    9.  describe I/O operation in a general-purpose computer system, including synchronous/asynchronous bus characteristics, bus arbitration schemes, and DMA.
+    10.  define processes and threads.
+    11.  construct and evaluate CPU schedules for a variety of scheduling algorithms.
+    12.  define the problem of process/thread synchronization and describe several alternative mechanisms for handling synchronization.
+    13.  define deadlock and describe several mechanisms for handling it.
+    14.  step through an algorithm to determine if a given set of processes and resources are deadlocked.
+    		"
+10,University of Illinois at Urbana-Champaign,NULL,CS 231 Computer Architecture I,NULL,6,NULL,NULL,NULL,NULL,NULL
+11,University of Illinois at Urbana-Champaign,Department of Electrical Engineering,ECE 411 - Computer Organization and Design,http://courses.ece.illinois.edu/ece411/index.php,7,Fall,2009,"""Introduction to the course; levels of abstraction, computer organization, instruction set architecture data path
+Instruction processing, control unit design
+Instruction Set Architecture
+More on instruction set architecture, performance considerations
+Cache memory: motivation, locality, conceptual operation, microarchitecture
+Cache memory: block size, associativity
+Cache memory: virtual vs. physical, advanced topics 
+Pipelining: motivation, microarchitecture, basic design
+Pipelining: data forwarding
+Exam #1
+Pipelining: branch prediction
+Pipelining: Advanced branch prediction and interlocking
+Interconnects: synchronous, arbitration, PCIe example
+System issues, interrupts and exceptions
+Arithmetic: number representation, floating-point, IEEE standard
+Floating-point precision and accuracy, more on IEEE standard
+Dynamic scheduling: Interlocking and Tomasulo’s algorithm
+Speculative and dynamic scheduling processors, exception recovery
+VLIW architectures and processors
+Introduction to design verification
+Data parallelism; vectors and SIMD
+Exam #2
+More on SIMD designs
+Multiprocessor: synchronization, programming models
+Multiprocessors: cache coherence 
+Multiprocessors: multi-cores and GPUs
+Case studies, future trends, challenges, opportunities
+Course retrospective and review
+MP3 presentations (4 hours, signup)""
+","This course is an intensive introduction to the fundamentals of computer architecture. Relying heavily upon the elementary principles taught in ECE 290 and ECE 390 (old ECE 291), we will discuss the basic design, or architecture, of computing hardware. Computer systems involve architecture design at many levels. We will focus on the instruction set architecture (ISA) level (the interface between the software and computing hardware) and the microarchitecture level (the computing hardware itself). We will examine to some extent, the level above the instruction set (the programming language level) and the level below the microarchitecture (the logic gate level) in order to deepen our understanding of computing systems. This course has a demanding design component; you will implement some of the basic concepts presented in lecture using real hardware design tools. 
+",NULL
+12,University of Illinois at Urbana-Champaign,Department of Electrical Engineering,ECE 391 Computer Systems Engineering,http://courses.ece.illinois.edu/ece391/,8,Fall,2009,"""         class overview and big picture                                              none
+ 1 8/25
+         x86 instruction set architecture: introduction and instructions             CN
+ 2 8/27
+         x86 ISA: assembler conventions, calling convention, example                 CN
+ 3  9/1
+         C to x86 linkage, device I/O; role of system software, system calls         CN, ULK1
+ 4  9/3
+         interrupts and exceptions, processor and ISA support                        CN, (ULK4)
+ 5  9/8
+         shared resources, critical sections, examples                               CN, (ULK5)
+ 6 9/10
+         multiprocessors and locks, conservative synchronization design              CN
+ 7 9/15
+         Linux synchronization interface, synchronization hazards                    CN
+ 8 9/17
+         programmable interrupt controller motivation and design                     CN
+ 9 9/22
+         Linux abstraction of PIC; interrupt chaining, soft interrupts               CN
+10 9/24
+         interrupt support in Linux: data structures, installation and removal       CN, (LDD9)
+11 9/29
+         (designing synchronization constructs, global state diagrams)               none
+12  10/1
+         interrupt support in Linux: invocation, soft interrupts/tasklets            CN, (LDD9)
+13  10/6
+         programs to processes: rationale, terminology, and structures               CN?, ULK3
+14  10/8
+         programs to processes: job types and scheduling; MP3 TEAM MEETING           CN?, (ULK11)
+15 10/13
+         programs to processes: scheduler design and implementation                  CN?
+16 10/15
+         virtual memory: rationale, segmentation                                     CN, (ULK2)
+17 10/20
+         virtual memory: paging, Linux abstractions                                  CN, (LDD13)
+18 10/22
+         memory allocation and management in Linux                                   LDD7, ULK7
+19 10/27
+         memory management data structures                                           ULK8
+20 10/29
+         abstracting devices: file descriptors, block and character devices          LDD1, (ULK13)
+21  11/3
+         (user-level file and network application programming interfaces)            none
+22  11/5
+         character driver interface, system call linkage, application path to driver CN, LDD3,5, (ULK9)
+23 11/10
+         driver development process and detailed example                             LDD3,5
+24 11/12
+         detailed example of driver development, continued                           LDD3,5
+25 11/17
+         signals: user-level analogue of interrupts, controlling behavior            CN, (ULK10)
+26 11/19
+         signals: data structures, generation, delivery                              CN, (ULK10)
+27  12/1
+         filesystems: philosophy, ext2 as example, disk layout                       CN?, ULK (12), 17
+28  12/3
+         filesystems: ext2 structures, caching issues                                CN?, ULK17
+29  12/8""
+","""Objectives of the course: This class introduces students to the concepts and abstractions central to the development
+of modern computing systems, with an emphasis on the systems software that controls interaction between devices
+and other hardware and application programs. The conceptual material to be covered includes input-output
+semantics, synchronization, interrupts, multitasking, virtualization of resources, protection, and resource
+management concepts. Students will also be introduced to network and storage device abstractions. In terms of
+practical skills, students will be exposed to software development tools for source control, debugging, dependency
+management, and compilation, and will work in the context of a real operating system executing in a virtual
+machine. Students will also develop software analysis skills as well as team-based development and testing skills.
+The list of topics includes:
+    • x86 assembly: review of basic constructs and structures, interfacing C to assembly, macros, stack frame
+          and calling convention
+    • system software basics: resource management, virtualization, protection, system call interface,
+          asynchronous and synchronous interactions
+    • interrupts and exceptions: controlling generation and handling, chaining, cleanup code, interactions with
+          device functionality, interrupt controllers
+    • synchronization: primitives, memory semantics, mutual exclusion, semaphores, scheduling, race conditions
+    • virtualization of the CPU: processes and scheduling
+    • I/O interface: file descriptors, buffering, control operations
+    • device programming: basic abstractions, character and block devices, device driver development process
+    • user-level programming interfaces for file and network I/O, relationship to kernel I/O abstractions
+    • virtualization of memory: hardware support and software abstractions
+    • signals: semantics, generation, and delivery
+    • file system abstractions and disk layout
+""
+",NULL
+13,Carnegie Mellon University,Department of Electrical Engineering,18447 Introduction to Computer Architecture ,http://www.ece.cmu.edu/~ece447/,9,Spring,2009,"""Computer Arithmetic: Adders
+Verilog RTL Review in class
+Computer Arithmetic: Multipliers
+Floating Point
+ISA Design 
+MIPS ISA
+Performance and Cost 
+Single-Cycle Implementation
+Multi-Cycle Implementations 
+Pipelining: Basics
+Pipelining: Data Hazard and  Resolution
+Pipelining: Control Hazard and Resolution
+Pipelining: Branch Prediction
+Pipelining: Exceptions
+Modern CPU Design
+Memory Technology and Organization
+Caches
+Multithreading and Multicore + Project 4 Kick-Off
+More caches
+VM: protection and paging
+VM: page tables and TLB 
+VM: modern systems  
+Cache Coherence
+Multicore Processors
+Busses
+I/O""
+",NULL,NULL
+14,University of Michigan-Ann Arbor,Department of Electrical Engineering and Computer Science,EECS 370: Introduction to Computer Organization,http://www.eecs.umich.edu/courses/eecs370/,10,Fall,2009,"""Instruction set architecture (storage): registers, memory addressing modes, overview of project 1. 
+Instruction set architecture: LC-2K and MIPS instruction sets, instruction encoding, number representation. 
+Instruction set architecture: C to assembly, function calling conventions
+Instruction set architecture: function calling conventions (continued).
+Instruction set architecture - Translation software: linker, loader, etc.
+Basic Processor Design: Combinational & Sequential Logic
+Basic Processor Design: ALU Design
+Basic Processor Design: Finite State Machines, Single Cycle Datapath
+Basic Processor Design: Single Cycle Data Path, Intro to Multi-cycle Data Path
+Basic Processor Design: Multi-cycle Data Path
+Introduction to Pipelining 
+Pipelining: Data Hazards and Forwarding 
+Pipelining: Control Hazards and Performance Calculation 
+Exceptions, performance and advanced pipelining
+Basic cache design, block size, write-back, write-through
+Caches -- Direct-mapped and associative 
+More caches 
+Virtual memory: Address translation, page tables
+Virtual memory: TLBs - VM & caches
+Hard drives basics
+Advanced topics""
+",NULL,NULL
+15,Cornell University-Endowed Colleges,Department of Electrical Engineering and Computer Science,ECE 3140 / CS 3420 Computer Organization,http://www.csl.cornell.edu/courses/ece314/,79,Spring,2009,"Introduction
+MIPS Instruction Set Architecture
+MIPS Programming Data & Instruction Representation
+Data & Instruction Representation
+Procedures
+Procedures
+Procedures Assemblers
+Assemblers, Loaders, and Linkers
+Combinational Digital Logic
+Sequential Digital Logic
+Hardware for Multiplication and Division
+Simple Datapaths
+Multi-cycle Datapaths and Carry Look Ahead Adders
+Pipelining II
+Pipelining II
+Pipelining III
+Pipelining IV: Memory Hierarchies
+Associative Caches
+Cache Performance: Multilevel Caches
+Virtual Memory
+Floating Point
+Exceptions
+Storage and I/O
+Intel IA-32","This course is intended to give students a broad overview of Computer Organization at a number of
+different levels. We start by looking at the lowest level at which a machine and human being may
+interact—Assembly Language. Students will gain an understanding of Instruction Set Architecture design
+and tradeoffs, and will learn how to make fair comparisons among machines built to implement a given
+architecture. With the knowledge of how programs are written and how performance is assessed, students
+will turn their focus to understanding implementation of a given architecture. Students will learn the
+fundamentals of logic design, and will learn to use CAD tools to develop complex logic networks at the
+gate level, including implementation of the building blocks of a CPU datapath (e.g., adders, shifters, and
+multipliers). Students will then learn about two well established performance enhancements in Computer
+Architecture—Pipelining and Caches. We will also provide an overview of some advanced topics in
+Computer Organization such as Multiprocessors. The course culminates with students designing a fully
+functional implementation of the MIPS architecture at the gate level! The main goal of the course is for
+students to gain an understanding of the design and operation of modern computers. Furthermore,
+students will be equipped with the tools necessary for further study in fields as varied as Computer
+Architecture, VLSI, Operating Systems, and Compilers.",NULL
+16,Purdue University-Main Campus,Department of Computer Science,CS 250 Computer Architecture,http://www.cs.purdue.edu/homes/cs250/,12,Fall,2009,"""1. Introduction; motivation; fundamentals of digital logic; gates as basic building blocks
+2. Data and program representation; endian order and effect on programming
+3. Processors: variety and types; computational engines; cores
+4. Processors: instruction sets and pipelined execution; vertical and horizontal organizations
+5. Processors: operand addressing and instruction representation; CPUs
+6. Assembly languages; programming paradigm; symbolic assemblers
+7. Memory and storage: technologies and basic organization
+8. Memory and storage: physical memories; access paradigm; physical memory addressing
+9. Memory and storage: virtual memory technologies; virtual addressing; caches and caching
+10. Input / Output: concepts and terminology; relative speeds
+11. Input / Output: buses and bus architectures
+12. Input / Output: programmed and interrupt-driven I/O; a programmer’s view of devices; I/O and
+buffering
+13. Hardware optimizations: parallelism & pipelining
+14. Assessing performance, multiprocessing, and other advanced topics
+15. Miscellaneous topics or visitors""
+","""This is a course on computer organization and computer architecture. It covers all aspects of architecture,
+with the material divided into five parts:
+(1) Basics. Fundamentals of digital logic and data representation.
+(2) Processors. Review of basic building blocks, and how they are used in a modern
+Central Processing Unit (CPU).
+(3) Memory. Storage and access; physical and virtual memory systems; caching.
+(4) I/O. Interconnection of computers and external devices; buses; role of device
+drivers.
+(5) Advanced Topics. Other aspects of architecture, including the concept of multicore
+chips and architectural hierarchies.""
+",
+17,The University of Texas at Austin,Department of Computer Science,352. Computer Systems Architecture,http://www.cs.utexas.edu/~hunt/class/2009-fall/cs352/,13,Fall,2009,""" Schedule Below is Approximate, Lectures Dates May Change Slightly
+
+00     Aug 27  Introduction to Computer Architecture, Chapter 1
+
+01     Sep  1  Chapter 1
+02     Sep  3  Chapter 1, Laboratory 1
+
+03     Sep  8  Chapter 2
+04     Sep 10  Chapter 2
+
+05     Sep 15  Chapter 3
+06     Sep 17  Chapter 3
+
+07     Sep 22  Chapter 3
+08  *  Sep 24  Short Exam,  Laboratory 2
+
+09     Sep 29  Chapter 3
+10     Oct  1  Chapter 3
+
+11     Oct  6  Chapter 4
+12     Oct  8  Chapter 4
+
+13     Oct 13  Chapter 4
+14     Oct 15  Y86 Design, Laboratory 3
+
+15     Oct 20  Chapter 4
+16  *  Oct 22  Midterm Exam
+
+17     Oct 27  Chapter 4
+18     Oct 29  Chapter 4
+
+19     Nov  3  Y86 Implementation, Laboratory 4
+20     Nov  5  Chapter 5
+
+21     Nov 10  Chapter 5
+22     Nov 12  Chapter 6
+
+23  *  Nov 17  Short Exam
+24     Nov 19  Chatper 6
+
+25     Nov 17  Chapter 6, Laboratory 5
+26     Nov 22  Guest Lecture
+
+27     Nov 24  Chapter 10
+28     Nov 29  Chapter 10  
+
+29     Dec  1  Chapter 10
+30     Dec  3  Course Summary
+
+    *  Dec 11  Final Exam, 9:00 -- noon
+""
+",NULL,NULL
+18,The University of Texas at Austin,Department of Electrical and Computer Engineering,EE360N -- Computer Architecture ,http://www.ece.utexas.edu/files/courses/syllabus/2009/08/descriptor.html,14,Fall,2009,"""    *  What is Architecture, Tradeoffs
+    * Instruction Set Architecture, LC-3b ISA
+    * Assemblers: Translating Assembly Language to ISA
+    * Microarchitecture: Detailed LC-3b implementation
+    * Physical memory, unaligned access, interleaving, SRAM, DRAM
+    * Virtual memory, page tables, TLB, VAX model, PowerPC model, contrast with segmentation
+    * Cache memory
+    * Interrupts/Exceptions
+    * I/O
+    * Performance Improvement. Metrics, Pipelining.
+    * Branch prediction
+    * Out-of-order execution
+    * Vector processing
+    * Integer arithmetic, Floating point, IEEE Standard
+    * Measurement Methodology
+    * Intro to Multiprocessing, Interconnection networks, Amdahl's Law, Consistency models
+    * Cache coherency
+    * Alternative Models of Concurrency: SIMD, MIMD, VLIW, dataflow, etc.
+    * State-of-the-art Microprocessor
+""
+","""This class covers many of the concepts that implement that execution magic, more commonly called computer architecture.  We start by learning the machine language that a computer exposes to the user and how one can use that language to express algorithms in the form of machine language (or the more human-readable form of machine language called assembly language) programs.  We then learn how a simple hardware-based machine language interpreter (generally called a processor) is structured.  We use that as a launching point to explore
+
+    * implementing the processor (in a basic sense)
+    * improving the performance and usability of the processor
+    * measuring and understanding tradeoffs between performance, usability and design complexity
+""
+",NULL
+19,University of Wisconsin-Madison,Department of Computer Science,354 Machine Organization and Basic Systems,http://pages.cs.wisc.edu/~cs354-1/,17,Fall,2009,"""  	 	 	prerequisite material: Number Systems  	 	
+9/2-4 	class policies,
+how computers work 	the basics of computer operation 			
+9/7-11 	C programming 	introduction,
+I/O,
+on pointers,
+on functions and memory allocation 	on argv and argc:
+questions, questions with answers 		No class Monday Sept 7 (Labor Day)
+9/14-18 	C programming 		integer representations:
+questions, questions with answers
+
+character representation:
+questions, questions with answers 	floating point representation 	finish the optional Assignment 0 by Monday
+9/21-25 	finish C programming, integer arithmetic and logical operations 	integer arithmetic, logical, and shift operations 		two's complement multiplication 	Assignment 1 due Friday: C program
+9/28-10/2 	Assembly language: with MIPS R2000 examples 	
+motivation for registers,
+basics of MAL (MIPS assembly language),
+MIPS instructions,
+code implementation examples 	need-to-know aspects of MAL 		No class Monday Sept 28 (Yom Kippur)
+10/5-9 	MIPS assembly language 	
+on addressing modes 	addressibility: questions, questions with answers 		Exam 1 WEDNESDAY
+(covers thru arithmetic and logical operations)
+10/12-16 	
+data structures 	arrays, stacks, and queues 	array code implementation: questions, questions with answers 		
+Assignment 2 due Monday: super simple MAL program
+10/19-23 	
+functions 	function implementation 		MIPS conventions 	
+Assignment 3 due Friday: MAL program using arrays
+10/26-30 	finish material on functions,
+the assembly process 	the assembly process 		linking and loading 	
+11/2-6 	finish material on the assembly process
+on I/O 	input and output, more on I/O and DMA 			Assignment 4 due Friday: MAL programs with functions
+11/9-13 	finish material on I/O 				
+11/16-20 	exception handling 	interrupts, an incomplete kernel, and a complete, non-reentrant kernel. 	
+Just for fun, read The Story of Mel. 		Exam 2 MONDAY
+(covers thru function implementation)
+Assignment 5 due Friday: hand assembly
+11/23-27 	finish exception handling 				No class Wednesday Nov 25 (Thanksgiving)
+11/30-12/4 	performance 	on perfomance issues 		pipelining 	Assignment 6 due Friday: MAL program using interrupts
+12/7-11 	finish performance, extra topics 	floating point appreciation,
+Intel x86 appreciation 			
+12/14 	finish extra topics 				
+? 					Exam 3 during Summary Activity period
+(Covers the assembly process, I/O, interrupts, performance, and end-of-semester topics.)
+Location: ? ""
+",NULL,NULL
+20,Johns Hopkins University,Department of Computer Science,525.412 Computer Architecture,http://www.apl.jhu.edu/Notes/Cameron/525.412/,19,Fall,2009,"""525.412 Computer Architecture Syllabus
+Fall 2009
+Engineering and Applied Science Programs for Professionals
+Whiting School of Engineering
+Johns Hopkins University
+Charles B. Cameron
+Date Lesson Topics
+02-Sep-09 Introduction
+History of Computer Architecture
+Overview of Modern Computer Architecture
+Parallel computing
+Primary & secondary memory
+Input and Output
+09-Sep-09 Review
+Digital design
+Logic gates
+Flip-flops and registers
+Decoders and encoders
+Memory systems
+Design at the gate, register, and processor levels
+16-Sep-09 Processor design I
+Quiz 1
+Instruction formats
+Classes of instructions
+Addressing modes
+Control design
+Instruction-level parallelism
+Resets, exceptions, interrupts, traps, and system calls
+Microprogramming
+23-Sep-09 Processor design II
+30-Sep-09 Processor design III
+Quiz 2
+07-Oct-09 Computer arithmetic
+Number representation
+1's & 2's complement, BCD, excess, IEEE floating point
+Addition and subtraction
+Ripple carry, look-ahead carry, excess
+Multiplication and division
+Robertson's and Booth's algorithms
+Restoring & non-restoring division
+Parallel designs
+Square root
+Converging iterations
+Fast computation
+Pipelining, parallelism, table look-up
+ALU design
+14-Oct-09 Midterm Exam
+21-Oct-09 Software issues
+O/S, assemblers, compilers, interpreters, linkers, loaders
+Macros
+Bind time
+Sequential processes, coroutines, procedures
+28-Oct-09 Memory I
+Quiz 3
+Integrated Circuit
+ROM, PROM, EPROM, EEPROM, Flash, RAM, magnetic bubble
+Associative
+Disk, tape, optical, mass storage
+RAID
+Memory access
+Hierarchical, cache, segmented, virtual
+RISC v. CISC
+Multiplexers and demultiplexers
+Immediate, register, direct, indirect, indexed, based-index, stack,
+relative
+Datapath design
+Masters and slaves; servers and clients; peer-to-peer
+relationships
+Date Lesson Topics
+Address translation
+Error detection and correction
+04-Nov-09 Memory II
+11-Nov-09 I/O I
+Quiz 4
+Buses
+Bus width, contention, arbitration
+Control, data, address
+Handshaking
+Programmed v. interrupt-driven
+Priority
+DMA
+Serial v. parallel
+18-Nov-09 I/O II
+25-Nov-09 Thanksgiving
+02-Dec-09 High-performance computer design
+Quiz 5
+Multiprocessors and multicomputers
+SISD v. SIMD; MIMD; vector processors
+Practical considerations
+09-Dec-09 Final Exam
+IDE, SCSI, PCI, USB, Firewire
+Superscalar and VLIW
+Branch prediction, out-of-order execution, speculative
+execution
+Power, temperature, mass, volume, cost, administrative overhead,
+execution time, queuing, communications, data volume, scaling""
+","""This course is primarily intended for students pursuing a graduate degree
+in electrical and computerengineering during their spare time. It
+covers the design and architecture of computers. This includes processors,
+arithmetic and logic units, primary and secondary memory, input
+and output, data-path design, buses, instruction-set design, pipelining,
+addressing modes, reduced instruction set computing, parallel computing,
+and various techniques for maximizing speed. The prerequisite is
+a course in digital design.""
+",NULL
+21,Northwestern University,NULL,EECS 205 Fundamentals of Computer Systems Software,NULL,75,NULL,NULL,NULL,NULL,NULL
+22,Northwestern University,Department of Electrical Engineering and Computer Science,EECS 213 Introduction to Computer Systems,http://www.cs.northwestern.edu/~pdinda/ics-f09/,80,Fall,2009,"Lecture Date Topics Readings Homework/Labs
+Note that classes begin on Tuesday, so we will meet for the first time on Wednesday,
+September 23
+1 9/23 W Mechanics, Introduction,
+overview of abstractions using
+web request-response
+Chapter 1 Data lab out
+2 9/28 M Physics, transistors,
+photolithography, Moore’s
+Law, bits, bytes, logic, cores,
+and multi-cores
+2, 2.1,
+handout
+HW 1 out,
+Last day for late registration: Monday, 9/28
+3 9/30 W Integers and integer math 2.2-2.3
+4 10/5 M Floating point 2.4-2.5
+5 10/7 W The Machine Model –
+instruction set architecture,
+microarchitecture, and basic
+instructions
+3, 3.1-3.5,
+5.7
+HW 1 in, HW 2
+out
+6 10/12 M Control flow 3.6 Data lab in
+Bomb lab out
+7 10/14 W Procedures 3.7
+8 10/19 M Data 3.8-3.11
+9 10/21 W Advanced machine code 3.12-3.16 HW 2 in, HW 3
+out
+Midterm Exam: (tentative): Thursday, 10/22, 6-8pm
+10 10/26 M Memory and cache 6, 6.1-6.4
+11 10/28 W Cache performance 6.5-6.7 Bomb lab in,
+Exploit lab out
+12 11/2 M Linking Chapter 7
+13 11/4 W Exceptional control flow 8,8.1-8.4
+14 11/9 M Exceptional control flow 8.5-8.8 HW 3 in
+15 11/11 W Virtual memory
+Memory system
+10, 10.1-
+10.8
+Malloc lab out,
+Exploit lab in
+16 11/16 M Memory allocation 10.9-10.13 HW 4 out
+17 11/18 W Input and Output Chapter 11
+18 11/23 M (Slack day)
+19 11/30 M Network programming Chapter 12
+handout
+20 12/2 W Concurrency, Distributed
+Systems and Wrap-up
+Chapter 13
+handouts
+Malloc lab in
+HW 4 in
+Finals week – Exam is Wednesday, December 9, 9am-11am","This course has four purposes. First, you will learn about the hierarchy of
+abstractions and implementations that comprise a modern computer system. This
+will provide a conceptual framework that you can then flesh out with courses such
+as compilers, operating systems, networks, and others. The second purpose is to
+demystify the machine and the tools that we use to program it. This includes
+telling you the little details that students usually have to learn by osmosis. In
+combination, these two purposes will give you the background to understand
+many different computer systems. The third purpose is to bring you up to speed in
+doing systems programming in a low-level language in the Unix environment.
+The final purpose is to prepare you for upper-level courses in systems.
+This is a learn-by-doing kind of class. You will write pieces of code, compile
+them, debug them, disassemble them, measure their performance, optimize them,
+etc.
+This course is ideally taken after 211 early in your academic career.",NULL
+23,Northwestern University,Department of Electrical Engineering and Computer Science, EECS 361 - Computer Architecture I,NULL,20,Fall ,2009,"""Week 1: Introduction, ISA definition, the effect of technology on computer systems, trends in computing,
+performance, benchmarking, design metrics, Amdahl’s Law
+Week 2: ISA: Instruction Formats, Sequencing, Languages and Compilers, Delayed Branch, Procedures,
+MIPS ISA
+Week 3: Design Decisions, Arithmetic Units, ALU design
+Week 4: Division, Datapath, Single-Cycle Processor Design
+Week 5: Designing Control, Multi-Cycle Datapath
+Week 6: Pipelining, Designing a Pipelined Processor
+Week 7: Introduction to Memory Subsystem, Caches
+Week 8: Virtual Memory, I/O
+Week 9: Disks
+Week 10: Overview, discussion of advanced techniques: Hyper-Threading, Hyper-Pipelining, and
+Instruction-Level Parallelism""
+","""When a student completes this course, he/she should be able to:
+1. Understand the architecture of a basic computer system and its components, and the role of
+performance in designing computer systems.
+2. Understand how to design and instruction set and its impact on processor design. To design
+ALU and processor datapath and control.
+3. Design pipeline processor including datapath and control, and design to detect and resolve
+hazards.
+4. Understand memory hierarchy design and its impact on overall processor performance. Design
+cache memory based on the characteristics of the expected workload. Understand the workings
+of virtual memory and efficient design for TLBs
+5. Understand the I/O system and its design. Be Knowledgeable about Busses and bandwidth
+requirements to support heterogeneous I/O devices. Understand the disk technology and its
+impact on performance.
+6. Know about terms such as Hyper-Threading, Hyper Pipelining, and Instruction-Level
+Parallelism.""
+",NULL
+24,Virginia Polytechnic Institute,Department of Computer Science,CS2505: Computer Organization and Architecture I ,http://courses.cs.vt.edu/~cs2505/fall2009/wmcquain/,23,Fall,2009,"""Aug 24
+ Course Policies
+
+Introduction
+  
+P&H:  1.1 - 1.3
+  
+    ppt       pdf
+   
+Aug 26 Numeric Bases, Notation, Conversions none     ppt       pdf   
+Aug 28
+ Integer Representation and Arithmetic
+ P&H:  2.4, 3.1 - 3.2
+     ppt       pdf   
+ 
+
+2
+
+ 
+ Aug 31
+ Representing Non-numeric Types       ppt       pdf   
+Sept  2 Floating-Point Representation       ppt       pdf   
+Sept  4
+ C:  Basic Types, Control Structures, Ops
+
+Cygwin Installation
+
+Eclipse for C/C++ 
+ King:  Ch 2, 4, 5, 6, 7
+     ppt       pdf
+
+    ppt       pdf
+
+    ppt       pdf
+   
+ 
+
+3
+
+ 
+ Sept  7 Basics of Boolean Algebras P&H: C.1 - C.2     ppt       pdf HW 1 due 
+Sept  9 Logic Gates and Combinational Design P&H: C.2 - C.3     ppt       pdf   
+Sept 11
+ C:  I/O and Function Interfaces
+ King:  Ch 3, 9, 10, 22
+     ppt       pdf
+
+    ppt       pdf
+
+FindFactors.c
+ P1 due
+ 
+ 
+
+4
+
+ 
+ Sept 14 Multiplexors and Decoders       ppt       pdf HW 2 due 
+Sept 16 Adders P&H:  C.6     ppt       pdf   
+Sept 18 FSM Concepts and Sequential Design P&H:  C.7, C.10     ppt       pdf P2 due 
+ 
+
+5
+
+ 
+ Sept 21 Storage and Registers P&H:  C.8     ppt       pdf   
+Sept 23 Intro to MIPS Architecture P&H:  2.1 - 2.2     ppt       pdf   
+Sept 25 More Intro to MIPS P&H:  2.5, 4.1, 4.2     ppt       pdf P3 due 
+ 
+
+6
+
+ 
+ Sept 28 Test 1       
+Sept 30 C:  Arrays King:  8.1,8.3, 13.2     ppt       pdf   
+Oct    2 C:  Pointers       ppt       pdf P4 due 
+ 
+
+7
+
+ 
+ Oct    5 C:  More on Pointers King:       ppt       pdf   
+Oct    7 C:  Even More on Pointers King:       ppt       pdf   
+Oct    9 Fall Break:  No Classes       
+ 
+
+8
+
+ 
+ Oct  12 Basic Single-cycle Datapath P&H:  4.1 - 4.4     ppt       pdf   
+Oct  14 Basic Single-cycle Datapath       ppt       pdf   
+Oct  16 ISA Overview P&H:  2.1 - 2.5   P5 due 
+ 
+
+9
+
+ 
+ Oct  19 Core MIPS Assembly Instructions P&H:  2.6     
+Oct  21 Control Structures in Assembly P&H:  2.7     
+Oct  23 Arrays in Assembly       
+ 
+
+10
+
+ 
+ Oct  26 Procedures in Assembly P&H:  2.8     
+Oct  28 Procedures and the Stack       
+Oct  30 I/O and Traps       
+ 
+
+11
+
+ 
+ Nov   2 Traps       
+Nov   4 Advanced Calls with the Stack       
+Nov   6 Trap Issues       
+ 
+
+12
+
+ 
+ Nov   9 C:  More on Pointers and Dynamic Alloc.       
+Nov  11 C:  More on Pointers       
+Nov  13 C:  Separate Compilation       
+ 
+
+13
+
+ 
+ Nov  16 C:  Recursion       
+Nov  18 Test 2       
+Nov  20 Bridging I/O       
+  Thanksgiving Break 
+ 
+
+14
+
+ 
+ Nov  30 Bridging I/O       
+Dec    2 C and Traps       
+Dec    4 C and the Runtime Stack       
+15
+ Dec    7 C and the Runtime Stack       
+Dec    9 Summary & Evaluations       
+ 
+ Exam
+ 10:05 - 12:05 Friday Dec 11
+ 
+""","""Having successfully completed this course, the student will be able to:
+- design combinational and sequential circuits that realize different aspects of a digital computer,
+particularly the control unit;
+- represent and manipulate information in arbitrary number systems, including binary;
+- design and analyze finite state automata;
+- explain the different layers of abstraction in a computing system, i.e., logic design, computer
+architecture, machine language, assembly language, high level language;
+- write simple programs in machine language, assembly language and C;
+- describe the characteristics of an instruction set and how it maps to underlying hardware;
+- explain the basics of instruction on a computer, i.e., the instruction cycle;
+- define the relationship between hardware and software.""
+",NULL
+25,Pennsylvania State University-Main Campus,Department of Computer Science and Engineering,CMPEN 331 - Computer Organization and Design,http://www.cse.psu.edu/research/mdl/mji/mjicourses/331,24,Fall,2009,"""1 Course intro, intro to SPIM PH: 1.1-1.3, A.9-A.10 HW1: SPIM
+2 Intro to assembly prog., adds, loads/stores PH: 2.1-2.4HW2: SPIM
+3 Logic operations, control flow instr. PH: 2.5-2.6 HW3: SPIM
+4 Supporting procedures; addressing modes PH: 2.7-2.9, A.6, D.2 HW4: SPIM
+5 Assemblers, linker, and loaders PH: 2.10, A.1-A.5  
+Exam #1   
+6 Intro to design and use of HDLs Y: Chp1-3 HW5: VHDL
+7 VHDL behavior and structure; number repr and basic arith ops Y: Chp 4-5, PH: 3.1-3.3 HW6: VHDL
+8 ALU design PH: B.5, 3.4-3.5  
+9 Building a datapath PH: 5.1-5.3, B.7  
+10 A simple single cycle impl. PH: 5.4, B.8, C.1-C.2 HW7: VHDL
+Exam #2   
+11 A multicycle impl., control unit design PH: 5.5, 5.7. C.3-C.5  
+12 Thanksgiving week (no classes) 
+13 I/O, exceptions and interrupts, bus design PH: 5.6, 8.1, 8.5, A.7-A.8 HW8: SPIM
+14 Intro to pipelined datapath design PH: 6.1  
+15 Memory hierarchies, the basics of caches PH: 8.4-8.5, B.9, 7.1-7.2""
+","Upon completion of the course, students should posses the following knowledge and skills:
+•
+An understanding of a machine’s instruction set architecture (ISA) including basic instruction fetch and execute cycles, instruction formats, control flow, and operand addressing modes.
+•
+The ability to create, assemble, execute, and debug assembly language programs along with a basic understanding of the assembly, linker, and loader processes.
+•
+An understanding of a hardware description language (e.g., either VHDL or verilog) including their uses, structural, and behavioral descriptions.
+•
+The ability to create, simulate, and debug a VHDL or verlog program.
+•
+An understanding of the design and functioning of a machine’s central processing unit (CPU) including the datapath components (ALU, register file) and the control unit.
+•
+An understanding of basic input/output functioning including program controlled I/O and interrupt I/O.
+•
+An understanding of organization of memory hierarchies including the basics of cache design and DRAM architectures.","CMPEN 431 is the second in a sequence of computer organization and architecture courses (the first being CMPEN 331) which collectively support the following program outcomes:
+•
+Design the electronic/logic circuits that form the basic building blocks of a computer system.
+•
+Design the organization and architecture of the basic components of a computer system.
+•
+Analyze the performance of hardware systems using probabilistic, statistical and simulation methods.
+•
+Design hardware support for virtual memory and understand how it is used by the operating system to manage virtual memory.
+•
+Given specifications, design and implement a computer system under time and budget constraints.
+•
+Write clear and effective prose.
+•
+Be able to discuss major trends in industry and current research activities within computer architecture design."
+26,Pennsylvania State University-Main Campus,Department of Computer Science and Engineering,CMPEN 431 Introduction to Computer Architecture,http://www.cse.psu.edu/research/mdl/mji/mjicourses/431/,24,Fall,2009,"""Content
+Principles of computer architecture: CPU datapath and control unit design (single-issue pipelined, superscalar, VLIW), memory hierarchies and design, I/O organization and design, advanced processor design (multiprocessors and SMT)
+Design focused class
+Various homework assignments throughout the semester
+Simulation of architecture alternatives using SimpleScalar
+
+Lectures:
+2 weeks review of the MIPS ISA and basic architecture 
+2 weeks pipelined datapath design issues
+3 weeks superscalar/VLSI datapath design issues 
+2 week memory hierarchies and memory design issues
+2 weeks I/O design issues
+2 weeks multiprocessor design issues
+1 week exams
+""
+","This course is designed to give seniors in computer science, computer engineering, and electrical engineering insight into:
+• The design of computer systems,
+• The design of fast computers, and
+• The design of high performance processors.","Upon completion of the course, students should possess the following skills:
+LIST OF SKILLS HERE (Different than outcomes in the next section)
+•
+Design and analysis of pipelined RISC computer architecture.
+•
+Analysis of superscalar/VLIW microarchitecture.
+•
+Understand memory hierarchies and memory design issues.
+•
+Understand I/O design issues.
+•
+Design of multiprocessor systems."
+27,Texas A & M University,Department of Computer Science,CSCE 312. Computer Organization,http://courses.cs.tamu.edu/rabi/CPSC312/,25,Fall,2009,"""Table 1: Course Topics and Corresponding Textbook Chapters
+Week Topics
+Reading
+Materials
+Chapter
+Numbers
+Milestones
+1-2 Computer Systems Ch. 1 Pre-Test
+2-5 Data representation, Arithmetic, Logic Design Vahid Ch.1-4 Q1, HW 1,2
+5-7 Machine language Ch. 3 Q2, HW3
+7-10
+Processor architecture
+Ch. 4
+Q3, HW4,
+Project.1
+10-12 Memory hierarchy Ch. 6 Q4, HW5,
+12-13 Virtual memory Ch 10 HW6, Q5
+14 System level I/O Ch 11 Project.2
+15 Review Final Exam""","""1.1 Course Overview
+CSCE 312 is an introductory course on computer organization. It provides insights into
+fundamentals of organization and structure of computer systems. One of the objectives of this
+course is to teach critical thinking, how to learn, and how to communicate technical concepts in
+the area of computer system. These objectives will be met through lectures, challenging
+assignments, regular quizzes, and a final examination. The course consists of materials on the
+following topics: Introduction to Computer systems, Data representation, Machine language,
+Processor architecture, Memory hierarchy, Linking, Exception control flow, Virtual memory,
+System level I/O , and Network programming.
+Several laboratory assignments will provide hands-on experience on some of the above topics.
+Projects allow students to implement material taught in the lectures and laboratory.""",NULL
+28,Texas A & M University,Department of Computer Science,CSCE 350. Computer Architecture and Design. (3-3). Credit 4. (Cross-listed as ECEN350),http://faculty.cs.tamu.edu/ejkim/Courses/cpsc350/,26,Fall,2009,"""Table 1: Course Topics and Corresponding Textbook Chapters
+ 
+--
+ Topic
+ Chapter Number
+ 
+--
+ Introduction; The 5 components of a computer; Performance; Technology and Delay Modeling
+ Ch. 1, 2 (partially)
+ 
+--
+ Intro to Instruction Set Architecture (ISA) Design; MIPS ISA; Translation of High-Level C Constructs into MIPS; Assemblers, Object Code Generation, Linking and Executable Loading; Run-time Execution Environment
+ Ch. 3, App. A.
+ 
+--
+ Review of Digital-Logic Design for Combinational Circuits
+ App. B.
+ 
+--
+ Introduction to Hardware Description Languages (Verilog) and the Design-Simulation Process; Overview of Computer Arithmetic and ALU Design; Structural Designs in Verilog
+ Ch. 4
+ 
+--
+ Review of Digital-Logic Design for Sequential Circuits; Register-Transfer Level Description of Systems
+ App. B.
+ 
+--
+ Single-Cycle Datapath and Control; Multi-cycle Datapath and Control; Micro-programming and Hard-wired Control Units; Behavioral HDL Description of Systems; Exceptions Handling
+ Ch 5, App. C
+ 
+--
+ Intro to Pipelining; Pipelined MIPS Datapath; Pipeline Hazards: Structural, Control, Data; Hazard Detection and Resolution; Pipelining control; Exceptions Handling
+ Ch. 6
+ 
+--
+ Overview of SRAM and DRAM Design; Memory Hierarchy; Cache memory design
+ Ch 7
+ 
+--
+ Virtual memory
+ Ch 7
+ 
+""
+","""1.1 Course Basics
+
+CPSC 350 is an introductory course on computer organization and architecture. It examines in-depth the inner-workings of modern digital computer systems and the tradeoffs present at the hardware-software interface. It provides insights in the design process of complex hardware systems. A digital design background is considered fundamental and it is mandatory. This course includes a significant design component based on Hardware-Description Language modeling and simulation of a non-trivial RISC processor. 
+
+  
+
+1.2 Course Details
+
+The first part of the course investigates the design of Instruction Set Architectures (ISAs) focusing on application and system factors that shape the design choices. We focus on the MIPS processor and its assembly language. The next part focuses on the hardware design of a full-blown Arithmetic and Logic Unit (ALU). We use the Verilog Hardware Description Language (HDL) to develop a working model of an ALU. Subsequently, we discuss broader Data Path design issues, including registers, interconnection structures and clocking methodologies. The next part discusses Control Unit (CU) design, including hardwired and micro-programmed styles. This part studies the concept and mechanisms of machine exceptions and interrupts. We gradually develop data-paths and associated control units with higher performance, focusing on single-cycle, multi-cycle and finally pipe-lined designs. The Reduced Instruction Set Computers (RISC) are the main focus but Complex Instruction Set Computers (CISC) are compared and discussed as well. 
+
+Next we focus on memory design issues. We discuss typical problems and investigate mechanisms put into place in order to make the memory capable to support the instruction and data access rates of modern processors. We study both single and multi-level cache memories and a number of block placement, replacement and write policies. We then extend the memory hierarchy design with the study of virtual memories. We focus on single and multi-level page table and segmentation with paging and TLB designs. 
+
+Finally, we discuss processor-memory and I/O-processor inter-connections with various types of buses. Time permitting we will touch upon parallel processor architectures. 
+
+Several laboratory assignments will provide hands-on experience on MIPS assembly and the Verilog hardware description language, emphasizing structural and behavioral designs. The main material is complemented with actual system discussion. Projects allow students to implement material taught in the lectures and laboratory. We use processor simulators and the Verilog HDL as tools in our design and performance investigations. A sequence of design projects implements a subset of a realistic RISC architecture. 
+
+  
+
+""
+",NULL
+29,Rice University,Department of Electrical and Computer Engineering,ELEC 220 – Fundamentals of Computer Engineering,http://www.owlnet.rice.edu/~elec220/,28,Spring,2008,NULL,"""This course provides an overview of fundamental topics in computer engineering, including bits, logic, state machines, instruction-sets, assembly language, linkage conventions, storage hierarchies, interrupts, I/O, and systems issues. It is required for ECE and CS majors, and generally taken by freshmen and sophomores. Generally, the first five weeks focus on digital logic and simulation, the second five weeks on assembly language and computer architecture, and the third five weeks on high level languages and system design issues.
+
+""
+",NULL
+30,University of California-Los Angeles,Department of Electrical Engineering,EEM116C Computer Systems Architecture,https://eeweb.ee.ucla.edu/class_course_objectives.php?/eeM116C/1/fall/9,31,Fall,2009,""" Performance evaluation. 2 hrs.  
+ � Instruction sets. 6 hrs.  
+ � Arithmetic. 6 hrs.  
+ � Datapath and control. 8 hrs.  
+ � Pipelining. 8 hrs.  
+ � Memories. 8 hrs.  
+ � Peripherals. 2 hrs. 
+""
+","This is a required course for electrical engineers focusing on computer engineering. The goal of the course is to introduce students to the fundamentals of computer systems design. 
+",""" Specific Course Outcomes Program Outcomes  
+ 
+ 1. Compare the performance of computer systems using MIPS and MFLOPS ratings. a c i   
+   
+ 2. Identify the components of an instruction set, such as opcode, operands, and format. a   
+   
+ 3. Translate fractional numbers into IEEE scientific format. a m   
+   
+ 4. Translate numbers in IEEE scientific format into their fractional form. a m   
+   
+ 5. Implement 32-bit multiplication using iterative methods. a m   
+   
+ 6. Construct a simple 32-bit datapath composed of two function units and a register file. a   
+   
+ 7. Use pipelining to improve the performance of a simple 32-bit instruction set. a   
+   
+ 8. Compare the design of direct-mapped and associative caches. a   
+   
+ 9. Explain the function of the translation lookaside buffer in a memory management unit. a g   
+   
+ 10. Explain the sequence of operations in handling interrupts from a variety of simple peripherals. a g   
+   
+ 11. Several homework assignments delving on core concepts and reinforcing analytical skills learned in class. a i   
+   
+ 12. Opportunities to interact weekly with the instructor and the teaching assistant(s) during regular office hours and discussion sections in order to further the students' learning experience and the students' interest in the material.  
+""
+"
+31,University of California-San Diego,Department of Computer Science and Engineering,CSE30 – Computer Organization and Systems Programming ,http://cseweb.ucsd.edu/~kastner/teaching/cse30/,32,Fall,2009,"""Thursday September 24 	Overview of Computer Organization 	PS #0 assigned 	P+H 1.1-1.6, Gordon Moore Article
+Tuesday September 29 	Number Representation 	PS #1 assigned 	P+H 3.1-3.2
+Thursday October 1 	C Basics 	PS #0 due,
+PA #1 assigned 	K+R Chapters 1-5, Essential C – Pointers and Memory Section 1
+Tuesday October 6 	C Data Structures 	PS #1 due, PS #2 assigned 	Essential C - Section 3 & 6 (pg 33-36), Linked List Problems Section 1
+Thursday October 8 	Arithmetic Instructions 	PA #1 due, PA #2 assigned 	P+H 2.1-2.2
+Tuesday October 13 	Data Transfer Instructions 	PS #2 due, PS #3 assigned 	P+H 2.3
+Thursday October 15 	Control Flow, Logic and Shift Instructions 	PA #2 due 	P+H 2.7, Goto Harmful
+Tuesday October 20 	Quiz # 1 Review 	PS #3 due 	
+Thursday October 22 	Quiz #1 	PA #3 assigned 	
+Tuesday October 27 	Procedures 		
+Thursday October 29 	Instruction Representation 		P+H 2.4-2.5
+Tuesday November 3 	Disassembly 	PA #3 due, PA #4 assigned 	P+H 3.5
+Thursday November 5 	Pointers 	PS #4 assigned 	
+Tuesday November 10 	Arrays 	PA #4 due, PA #5 assigned 	
+Thursday November 12 	Strings and Lists 	PS #4 due 	
+Tuesday November 17 	Quiz #2 Review 	PA #5 due 	
+Thursday November 19 	Quiz #2 	PA #6 assigned 	
+Tuesday November 24 	Program Execution 		P+H B.5-B.6, Essential C – Section 6 (pg 38-40), Pointers and Memory Section 4
+P+H 2.12-2.13, B.1-B.4
+Tuesday December 1 	History of the Computing World: Part I 		
+Thursday December 3 	Class Wrapup and Final Review 	PA #6 due 	
+Thursday December 10 	Final Exam 3-6pm 	""
+",NULL,NULL
+32,University of California-San Diego,Department of Computer Science and Engineering,CSE41: Introduction to Computer Architecture,http://cseweb.ucsd.edu/classes/fa09/cse141/,33,Fall,2009,"""Thursday, September 24 	Introduction and Administrivia 		00_Introduction.pdf 		
+Tuesday, September 29 	Instruction Set Design 	Read: 1.1-1.3; 2.1-2.7; Key points: Types of machines and general terminology. Parts of the machine. Key components of an instruction set. Operand storage in registers and memory. Arithmetic, logical, and memory operations in MIPS 	01_ISA.pdf 		
+Thursday, October 1 	Instruction Set Design 	Read: 2.8, 2.10, 2.12-2.13, 2.16-2.19 Skim/Review: 2.4, 2.6, 2.9, 2.14; Key points: Function calls, translation from source code to machine code, the diversity of ISA design decisions between MIPS, ARM, and x86. 	02_ISA.pdf,
+03_project.pdf,
+04_quizzes_hw_microprojects.pdf,
+MP0_ISA.pdf 	Assignment 1-1; Assignment 1-2; 	
+Tuesday, October 6 	Instruction Set Design 	Read: 2.8, 2.10, 2.12-2.13, 2.16-2.19 Skim/Review: 2.4, 2.6, 2.9, 2.14; Key points: Function calls, translation from source code to machine code, the diversity of ISA design decisions between MIPS, ARM, and x86. 	05_ISA.pdf,
+S_x86_64.pdf 		
+Thursday, October 8 	Measuring Performance 	Read: 1.4-1.9; Key points: Speedup. The performance equation. Amdahl's law. Benchmarks and their short comings 	06_Performance.pdf,
+01_CodeAnalysisExample.pdf 	Assignment 2; 	
+Tuesday, October 13 	Measuring performance 	Read: 1.4-1.9; Key points: Speedup. The performance equation. Amdahl's law. Benchmarks and their short comings 			
+Thursday, October 15 	Performance/Single Cycle processors 	Read: 4.1-4.4; Key points: Designing a single-cycle datapath, datapath vs. control, clocking, control signals, decoding, handling branches. Review Appendix C if your logic design is rusty. 		Assignment 3-1; Assignment 3-2; 	
+Tuesday, October 20 	Single Cycle to Pipelining 	Read: 4.5-4.6 		Project 1; 	
+Thursday, October 22 	Data hazards; flash memory 	Read: 4.7-4.8 			
+Tuesday, October 27 	Control hazards 	Read: 4.9 			
+Thursday, October 29 	Midterm Review 				
+Tuesday, November 3 	Midterm 	TBA 			
+Thursday, November 5 	Branch Prediction and Advanced Pipelining 	Read: 4.10-4.14, except 4.12 			
+Tuesday, November 10 	New non-volatile memories and introduction to caching 	TBA 			
+Thursday, November 12 	Memory Systems 	Read: 5.1-5.3 			
+Tuesday, November 17 	Memory Systems 	Read: 5.4-5.5 			
+Thursday, November 19 	Virtual Memory 	TBA 			
+Tuesday, November 24 	I/O 	6.1-6.13 			
+Thursday, November 26 	Thanksgiving! No class! 				
+Tuesday, December 1 	Multiprocessors 	7.1-7.3; 7.7 			
+Thursday, December 3 	Wrap up and Final review 	TBA 			
+Monday, December 7 	Final Exam 	""
+","This course will describe the basics of modern processor operation. Topics include computer system performance, instruction set architectures, pipelining, branch prediction, memory-hierarchy design, and a brief introduction to multiprocessor architecture issues.
+",NULL
+33,University of California-San Diego,Department of Computer Science and Engineering,cse141L: Introduction to Computer Architecture,http://cseweb.ucsd.edu/classes/fa09/cse141L/,33,Fall,2009,"""Date Topic Readings Slides Due Notes 
+Wednesday, September 30 Administrivia; Overview of the course; Lab 1 assigned; Verilog I  00_Introduction.pdf, 
+01-Verilog1.pdf    
+Wednesday, October 7 Verilog II; datapath and control design. Lab 2 preview.  03_CodeStandardsAndDatapaths.pdf, 
+02-VerilogFundametals.pdf, 
+TrivialScalarDatapath.pdf  Project 1-1; Project 1-2;   
+Wednesday, October 14 Verilog II; datapath and crontrol design; Lab 3 preview.   Project 2;   
+Wednesday, October 21 Lab 4 preview   Project 3;   
+Wednesday, October 28 Lab questions     
+Wednesday, November 4 Lab 5 preview   Project 4;   
+Wednesday, November 11 Holiday: Veteran's Day     
+Wednesday, November 18 Lab 6 preview   Project 5;   
+Wednesday, November 25 Lab questions    Private meditation on processor design at a location of your choosing. 
+Wednesday, December 3 Lab questions   Project 6;   
+Wednesday, December 10 Final    
+""
+",NULL,NULL
+34,Rensselaer Polytechnic Institute,Department of Computer Science,CSCI-2500 Computer Organization,http://www.cs.rpi.edu/~chrisc/COURSES/CSCI-2500/FALL-2009/,36,Fall,2009,"""Schedule of Topics
+• Introduction to Unix and C: Assignment 1.
+• History, Performance and Why Parallelism?: P&H/Chapter 1 and class hand-out, Assignment 2.
+• Assembly Language Programming MPIS and x86: P&H/Chapter 2 and hand-outs, Assignments 3 and
+4.
+• Digital Logic: P&H/Appendix B, Assignment 5.
+• Computer Arithmetic: P&H/Chapter 3, Assignment 6.
+• Building a Processor: P&H/Chapter 4, hand-out, start of group project.
+• Pipelining & Multiprocessors: P&H/Chapters 4 and 7 plus lecture notes, Assignment 7.
+• Memory Hierarchy: P&H, Chapter 5, finish-up group project.""
+","""Introduction to computer organization, assembler language, and operating systems with a heavy emphasis
+on systems and low-level programming. Topics include, but are not exclusively limited to:
+• Organization/design of processors, memory and I/O.
+• Numeric representation including binary integer and floating point number systems.
+• Digital logic including Boolean algebra, gates, digital logic circuits, and memory.
+• Assembly language including instruction formats, addressing modes, instruction types, flow of control,
+the assembly process, macros, linking, loading.
+• Advanced architectures including RISC architectures and parallel architectures.
+• Operating systems virtual memory, processes and interprocess communication.""
+","""Learning Outcomes
+By the end of this course, you will be able to:
+1. Apply the concepts of the C programming language to the construction of moderately complex software
+implementation problems.
+2. Apply the concepts of assembly language to correct and efficient translation of a given C programming
+language into the course required assembly language(s).
+3. Apply the concepts of integer and floating point formats to convert from the base-10 integer or
+scientific format into the correct machine readable binary format.
+4. Apply the concepts of Boolean Algebra to simplify given Boolean equations
+5. Apply the concepts of K-Maps to the problem of Boolean expression simplification.
+6. Apply the concepts of Performance to the analysis of computer performance problems.
+7. Apply the concepts of a multicycle datapath and control by showing in written form the processing
+steps that different classes of instructions require as they move through the datapath and control
+hardware structures.
+8. Apply the concepts of a pipelined datapath and control by showing in written form the processing
+steps that different classes of instructions require as they move through the datapath and control
+hardware structures.
+9. Apply the concepts of caching and memory hierarchy to solve a problem which requires you to
+design the “best” cache system given particular design constraints.
+10. Apply the concepts of parallel programming to the construction/implementation of a correct and
+efficiently executing multithreaded program.""
+"
+35,University of Maryland-College Park,Department of Computer Science,CMSC 311 - Computer Organization,NULL,37,Fall,2009,"""Date  Subject  Reading Assignment  Lab  Slides  
+8/31/09  Overview of Class  Chapter 1   Class slides  
+9/2/09  Programming tools and Bits and Bytes  Section 2.1   Class slides  
+9/9/2009  Integers and Floating Point  Sections 2.2 - 2.5  Lab 1 out  Class slides  
+9/14/2009  Reverse Engineering  Advanced Disassembly   Class slides  
+9/16/2009  Assembley Programming - Control  Sections 3.1 - 3.6  Lab 1 is due
+
+Lab 2 is out
+ Class slides  
+9/21/2009  Assembley Programming - Control II  Sections 3.1 - 3.6   Class slides  
+9/23/2009  Assembley Programming - Procedures  Sections 3.7   Class slides  
+9/28/2009  Assembley Programming - Data  Sections 3.8 - 3.11   Class slides Jump Table Overview  
+9/30/2009  Stack and Heap Overflows  Smashing the Stack for fun and Profit 
+
+Heap Overflows 
+ Lab 2 is due
+ Class slides  
+10/5/2009  Program Optimization I  Sections 5.1 - 5.6  Lab 3 Handout
+
+Lab 3 tar file
+ Class slides  
+10/7/2009  Program Optimization II  Sections 5.7 - 5.16   Class slides  
+10/12/2009  Exam Review    Exam 1 Sample Problems  
+10/14/2009  Exam I   Lab 3 is due
+
+Lab 4 is out
+  
+10/19/2009  Memory Hierarchy  Sections 6.1 - 6.4    
+10/21/2009  Cache Memories  Sections 6.5 - 6.8    
+10/26/2009  Linking  Chapter 7    
+10/28/2009  Exception Control Flow I  Sections 8.1 - 8.4  Lab 4 is due
+  
+11/2/2009  Exception Control Flow II  Sections 8.5 - 8.8  Lab 5 is out
+  
+11/4/2009  Time Measurement  Chapter 9    
+11/9/2009  Virtual Memory  Sections 10.1 - 10.8    
+11/11/2009  P6/Linux Memory  Sections 10.7 - 10.8    
+11/16/2009  Dynamic Storage I  Section 10.9    
+11/18/2009  Dynamic Storage II  Sections 10.10 - 10.13  Lab 5 is due
+
+Lab 6 is out
+  
+11/23/2009  Exam II     
+11/25/2009  System IO  Chapter 11    
+11/30/2009  Virtualization I  TBD    
+12/2/2009  Virtualization II  TBD    
+12/7/2009  Network Programming  Sections 12.1 - 12.4    
+12/9/2009  Concurrent Servers  Sections 13.1 - 13.3  Lab 6 is due
+  
+12/17/2009  Final Exam 1:30pm - 3:30pm  
+""
+","""Objectives
+The aim of CMSC 311 is to help you become a better programmer by teaching you the basics concepts underlying all computer systems. This class will teach you what really happens when your programs run, so that when things go wrong (as they always do) you will have the intellectual tools to solve the problems.
+ 
+Here are some of the realities of systems programming that we will be dealing with in this class:
+a.	Intâs are not integers. Floatâs are not reals. Our finite representation of numbers has significant limitations, and because of these limitations we sometimes have to think in terms of bit-level representations.
+b.	You must know assembly language. Even if you never write programs in assembly, the behavior of a program cannot be understood sometimes purely based on the abstraction of a high-level language. Further, understanding the effects of bugs requires familiarity with the same machine-level model.
+c.	Memory matters. Computer memory is not unbounded. It must be allocated and managed. Memory referencing errors are especially pernicious. An erroneous updating of one object can cause a change in some logically unrelated object. Also, the combination of caching and virtual memory provides the functionality of a uniform unbounded address space, but not the performance.
+d.	There is more to performance than asymptotic complexity. Constant factors also matter. There are systematic ways to evaluate and improve system performance.
+e.	Computers do more than execute instructions. They also need to get data in and out and they interact with other systems over networks.
+""
+",NULL
+36,University of Maryland-College Park,Department of Electrical Engineering,ENEE 350 Computer Organization,NULL,40,Fall,2009,"""Class 1: Chapter 1. Introduction, and Appendix A Review of number systems
+conversions and complement arithmetic.
+Class 3: Chapter 1. Introduction, history (memorize Fig. 1-2)
+Class 5: Chapter 2. Computer systems organization; and Chapt. 5 Secs. 5.4 – 5.6.
+Class 7: Chapter 3 (Sections 3.3 to end). Memory, CPU, chips, buses, interfacing.
+Class 10: Chapter 4. The microprogramming level.
+(Secs. 4.1-4.3 & Mic-1/Mac-1, Microarchitecture Notes)
+Class 17: Chapter 5. The conventional machine level (& addressing modes).
+Class 20: Chapter 7. The assembly language level. (& examples from Silio notes)
+Class 31: Appendix B. and Silio notes: Floating-point data representations.
+Class 34: Chapter 6. The operating system machine level; piplining, cache, branch
+prediction (Secs. 4.4–4.6) & virtual memory (Sec. 6.1).""
+",NULL,NULL
+37,University of Maryland-College Park,Department of Electrical Engineering,ENEE 350H Computer Organization,http://www.ece.umd.edu/class/enee350.F2009/,41,Fall,2009,"""Aug 31 Intro to course Chap. 1, 4 P1 out
+Sep 7 Machine-level instructions Chap. 2, A
+Sep 14 Machine-level instructions, machine arithmetic Chap. 2, A, 3 P1 due
+Sep 21 Machine arithmetic, processor implementation Chap. 3, 5, B, C P2 out
+Sep 28 Processor implementation Chap. 5, B, C
+Oct 5 Processor implementation Chap. 5, B, C
+Oct 12 Performance Chap. 4 P2 due
+Oct 19 Review & Midterm (Thursday, October 22, in class) P3 out
+Oct 26 Pipelining Chap. 6
+Nov 2 Pipelining Chap. 6
+Nov 9 Memory hierarchy Chap. 7 P3 due
+Nov 16 Memory hierarchy, Operating systems Chap. 7 & readings P4 out
+Nov 23 Operating systems, Storage architectures Chap. 8 & readings
+Nov 30 Advanced stuff Chap. 9 & Readings
+Dec 7 Final Review P4 due
+Exams Final Exam (Tuesday, December 15, 8:00 a.m.)""
+","""is course is intended to give you a basic understanding of how computers execute programs.
+Understanding computers means understanding the hardware/software process of how you and the
+computer work together to have the computer carry out a concept. In your introductory computer
+courses that used or taught programming (e.g. ENEE 114), you learned how to express a concept in
+terms of a high-level programming language such as C. ENEE 244 taught you the basics building
+blocks of hardware (flip-flops, gates, etc.). ENEE 350 is the course where these two approaches meet.
+You will see in this course how a low-level language is executed by the hardware, and you will see
+how to put together basic hardware building blocks to form the functional units of a computer.
+To achieve these goals, you will partially design and “build” simple computers at various levels of
+detail. Building in this course will not mean connecting chips and gates (we assume you can do that
+from ENEE 244). Rather, you will describe the hardware in diagrams, finite-state machines, and
+hardware simulators written in C.""
+",NULL
+38,University of Maryland-College Park,Department of Computer Science,CMSC 313:  Introduction to Computer Systems,http://www.cs.umd.edu/class/fall2009/cmsc313,38,Fall,2009,"""Unix Memory Model (1 week)
+ Moving from Java to C (3 weeks)
+ Pointers and dynamic data structures in C (2 weeks)
+ I/O, standard libraries (1 week)
+ Testing (0.5 weeks)
+ Assembly Language (1 week)
+ Process control (0.5 week)
+ Systems programming (1 week)
+ Program measurement and optimization (1 week)
+ Multithreaded programming with pthreads (1 week)
+ Libraries and linking (1.5 weeks)
+ Dynamic memory management (0.5 weeks)""
+","""The goal of the course is to convey the fundamental concepts that enable programs to execute on real hardware.
+Those concepts include how the operating system virtualizes the hardware to provide basic services and abstractions
+to enable a user program to effectively use the available hardware resources. The course also addresses how different
+programming constructs and idioms work.
+The basic abstraction of a program running as one or more threads of control in a single at address space (a Unix
+process) is the key to the course. Emphasizing that abstraction as the underlying model for understanding how a
+program works, from both the user program and hardware perspective (with the OS in between), run as a theme
+through all topics in the course. Examples include C pointers (to data and functions), function calls and runtime
+stack management, dynamic memory management in the heap, and the fork/exec system calls.""
+",NULL
+39,University of Maryland-College Park,Department of Computer Science,CMSC 411 - Computer Systems Architecture,http://www.cs.umd.edu/class/fall2009/cmsc411/,39,Fall,2009,"""List of Topics (Tentative)
+Unit 1 (Chapter 1): Computer design and evaluation 
+What do we mean by computer performance? 
+How do we measure it?
+
+Unit 2 (Appendix B): Computer instruction sets 
+How are instruction sets designed? 
+How does design influence performance?
+
+Unit 3 (Appendix A): Instruction pipelining 
+What is pipelining? 
+What kinds of overhead are there in pipelining? 
+How much speedup do we get? 
+What are structural hazards, data hazards, and control hazards? 
+What techniques are used to reduce stalls? 
+How do we handle exceptions? 
+How do we handle long instructions, such as floating point arithmetic?
+
+Unit 4 (Chapters 2 & 3): Instruction-level parallelism 
+How can we take advantage of instructions that can be executed independently of others? 
+How can we do major rearrangements, in hardware and software to allow instructions to execute simultaneously? 
+How can we execute instructions in parallel in the presence of branches?
+
+Unit 5 (Appendix C & Chapter 5): Memory hierarchy 
+How big should memory units be? 
+How do we decide what to put in memory? 
+If memory is full, how do we decide what to remove? 
+How do we find something in memory? 
+How do we handle writes?
+
+Unit 6 (Chapter 6): Storage systems 
+How are input/output units such as disks and tapes organized? 
+How do buses connect storage devices? 
+How are file systems designed?
+
+Unit 7 (selections from Chapter 4 & Appendices E & H): Networks & Parallel Computing 
+Why parallel computing? 
+What are message passing vs. shared memory architectures? 
+How are computers interconnected? 
+What are the limits of parallelism? 
+What communication patterns are common?
+
+""
+","A study of computer architectures, including the following: Input/output processors and techniques. Intra-system communication, buses, caches. Addressing and memory hierarchies. Microprogramming, parallelism, and pipelining. 
+",NULL
+40,University of Washington-Seattle Campus,Department of Computer Science,CSE378: Machine Organization and Assembly Language,http://www.cs.washington.edu/education/abet_syllabi/CSE378.html,42,Fall,2009,"""machine organization, instruction sets, addressing modes, instruction encoding, subroutine
+linkages, assessing performance, datapath and control, pipelining, caches, address translation,
+I/O, exception and protection mechanisms.""
+","""Course objectives
+Fundamentals of instruction set design. CPU implementation, pipelining. Memory hierarchy. Assembly
+language programming. Compiler and operating system interfaces.
+
+The purpose of this course is to give students a basic understanding of
+computer architecture and organization, assembly language programming, and the hardware/software
+interface.""
+","""ABET Outcomes Assessed
+(b) an ability to design and conduct experiments, as well as to analyze and interpret data(c) an ability to design a computing system, component, or process to meet desired needs within realistic constraints such as economic, environmental, social, political, ethical, health and safety, manufacturability, and sustainabilityAdditional ABET Outcomes Covered
+(a) an ability to apply knowledge of mathematics, science, and engineering(e) an ability to identify, formulate, and solve computer engineering problems(k) an ability to use the techniques, skills, and modern computer engineering tools necessary for engineering practice""
+"
+41,Columbia University in the City of New York,Department of Electrical Engineering and Computer Science,CSEE W3827-1 (13281) Fundamentals of Computer Systems ,http://www1.cs.columbia.edu/~danr/3827/,43,Fall,2009,"""Date   #   Topics/chapters covered   Reading   Assigned   Due   
+9/8   1   Intro; Overview of Computer Architecture; Definitions (bit,byte,word)   M&K Ch 1       
+9/10   2   Binary number representations: 2's complement; 1's complement; floating point representations: overflow and underflow   M&K 4.3-4.4, 10.7, P&H 3.5 skip FP in MIPS   HW #1     
+9/15   3   Logic gates; XOR; Boolean Algebra; NAND and NOR gates; Taking complements; DeMorgan's Theorem; Duals   M&K 2.1-2.2, 2.8, 2.9       
+9/17   4   Standard Forms: minterms, maxterms, sum-of-products, product-of-sums   M&K 2.3   HW #2   HW #1   
+9/22   5   K-maps: simplification with implicants, Don't-care conditions   M&K 2.4-2.5       
+9/24   6   *** Catchup ***     HW #3   HW #2   
+9/29   7   Combinatorial Circuit Design: Multi-bit output functions; standard combinatorial circuits (enabler, decoder, encoder, priority encoder, mux   M&K 3.1, 3.3, 3, 3.6-3.9       
+10/1   8   Arithmetic funcs: Adder (half, full, ripple-carry, adder-subtractor); Contraction; Shifter   M&K 4.1-4.2, 4.5, 9.4   HW #4   HW #3   
+10/6   9   Sequential Circuitry: Latch, Flip-Flops, timing issues   M&K 5.1-5.3, 5.6       
+10/8   10   Sequential Circuit Analysis & Design: State machines   M&K 5.4-5.5   HW #5   HW #4   
+10/13   11   PLAs; ROM; Register Design: Load and Transfer   M&K 6.8, 7.1-7.3       
+10/15   12   Register Design cont'd: MicroOps and Counters, mux and serial transfer   M&K 7.5-7.6, 7.8-7.9     HW #5   
+10/20   13   *** Catchup and/or Midterm review ***         
+10/22   14   MIDTERM (in class)         
+10/27   15   Memory Design   M&K 8.1-8.7       
+10/29   16   Processor Design: Datapath, ALU   M&K 9.1-9.5   HW #6     
+11/3   --   ELECTION DAY - NO CLASS!         
+11/5   17   Control Word; Simple Arch; Instruction Decoder   M&K 9.6-9.8       
+11/10   18   Instruction Types and Formats   P&H 2.1-2.6   HW #7   HW #6   
+11/12   19   Branches, stacks, heaps, immediate addressing   P&H 2.7-2.8, 2.10       
+11/17   20   Single Cycle Datapath   P&H 4.1-4.4   HW #8   HW #7   
+11/19   21   Single Cycle Datapath cont'd         
+11/24   22   Pipelining   P&H 4.5-4.6   HW #9   HW #8   
+11/26   --   THANKSGIVING - NO CLASS!         
+12/1   23   Hazards   P&H 4.7-4.8       
+12/3   24   Cache & Cache Replacement Policies   P&H 5.1-5.2   HW #10   HW #9   
+12/8   25   *** Catchup and/or review ***         
+12/10   26   *** Catchup and/or review ***       HW #10   
+12/21 @ 9am??     FINAL EXAM:   Location Mudd 825?   
+""
+",NULL,
+42,Columbia University in the City of New York,Department of Electrical Engineering and Computer Science,CSEE W4824: Computer Architecture,http://www1.cs.columbia.edu/~cs4824/,44,Fall,2009,"""WEEK #1: September 9
+Course Introduction: computer design fundamentals; principle of quantitive analysis.
+WEEK #2: September 14-16
+The Hardware-Software Interface: instruction set architectures; the role of compilers. Case study: MIPS.
+WEEK #3: September 21-23
+Pipelining: review of basic concepts; implementation issues; multi-cycle operations. Case study: MIPS R4000.
+WEEK #4: September 28-30
+Instruction-Level Parallelism: dynamic scheduling; scoreboard, Tomasulo’s algorithm. Case study: IBM 360.
+WEEK #5: October 5-7
+Memory-Hierarchy Design: review of the basics of caches; cache optimization. Case study: Intel Itanium 2.
+WEEK #6: October 12-14
+Memory-Hierarchy Design: main memory; virtual memory. Case study: Intel Pentium 4 vs. AMD Opteron.
+WEEK #7: October 19-21
+Instruction-Level Parallelism: branch prediction and speculation; superscalar and VLIW architectures.
+WEEK #8: October 26-28
+Thread-Level Parallelism: multithreaded architectures. Case studies: SUN UltraSPARC and Intel Pentium 4.
+MIDTERM (tentative date!): WEDNESDAY, OCT 28th (in class). Topics covered: first seven weeks.
+WEEK #9: November 2-4 [NO CLASS 11/2: Academic Holiday]
+Parallel Architectures: taxonomy; types of parallelism; programming and communication models.
+WEEK #10: November 9-11
+Parallel Architectures: memory consistency model & cache coherency.
+WEEK #11: November 16-18
+Multi-Core Architectures: chip multi-processors (CMP) and systems-on-chip (SoC). Case study: Nehalem.
+WEEK #12: November 23-25
+Multi-Core Architectures: on-chip and off-chip communication. Case Studies: IBM Cell and NVIDIA GPU.
+WEEK #13: November 30 - December 2
+Multi-Core Architectures: embedded computing. Case Studies: ARM 11, TI OMAP platform and Intel Atom.
+WEEK #14: December 7-9
+[Final Course Review]
+WEEK #15: December 14
+Perspective: “Towards Thousand Cores Processors: Opportunities and Challenges.”""
+","""Course Description: This course is a study of modern computer architecture. The focus is on advanced
+topics, illustrated by case studies of important processors. We will cover aspects of classic processors (Intel
+80x86, IBM 360), early RISC processors (MIPS R4000), high-performance general-purpose processors
+(Intel Pentium 4, Itanium 2), state-of-the-art processors based on multi-core architectures (Intel Core, IBM
+Cell BE, Sun UltraSPARC, Intel Nehalem) as well as computing platforms for embedded applications such
+as mobile phones and automobiles (ARM, TI OMAP). When you have completed this course, you will have
+a good understanding of how cutting-edge modern processors work. Topics include:
+Fundamentals of Quantitative Analysis: Amdahl’s Law, performance and power metrics, simulation and
+benchmark suites.
+Instruction Set Design: addressing modes, operands, compiler vs. architecture tradeoffs. Case studies:
+RISC vs. Intel 80x86 instruction sets.
+Pipelining: basic concepts; performance issues, hazards and exceptions; implementation issues; multicycle
+operations. Case study: MIPS R4000 pipeline.
+Memory-Hierarchy Design: review of cache memory basics; cache optimization; memory technology; virtual
+memory. Case studies: Intel Itanium 2, Intel Pentium 4 vs. AMD Opteron.
+Instruction-level parallelism (ILP); dynamic instruction scheduling: scoreboard, Tomasulo’s algorithm; dynamic
+branch prediction and branch target buffers; hardware-based support for parallelism: speculation;
+multiple-issue processors: superscalar and VLIW architectures; exploiting ILP with software approaches.
+Case studies: IBM 360, Intel Itanium 2, Philips Trimedia.
+Thread-Level Parallelism: multithreaded architectures; simultaneous multithreading. Case studies: SUN
+UltraSPARC and Intel Pentium 4.
+Parallel and Distributed Architectures: taxonomy; programming models; memory system organization;
+cache consistency and coherency. Case study: IBM Blue Gene.
+Multi-Core Architectures: trends and challenges; chip multi-processors (CMP), systems-on-chip (SoC),
+graphics-processing unit (GPU) and networks-on-chip (NoC). Case studies: IBM Cell BE, NVIDIA GeForce,
+Intel Nehalem.
+Embedded Computing: the landscape of embedded computing; embedded computing platforms. Case studies:
+TI OMAP and ARM.""
+",NULL
+43,Duke University,Department of Computer Science,"""COMPSCI  104 - 001   Computer Organization and Programming  ",http://kedem.cs.duke.edu/cps104/,45,Fall,2009,"Course Outline:
+Introduction to Computer Organization. 
+What is in the box. 
+Integer and Floating point representation. 
+Basic data structures. 
+Instruction Set Architecture. 
+The MIPS Processor. 
+Assembly level programming. 
+Instructions and data types representations. 
+Addressing, procedure calls and Exceptions. 
+Linking & Loading. 
+Digital Logic: 
+Introduction: Digital Gates and Boolean Algebra. 
+Arithmetic and Logic circuits, 
+Other Functional Units 
+Flip-flops, Registers and Tristate drivers 
+Single Cycle Per Instruction Processor. 
+The Datapath. 
+Executing Instructions 
+Control 
+Interrupts. 
+The Memory Hierarchy. 
+Cache Memory. 
+Virtual Memory and Paging. 
+I/O Devices. 
+I/O storage devices. 
+I/O buses and arbitration 
+LANs and WANs. 
+Advanced processors: 
+Pipelined Processor. 
+Super-Scalar processor. 
+Advanced Computer Architecture. (If there is time). 
+Fast Interconnects 
+Parallel Machines ",,NULL
+44,Duke University,Department of Electrical Engineering,"""COMPSCI  220 - 01   Advanced Computer Architecture I  ",http://people.ee.duke.edu/~sorin/ece252/,46,Fall,2009,"""Topic Reading Assignments 
+Course Introduction & Computer Performance H/P Chapter 1;
+""""Instruction Sets and Beyond: Computers, Complexity, and Controversy"""" 
+Pipelined Processors
+     part 1
+     part 2 
+     part 3 
+     part 4 H/P Appendix A; 
+""""The Optimal Pipeline Depth Per Pipeline Stage is 6-8 FO4 Inverter Delays"""" 
+Hardware/Dynamic Exploitation of Instruction Level Parallelism
+    part 1
+    part 2
+    part 3
+    part 4
+    part 5
+    part 6
+    part 7 H/P 2 and 3 (3 is optional);  
+""""The Microarchitecture of the Pentium 4 Processor"""";
+""""Complexity-Effective Superscalar Processors""""; 
+""""Checkpoint Processing and Recovery: Towards Scalable Large Instruction Window Processors""""  
+Software/Static Exploitation of Instruction Level Parallelism
+    part 1
+    part 2 H/P Chapter 2;
+""""EPIC: Explicitly Parallel Instruction Computing"""" 
+Advanced Cache/Memory Designs
+    part 1 (of 1)
+ H/P Chapter 5;
+""""An Adaptive, Non-Uniform Cache Structure for Wire-Dominated On-Chip Caches""""; 
+""""A Fully-Associative Software-Managed Cache Design"""";
+""""Exceeding the Dataflow Limit via Value Prediction"""" 
+Multithreading, Multicore, and Multiprocessors
+          Motivations: Power Efficiency, ILP Limits, and TLP
+          Multithreading
+          Multicore Processors 
+ H/P Chapter 4 (and 3.5); 
+""""Power: A First Class Design Constraint""""; 
+""""Exploiting Choice: Instruction Fetch and Issue on an Implementable Simultaneous Multithreading Processor""""; 
+""""Multiscalar Processors""""; 
+""""Niagara: A 32-Way Multithreaded SPARC Processor""""  
+""""NVidia Tesla: A Unified Graphics and Computing Architecture""""   
+Advanced Topics: Fault Tolerance, Virtual Machines, Security, Tiled Processors, Nanocomputing 
+ """"DIVA: A Reliable Substrate for Deep Submicron Microarchitecture Design"""";  
+""""Virtual Machine Monitors: Current Techology and Future Trends"""";  
+""""RIFLE: An Architectural Framework for User-Centric Information-Flow Security""""; 
+""""A Design Space Evaluation of Grid Processor Architectures""""; 
+""""NANA: A Nano-scale Active Network Architecture""""  
+""
+","""The objective of this course is to learn the fundamental aspects of computer architecture design and analysis. 
+ 
+The course focuses on processor design, pipelining, superscalar, out-of-order execution, caches (memory hierarchies), virtual memory, storage 
+systems, and simulation techniques. Advanced topics include a survey of parallel architectures and future directions in computer architecture. 
+""
+",NULL
+45,Harvard University,Department of Computer Science,"""Computer Science 61: Systems Programming and Machine Organization ",http://www.eecs.harvard.edu/~mdw/course/cs61/mediawiki/index.php/,47,Fall,2009,"""Th 9/3/09  Course overview    
+Tu 9/8/09  Machine programming 1: Introduction  Chapter 3.1-3.5   
+Th 9/10/09  Machine programming 2: Control flow  Chapter 3.6  Lab 1 (binary bomb) released  
+Tu 9/15/09  Machine programming 3: Procedures  Chapter 3.7   
+Th 9/17/09  Machine programming 4: Structured data  Chapter 3.8-3.11   
+Tu 9/22/09  Machine programming 5: Buffer overruns and stack exploits  Chapter 3.12-3.13, 3.16  Lab 1 due, Lab 2 (buffer lab) released, Quiz in section this week  
+Th 9/24/09  Program optimization  Chapter 5.1-5.11   
+Tu 9/29/09  Linking and loading  Chapter 7.1-7.11   
+Th 10/1/09  Memory and storage technologies  Chapter 6.1-6.3  Lab 2 due, Lab 3 (malloc) released  
+Tu 10/6/09  Dynamic memory allocation 1  Chapter 10.9   
+Th 10/8/09  Dynamic memory allocation 2  Chapter 10.10-10.13  Lab 3 design document due  
+Tu 10/13/09  Dynamic memory allocation 3    
+Th 10/15/09  Caching  Chapter 6.4-6.8   
+Tu 10/20/09  Cache performance measurement and optimization  Chapter 5.13-5.16  Quiz in section this week  
+Th 10/22/09  Virtual memory  Chapter 10.1-10.5  Lab 3 due  
+Tu 10/27/09  UNIX Systems Programming 1: files, pipes, terminals  Chapter 11.1-11.10   
+Th 10/29/09  Midterm exam in class    
+Tu 11/3/09  UNIX systems programming 2: processes  Chapter 8.1-8.5  Lab 4 (shell) released  
+Th 11/5/09  No lecture    
+Tu 11/10/09  Threads and concurrency  Chapter 13.1-13.3  Quiz in section this week  
+Th 11/12/09  Synchronization  Chapter 13.4  Lab 4 due, Lab 5 (threads) released  
+Tu 11/17/09  Semaphores, CVs, and monitors  Chapter 13.5   
+Th 11/19/09  Synchronization problems and deadlock  Chapter 13.7   
+Tu 11/24/09  Sockets programming 1: Clients  Chapter 12.1-12.4   
+Th 11/26/09  No lecture - Thanksgiving    
+Tu 12/1/09  Sockets programming 2: Concurrent servers  Chapter 12.5-12.7, Chapter 13.6  Lab 5 due, Quiz in section this week  
+Tu 12/8/09  Exam review session in G115 (our regular room), from 2:30-4pm  
+""
+",NULL,NULL
+46,Harvard University,Department of Computer Science,Computer Science 141. Computing Hardware,http://www.eecs.harvard.edu/cs141/,49,Fall,2009,"""Week Lecture Topics Hardware Lab
+8/31 Intro, passive elements, transistors, gates No Lab { Assign Lab Times
+9/7 Boolean algebra and combinational logic Lab #1 { Lab Intro
+9/14 Logic minimization Lab #2 { Comb. Circuits/Counter
+9/21 Programmable and steering logic Lab #3 { Verilog Adder
+9/28 Arithmetic Lab #4, Part 1 { CL Adder
+10/5 Sequential logic design Lab #4, Part 2 { Multiplier
+10/12 Design of Finite State Machines (FSMs) Lab #5 { Supercounter
+10/19 Memory and bussing No lab { Midterm
+10/26 Instruction Set Architecture (ISA) design Lab #6 { Verilog Finite State Machine
+11/2 Machine performance Lab #7 { Memory
+11/9 Datapath Design Lab #8, Part 1 { MIPS Datapath
+11/16 Datapath Design and Pipelining Lab #8, Part 2 { MIPS Datapath
+11/23 Datapath Design and Pipelining Problem Set only (No lab)
+11/30 Memory Systems Lab #8, Part 2 { MIPS Datapath
+12/7 Reading Week Lab Final""
+","""The main emphasis of this course is on the basic concepts of digital computing hardware and
+fundamental digital design principles and practices for computer systems. This course will
+cover topics ranging from logic design to machine organization and will address the impact
+of hardware design on applications and system software.""
+",NULL
+47,Harvard University,Department of Computer Science,Computer Science 246r. Advanced Computer Architecture,http://www.eecs.harvard.edu/~dbrooks/cs246/,49,Fall,2009,"""Introduction to Computer Architecture and Power‐Aware
+Computing
+• Modern CPU Design
+• Deep pipelines/Multiple Issue
+• Dynamic Scheduling/Speculative Execution
+• Memory Hierarchy Design
+• Pentium Architecture Case Study
+• Multiprocessors and Multithreading
+• Embedded computing devices
+• Dynamic Frequency/Voltage Scaling
+• Thermal‐aware processor design
+• Power‐related reliability issues
+• System‐Level Power Issues
+9
+• Software approaches power management""
+","""Focus on what modern computer architects worry
+about (both academia and industry)
+• Get through the basics of modern processor design
+• Look at technology trends: multithreading, CMP,
+power‐, reliability‐aware design
+• Recent research ideas, and the future of computing
+hardware""
+",NULL
+48,North Carolina State University at Raleigh,Department of Computer Science,CSC 234 Computer Organization and Assembly Language,http://courses.ncsu.edu/csc234/,50,Fall,2009,"""Thu
+08/20/09
+1
+Introduction To Architecture
+Tue
+08/25/09
+2
+Unsigned Number Systems
+HW0
+Thu
+08/27/09
+3
+Signed Number Systems
+Tue
+09/01/09
+4
+Basic Components
+HW1
+Thu
+09/03/09
+5
+8086 Architecture
+HW2
+Tue
+09/08/09
+6
+Environment & ASM Thru C=A+B Code
+HW3
+Thu
+09/10/09
+7
+ABC Program Format & TOOLS Discussion
+HW4
+Tue
+09/15/09
+8
+Compares and Jumps
+TOOLS
+Thu
+09/17/09
+9
+File I/O & KEY Discussion
+Tue
+09/22/09
+10
+Efficiency & Miscellaneous topics
+Thu
+09/24/09
+Test 1 *** OPEN BOOK - NO CALCULATORS ***
+Tue
+09/29/09
+11A, 11B, 11C
+Program-1 ROMAN and Programming Issues
+KEY
+Thu
+10/01/09
+12A, 12B
+Multiply & Divide
+Tue
+10/06/09
+13
+Indirect Addressing
+ROMAN_DESIGN
+Thu
+10/08/09
+No Class Fall Break
+Tue
+10/13/09
+14
+Subroutines
+HW5 and HW6
+Thu
+10/15/09
+16A, 16B, 16C
+Logical Operations and Program-2 FOURIER/COSINE
+ROMAN
+Tue
+10/20/09
+15
+Links To High Level Languages
+Thu
+10/22/09
+17
+Intel 8086 Machine Code
+HW7
+Tue
+10/27/09
+18
+Testing Procedures
+COSINE
+Thu
+10/29/09
+19
+Additional Examples Of Logical Operations
+HW8
+Tue
+11/03/09
+Test 2 *** OPEN BOOK - NO CALCULATORS ***
+Thu
+11/05/09
+20
+Software Development Process
+Tue
+11/10/09
+21
+Program-3 LIFE
+FOURIER
+Thu
+11/12/09
+22
+Java Virtual Machine Architecture
+Tue
+11/17/09
+23
+Microcode, String Instrs, Interrupts
+Thu
+11/19/09
+24, 25
+Tradeoffs in design & Performance Issues
+Tue
+11/24/09
+No Lecture - COE Freshmen Engineering Design Day
+LIFE
+Thu
+11/26/09
+No Class Thanksgiving
+Tue
+12/01/09
+26
+Advanced Intel Architecture (Post 8086)
+Thu
+12/03/09
+27
+Role of Architecture and Assembler""
+","""5.0 Course Objectives
+By the end of the course, students will be able to:
+ Add and subtract and convert, signed and unsigned integers, using bases 2, 10 and 16.
+ Enumerate the functional components of a computer; explain trade-offs in computer design as they relate to cost and function and performance; outline computer architectural enhancements beyond the Von Neumann model.
+ Explain the basic operation of interrupts and microcode.
+ Program in assembly language, and link assembler subroutines with a High Level Language.
+ Convert symbolic assembler code into machine code and convert machine code into symbolic assembler code.
+ Explain the basic operation of the Java Virtual Machine and Java Bytecode.""
+",NULL
+49,North Carolina State University at Raleigh,Department of Electrical Engineering,ECE 109 Introduction to Computer Systems,http://courses.ncsu.edu/ece109/,52,Fall,2009,"""19-Aug Chapter 1  Overview of class, hardware vs. software, layers of abstraction, Turing machines (entire chapter)  
+24-Aug Chapter 2  2.1-2.4 -- binary representation of signed and unsigned integers (sign-magnitude, one's complement, two's complement); conversion between binary and decimal representations  
+26-Aug   2.5, 2.6, 2.7.4 -- binary arithmetic, overflow, hexadecimal notation 
+31-Aug   2.7.3, 2.7.2 -- ASCII code, floating point representation. (Also see Wikipedia example from class.)  
+2-Sep Chapter 3  3.1, 3.2 -- nMOS transistor, pMOS transistor, CMOS logic circuits, logic gates (AND, OR, NOT) 
+9-Sep   3.2.3 -- combinational logic circuits,logical completeness 
+14-Sep   3.2.4, 3.3 -- DeMorgan's Law, multiplexer, adder 
+16-Sep   3.4, 3.5 -- latches, decoder, memory  
+21-Sep   3.4, 3.5 -- memory example 
+23-Sep   3.6 state machines  
+30-Sep   3.6 more state machines 
+5-Oct Chapter 4  4.1-4.4: Von Neumann architecture, components, instruction format, access to memory via MAR/MDR  
+7-Oct   4.1-4.4: Von Neumann architecture, instruction processing, instruction format  
+12-Oct Chapter 5  5.1, 5.2 -- LC-3 architecture, operate instructions (ADD, AND, NOT) 
+    5.3.1-5.3.4, 5.4.1-- Data movement instructions (LD, ST, LDR, STR, LDI, STI), control instructions  
+  Chapter 6  5.3.4 (LEA), 5.4 (JMP, TRAP), 6.1 (problem solving)  
+    6.1, 6.2 -- Debugging  
+  Chapter 7  6.2.2 -- More debugging; 7.1-7.2 -- LC-3 Assembly Language  
+    7.3 -- assembler, symbol table  
+    More assembly language code examples (right shift, I think)  
+  Chapter 8  8.1-8.3 -- Memory-mapped I/O, device registers, polling vs. interrupts, keyboard, display  
+      
+  Chapter 9  9.1-9.2 -- Subroutines (JSR, JSRR) and service routines (TRAP)  
+    Subroutine examples  
+  Chapter 10  More subroutine examples, stacks (10.1)  
+    8.5, 10.2 -- Interrupts (implementation), processor status register (PSR), interrupt service routines (ISRs), RTI instruction  
+""
+",NULL,"""This course introduces you to the fundamentals of computer engineering from both the hardware and software points of
+view. It serves as a “roadmap” for the rest of the computer courses that you will take here. After taking this course, you will
+have a better understanding of how a program is translated into commands for execution on hardware, and how the hardware
+executes those commands using, ultimately, electrons to do the work.
+At the end of this course, students will be able to:
+· Demonstrate a basic understanding of computer system architecture,
+· Program computer systems at the machine and assembly level,
+· Describe what roles are carried out by the microarchitecture, data flow and control flow portions of computers,
+· Describe how a high level language such as C is translated from text, to assembly, to machine language, to run time
+actions, to voltage variations in the underlying switching fabric, and
+· Describe how simple input/output (I/O) devices are controlled by microprocessors.""
+"
+50,North Carolina State University at Raleigh,Department of Computer Science,CSC 236 Computer Organization and Assembly Language for Computer Scientists,http://courses.ncsu.edu/csc236/lec/001/,50,Fall,2009,"""Thu
+08/20/09
+1
+Introduction To Architecture
+Tue
+08/25/09
+2
+Unsigned Number Systems
+HW0
+Thu
+08/27/09
+3
+Signed Number Systems
+Tue
+09/01/09
+4
+Basic Components
+HW1
+Thu
+09/03/09
+5
+8086 Architecture
+HW2
+Tue
+09/08/09
+6
+Environment & ASM Thru C=A+B Code
+HW3
+Thu
+09/10/09
+7
+ABC Program Format & TOOLS Discussion
+HW4
+Tue
+09/15/09
+8
+Compares and Jumps
+TOOLS
+Thu
+09/17/09
+9
+File I/O & KEY Discussion
+Tue
+09/22/09
+10
+Efficiency & Miscellaneous topics
+Thu
+09/24/09
+Test 1 *** OPEN BOOK - NO CALCULATORS ***
+Tue
+09/29/09
+11A, 11B, 11C
+Program-1 ROMAN and Programming Issues
+KEY
+Thu
+10/01/09
+12A, 12B
+Multiply & Divide
+Tue
+10/06/09
+13
+Indirect Addressing
+ROMAN_DESIGN
+Thu
+10/08/09
+No Class Fall Break
+Tue
+10/13/09
+14
+Subroutines
+HW5 and HW6
+Thu
+10/15/09
+16A, 16B, 16C
+Logical Operations and Program-2 FOURIER/COSINE
+ROMAN
+Tue
+10/20/09
+15
+Links To High Level Languages
+Thu
+10/22/09
+17
+Intel 8086 Machine Code
+HW7
+Tue
+10/27/09
+18
+Testing Procedures
+COSINE
+Thu
+10/29/09
+19
+Additional Examples Of Logical Operations
+HW8
+Tue
+11/03/09
+Test 2 *** OPEN BOOK - NO CALCULATORS ***
+Thu
+11/05/09
+20
+Software Development Process
+Tue
+11/10/09
+21
+Program-3 LIFE
+FOURIER
+Thu
+11/12/09
+22
+Java Virtual Machine Architecture
+Tue
+11/17/09
+23
+Microcode, String Instrs, Interrupts
+Thu
+11/19/09
+24, 25
+Performance Issues
+Tue
+11/24/09
+No Lecture - COE Freshmen Engineering Design Day
+LIFE
+Thu
+11/26/09
+No Class Thanksgiving
+Tue
+12/01/09
+26
+Advanced Intel Architecture (Post 8086)
+Thu
+12/03/09
+27
+Role of Architecture and Assembler""
+","This course explains what happens beneath High Level Languages such as C++ and Java. It covers the history of computing, number systems, Von Neumann architecture, instruction sets, machine code, assembly language programming, program testing, compilers, logical operations, microprogramming and interrupts. It includes a detailed study of a contemporary processor, the Intel x86 family.
+","""By the end of the course, students will be able to:
+ Add and subtract and convert, signed and unsigned integers, using bases 2, 10 and 16.
+ Enumerate the functional components of a computer; explain trade-offs in computer design as they relate to cost and function and performance; outline computer architectural enhancements beyond the Von Neumann model.
+ Explain the basic operation of interrupts and microcode.
+ Program in assembly language and link assembler subroutines with a High Level Language.
+ Convert symbolic assembler code into machine code and convert machine code into symbolic assembler code.
+ Explain the basic operation of the Java Virtual Machine and Java Bytecode.""
+"
+51,North Carolina State University at Raleigh,Department of Electrical Engineering,CSC 456 Computer Architecture and Multiprocessors,http://courses.ncsu.edu/ece506/lec/001/,51,Fall,2009,"""1. (W, Aug 19): Syllabus discussion, (Chap 1) Introduction
+
+
+2. (M, Aug 24): 
+
+
+3. (W, Aug 26): (Chap 2) Parallel programming model
+
+
+4. (M, Aug 31): 
+
+
+5. (W, Sep 2): (Chap 3) Shared memory parallel programming
+
+
+6. (M, Sep 7): ---- No class, Labor day holiday ----
+
+
+7. (W, Sep 9): 
+
+
+8. (M, Sep 14): 
+
+
+9. (W, Sep 16): (Chap 4) Correctness and performance issues
+
+
+10. (M, Sep 21): 
+
+
+11. (W, Sep 23): (Chap 6) Memory hierarchy organization
+
+
+12. (M, Sep 28): 
+
+
+13. (W, Sep 30): (Chap 7) Introduction to coherency, consistency, and synchronization
+
+
+14. (M, Oct 5): (Chap 8) Bus-based cache coherent multiprocessors
+
+
+15. (W, Oct 7): 
+
+
+16. (M, Oct 12): 
+
+
+17. (W, Oct 14): *MIDTERM EXAM*
+
+
+18. (M, Oct 19): (Chap 9) Synchronization
+
+
+19. (W, Oct 21): 
+
+
+20. (M, Oct 26): (Chap 10) Memory consistency models
+
+
+21. (W, Oct 28): 
+
+
+22. (M, Nov 2): 
+
+
+23. (W, Nov 4): (Chap 11) Distributed shared memory multiprocessors
+
+
+24. (M, Nov 9): 
+
+
+25. (W, Nov 11): 
+
+
+26. (M, Nov 16): (Chap 12) Interconnection network
+
+
+27. (W, Nov 18): 
+
+
+28. (M, Nov 23): Multicore architectures 
+
+
+29. (W, Nov 25): ---- No class, Thanksgiving break ----
+
+
+30. (M, Nov 30): 
+
+
+31. (W, Dec 2): Future directions and closing comment
+""
+","""1.1. Goal
+This course addresses topics in parallel computer architectures, i.e. architectures that support parallel processing.
+The course overviews fundamental issues related to parallel processing: programming paradigms, correctness,
+and performance; and case studies of modern parallel systems.
+This course is intended for:
+1. First-year PhD students who are looking to build foundational knowledge in parallel computer architecture
+and parallel programming, as one major area of computer architecture. The topics covered in this course
+hopefully will enable them to read technical and research papers and understand more advanced concepts
+as well as understand the implications of various designs in parallel computer architecture.
+2. First-year Master’s degree students who are looking to build broad knowledge in the area of parallel computer
+architecture and parallel programming.
+3. Final-year undergraduate students who have taken basic computer organization course, and are looking
+to learn more advanced concepts in computer architecture, especially in the area of multiprocessor and
+multicore technology, as well as in parallel programming.
+Graduate students should take this course prior to taking the more advanced ECE 706 (Parallel Processing).""
+","""1.2. Objectives
+By the end of the course, you should be knowledgable in the following concepts in parallel computing/
+architecture:
+ Why parallel architectures are needed, where and how they are used
+ Parallel programming models: shared memory (e.g. OpenMP) and message passing
+ Parallel programming contstructs: locks, barriers, point-to-point synchronization
+ Parallelization techniques: loop level, task level, and algorithm level.
+ Correctness issues: variable scope, synchronization points, computation ordering
+1
+ Performance issues: loop transformations, thread scheduling, locality, page allocation, false sharing
+ Memory hierarchy organization: cache organization, write policy (write-through vs. write-back), replacement
+policy
+ Bus-based multiprocessor architecture
+ Cache coherency on bus-based machines: coherence protocols, coherence misses, sharing patterns and
+object behavior, latency and bandwidth trade-offs
+ Hardware support for synchronization primitives
+ Memory consistency issues: problems, sequential consistency, processor consistency, release consistency,
+etc.
+ Cache coherency on distributed shared memory machines: directory-based
+ Interconnection network
+ Case studies of recent machines""
+"
+52,Ohio State University-Main Campus,NULL,CSE  360 - Introduction to Computer Systems ,NULL,53,NULL,NULL,NULL,NULL,NULL
+53,Ohio State University-Main Campus,Department of Electrical Engineering,"""662 Theory and Design of Digital Computers",http://www.ece.osu.edu/~orin/ece662/,54,Fall,2009,"""Class Schedule (Tentative)
+
+
+Topic  Lecture  Reading
+Basic structure of computers  1  1-18
+Motorola 68000 reg. structure, Simple Computer example  2  130-132
+Bus structures, counter design  3  Appendix A
+Number formats, arithmetic operations, overflow  4  25-32, 368-371
+Memory locations, addresses  5  33-37
+Instructions & instruction sequencing  6  37-47
+Addressing modes  7  48-58, 131-136
+68000 instruction set  8  94-98, 136-144
+      Appendix C
+68000 stacks and subroutines  9  68-73, 146-151
+ECE662 simulator  10   
+OSIAC 662  11  411-425
+OSIAC 662 - data paths  12   
+OSIAC 662 - general-purpose registers, adder  13   
+OSIAC 662 - open-collector bus, temporary regs.  14   
+Hardwired control  15  425-429
+Example Control Unit  16   
+Encoder circuitry  17   
+Review for midterm  18   
+Midterm  19   
+Microprogrammed control  20  429-435
+Memory basics  21  291-295, 313-314
+Cache memories  22  314-322
+Cache example  23   
+Cache mapping techniques  24  322-325
+Machine problem  25   
+Direct memory access  26  234-237
+Bus arbitration  27  237-240
+Fast adders  28  371-376
+Multiplication  29  376-390
+Review for final  30   ""
+",NULL,NULL
+54,University of Florida,CISE,CDA 4102/5155: Computer Architecture Principles,http://www.cise.ufl.edu/~prabhat/architecture.html,56,,0,,,
+55,University of Florida,NULL,CDA 3101 Introduction to Computer Organization,NULL,55,NULL,NULL,NULL,NULL,NULL
+56,University of Pennsylvania,Department of Computer & Information Science,CIS 240: Introduction to Computer Systems,http://www.seas.upenn.edu/~cis240/,81,Fall,2009,"Week Class Topic Notes P&P Readings Homework 
+1 Wed, 9/9 Logistics logistics None   
+2 Mon, 9/14 Introduction intro Ch 1 hw1 (hw1 soln) 
+Wed, 9/16 Bits bits Ch 2   
+3 Mon, 9/21 Combinational Logic gates adders latches fsms Ch 3   
+Wed, 9/23 Sequential Logic   
+4 Mon, 9/28 No Class (Yom Kippur) hw2 (hw2 soln) 
+Wed, 9/30 FSMs   
+5 Mon, 10/5 Von Neumann vn Ch 4   
+Wed, 10/7 C/LC4 Control lc4regs Ch 5,11,12,13   
+6 Mon, 10/12 C/LC4 Data lc4globals   
+Wed, 10/14 C/LC4 Functions lc4funcs Ch 14   
+7 Mon, 10/19 No class (Fall break)       
+Wed, 10/21 I/O and OS lc4ioos Ch 8,9   
+8 Mon, 10/26 PennSim       
+Wed, 10/28 Mid-term (in class)       
+9 Mon, 11/2 Mid-term solutions       
+Wed, 11/4 Pointers   Ch 16   
+10 Mon, 11/9 Arrays     
+Wed, 11/11 Missile   Ch 15   
+11 Mon, 11/16 No class (ISCA)       
+Wed, 11/18 Heap   Ch 19   
+12 Mon, 11/23 Safety / Writing       
+Wed, 11/25 No class (T-giving)       
+13 Mon, 11/30 Files and C I/O   Ch 18   
+Wed, 12/2 Containers in C     
+14 Mon, 12/7 Buffer       
+Wed, 12/9 Review    
+",NULL,NULL
+57,University of Pennsylvania,Department of Computer & Information Science,CIS 371 - Computer Organization and Design,http://www.cis.upenn.edu/~milom/cis371-Spring09/,57,Spring,2009,"
+    * Unit 0 - Introduction
+    * Unit 1 - Instruction Set Architectures
+    * Unit 2 - Single-Cycle Datapath and Control
+    * Unit 3 - Arithmetic
+    * Unit 4 - Multi-Cycle
+    * Unit 5 - Pipelining
+    * Unit 6 - Superscalar
+    * Midterm Review
+    * Unit 7 - Caches
+    * Unit 8 - Static and Dynamic Scheduling
+    * Unit 9 - Shared Memory & Multicore
+    * Unit 10 - Virtual Memory & I/O
+    * Unit 11 - Reliability
+    * Unit 12 - Power
+    * Unit 13 - Vectors
+    * Unit 14 - XBox 360
+
+",NULL,NULL
+58,University of Pennsylvania,Department of Computer & Information Science,CIS 372: Computer Organization and Design Lab,http://www.cis.upenn.edu/~cse372/,81,Spring,2009,"•Wed., 1/21 - Introduction
+•Wed., 1/28 - Synthesizable Verilog
+•Wed., 2/11 - Verilog Simulation
+•Wed., 3/3 - Pipeline Lab",NULL,NULL
+59,University of Pennsylvania,Department of Computer & Information Science,CIS 501: Introduction To Computer Architecture,http://www.cis.upenn.edu/~milom/cis501-Fall09/,57,Fall,2009,"""Tentative
+Date  Lecture Topic  Assignment due
+     
+Thur, Sept 10  Introduction   
+     
+Tues, Sept 15  Technology  Moore discussion questions
+Thur, Sept 17  Technology   
+     
+Tues, Sept 22  Technology   
+Thur, Sept 24  Performance   
+     
+Tues, Sept 29  ISAs   
+Thur, Oct 1  ISAs  Cocke discussion questions
+     
+Tues, Oct 6  ISAs  Homework1 Due
+Thur, Oct 8  Caches   
+     
+Tues, Oct 13  Caches   
+Thur, Oct 15  Caches  Jouppi reading questions
+     
+Tues, Oct 20  Virtual Memory   
+Thur, Oct 22  Pipelining & Branch Prediction  Homework2 Due
+     
+Tues, Oct 27  Pipelining & Branch Prediction   
+Thur, Oct 29  Midterm Exam   
+     
+Tues, Nov 3  Superscalar   
+Thur, Nov 5  Scheduling (Guest lecturer)   
+     
+Tues, Nov 10  Scheduling   
+Thur, Nov 12  Multicore   
+     
+Tues, Nov 17  Multicore   
+Thur, Nov 19  Multicore   
+     
+Tues, Nov 24  Multithreading   
+Thur, Nov 26  Thanksgiving -- No Class   
+Thur, Dec 1  Vectors   
+Thur, Dec 3  Vectors   
+     
+Tues, Dec 8  Catchup   
+Thur, Dec 10  XBox360 & Wrapup   
+  ""
+","This course is a graduate course on computer architecture with an emphasis on a quantitative approach to cost/performance design tradeoffs. The course covers the fundamentals of classical and modern processor design: performance and cost issues, instruction sets, pipelining, caches, physical memory, virtual memory, I/O superscalar and out-of-order instruction execution, speculative execution, long (SIMD) and short (multimedia) vector execution, multithreading, and an introduction to shared memory multiprocessors.
+",NULL
+60,University of Southern California,NULL,CSCI 357: Basic Organization of Computer Systems (3 units),NULL,59,NULL,NULL,NULL,NULL,NULL
+61,University of Southern California,NULL,CSCI 357: Basic Organization of Computer Systems (3 units),NULL,59,NULL,NULL,NULL,NULL,NULL
+62,University of Southern California,NULL,CSCI 457: Computer Systems Organization (3 units),NULL,60,NULL,NULL,NULL,NULL,NULL
+63,University of Southern California,NULL,CSCI 557: Computer Systems Architecture (3 units),NULL,61,NULL,NULL,NULL,NULL,NULL
+64,University of California-Davis,Department of Computer Science,ECS 154A COMPUTER ARCHITECTURE,NULL,62,Fall,2009,NULL,"""Goals:
+Students will:
+
+    * learn the foundational concepts of digital design, interfacing of devices for I/O, memory and memory management
+    * learn input/output programming and hardware support for operating systems software
+""
+","""Program Outcomes:
+
+    * The ability to apply knowledge of basic science, mathematics and engineering principles to solve computing and information processing problems
+    * The ability to understand the relationship between hardware and software
+    * The ability to understand the tradeoffs in the design of hardware systems, software systems, processes and components
+    * The ability to acquire the foundations to be a life-long learner
+""
+"
+65,University of California-Davis,Department of Electrical Engineering,EEC70 - COMPUTER STRUCTURE AND ASSEMBLY LANGUAGE,NULL,63,Fall,2009,"""Expanded Course Description
+
+   1. Binary Representation
+
+      Storing integers, real numbers, characters and machine instructions.
+
+      2's complement, floating-point storage, ASCII, concept of instruction op codes.
+   2. Main Components of Computers
+
+      CPU, bus, memory, I/O devices. ALU, control unit, data and pointer registers, MAR, IAR, MDR. Memory structures, words, bytes, bits, addresses. Data bus, address bus, control bus, memory read/write operations. Brief description of MIPS. Fetch/execute cycle.
+   3. Introduction to MIPS Instruction Set and Addressing Modes
+
+      Brief introduction to RISC machine organization, architecture and machine language. Introduction to a few operations and addressing modes. An example program is used throughout, and modified by the students. Instruction formats, op codes.
+   4. Loading and Executing Programs: Debuggers and Assemblers
+
+      How to use SPIM simulator to get a MIPS machine language program into memory and execute it. Assembly language for ease and clarity in programming at the machine level. DEBUG Trace and other commands.
+   5. Modular Programming: Subroutines, Macros and Linkers
+
+      Review of the advantages of modularity. Stack manipulation, and use in subroutine calls.
+
+      Parameter passing. Interfacing assembly language subroutines to calling programs written in higher-level languages. Writing macros, speed/code size tradeoffs with subroutines.
+   6. Input/Output
+
+      Reminder of the central importance of this unit in the course. I/O ports - control, data, etc. Memory-mapped vs. programmed I/O. Busy-wait I/O. Interrupt-driven I/O, including motivation; concurrent-but-nonsimultaneous execution of more than one software module; vectored interrupts; device priorities; interrupt masks and enable bits; daisy-chain structures. Introduction to disk structure. Introduction to implementation of I/O statements in higher-level languages.
+   7. Brief Look at Other Architectures
+
+      Overview of the VAX 11, IBM 360 and other RISC architectures. Word/address sizes, address structures (segmented vs. flat), I/O, register sets and instruction sets.
+""
+",NULL,"""Course Outcomes   
+Understand the machine-level representation of a computer program's instructions and data.  
+Understand assembly code, how to write programs in assembly code, how high level language constructs can be represented in assembly code, and how assembly code is translated into machine code.""
+"
+66,University of California-Davis,Department of Electrical Engineering,EEC170 - INTRODUCTION TO COMPUTER ARCHITECTURE,NULL,64,Fall,2009,"""Expanded Course Description:
+
+   1. Computer Performance
+         1. Measuring Performance
+         2. Benchmark Selection
+         3. Comparing and Summarizing Performance
+   2. Instruction Sets
+         1. Addressing
+         2. Instruction Representation
+         3. Branching
+         4. Support for Procedures
+         5. Complex Instructions
+   3. Computer
+         1. Integer Representation
+         2. Addition and Subtraction
+         3. Logical Operations
+         4. ALU Design
+         5. Multiplication
+         6. Division
+         7. Floating Point
+   4. Non-Pipelined Processor Design
+         1. Datapath
+         2. Simple Control Unit
+         3. Finite State Machine Control Unit
+   5. Pipelined Processor Design
+         1. Pipelined Datapath
+         2. Pipelined Control
+         3. Data Hazards
+         4. Branch Hazards
+         5. Exceptions
+   6. Memory System Design
+   7. Memory Hierarchy
+   8. Mapping and Replacement Schemes
+   9. Cache
+  10. Virtual Memory
+""
+",,"""Course Outcomes   Program Outcomes
+Understand how computer performance is measured.  3a
+Understand basic instruction-set architecture.  4a
+Understand the internal organization and design of a simple processor (including pipeline).  1b, 4a, 4b
+Understand how a processor's major modules can be designed, down to the gate level (including the ALU).  4a
+Understand the design of a memory system (including cache and virtual memory).  4a, 4b
+Be able to perform experiments and simulations to design, evaluate, debug, and correct various microprocessor modules.  2a
+Be able to analyze various microprocessor modules to establish correct functionality/performance."""
+67,University of California-Davis,Department of Electrical and Computer Engineering,EEC270 - COMPUTER ARCHITECTURE,NULL,64,Fall,2009,"""Expanded Course Description:
+
+   1. Instruction Sets and Addressing Modes
+         1. Architecture Types
+         2. Addressing Modes
+         3. Operation Types
+         4. Instruction Encoding
+   2. Pipelining
+         1. Data Hazards
+         2. Structural Hazards
+         3. Control Hazards 
+   3. Advanced Pipelining
+         1. Static instruction scheduling
+         2. Dynamic instruction scheduling
+         3. Branch Prediction
+         4. Issuing Multiple instructions
+         5. Loop unrolling and software pipelining
+         6. Predicated execution 
+   4. Memory-Hierarchy Design
+         1. Reducing cache misses
+         2. Reducing cache-miss penalty 
+   5. Multiprocessors
+         1. Centralized shared memory
+         2. Distributed shared memory
+         3. Synchronization and memory consistency 
+""
+","Course Goals: The goals of this course are to introduce students to the artchitecture and software techniques that are used for state-of-the-art processors to achieve high performance.
+",NULL
+68,University of California-Santa Barbara,Department of Electrical Engineering,ECE 15B COMPUTER ORGANIZATION,NULL,65,Fall,2009,"""Week Lecture Date Topic / Projects Reading Assigned Due
+1 3/31 Introduction HW #0 - Gordon Moore Article
+1
+2 4/2 Overview of Computer
+Organization HW #1 HW #0
+3 4/7 Arithmetic Instructions - - P+H 2.1-2.3
+2
+4 4/9 Data Transfer Instructions HW #2 HW #1 P+H 2.3
+5 4/14 Control Flow Instructions - - P+H 2.6, 2.9
+3
+6 4/16 Logic and Shift Instructions, Bytes
+and Overflow Project #1 HW#2 P+H 2.5
+7 4/21 Procedures - - P+H 2.7, A.6
+4
+- 4/23 Quiz 1 - -
+8 4/28 Procedures - -
+5
+9 4/30 Instruction Representation - Project #1 P+H 2.4, 2.9
+10 5/5 Floating Point HW#3 - P+H 3.2, 3.3, 3.6
+6
+11 5/7 Pointers Project #2 - EC Pointers and Memory
+Section 1
+12 5/12 Arrays - - EC Section 3 & 6
+(pg 33-36)
+7
+13 5/14 Strings, Lists and Stacks - HW #3 EC Linked List Problems
+Section 1
+14 5/19 Memory Management Project #3 - P+H A.5,
+EC Section 6 (pg 38-40)
+8
+- 5/21 Quiz 2 - -
+15 5/26 Memory Management HW #4 - EC Pointers and Memory
+Section 4
+9
+16 5/28 Executing Programs: Compiling,
+Assembling, Linking and Loading - Project #2 P+H 2.10, A.1 - A.4
+17 6/2 History of the Computing World:
+Part I - HW #4
+10
+- 6/4 Final Review - Project #3
+11 - 6/10 Final Exam""
+","""Basic memory and processor organization, instruction set architecture, assembly
+language programming, number systems, arithmetic, data transfer and control flow
+instructions, procedures, memory management and program execution.""
+",NULL
+69,University of California-Santa Barbara,NULL,CMPSC 30 - Introduction to Computer Systems,NULL,66,NULL,NULL,NULL,NULL,NULL
+70,University of California-Santa Barbara,NULL,CMPSC 64 - Computer Organization and Logic Design,NULL,67,NULL,NULL,NULL,NULL,NULL
+71,University of California-Santa Barbara,NULL,CMPSC 123 - Overview of Computer Systems: Hardware and Software,NULL,68,NULL,NULL,NULL,NULL,NULL
+72,University of Colorado at Boulder,Department of Electrical Engineering,ECEN 2120 - Computers as Components ,NULL,69,Fall,2009,"""Week 1
+
+    *
+      8/24: Introduction
+          o Course goals
+          o Course mechanics
+          o Complex systems from a digital perspective 
+
+    *
+      8/26: CPU architecture
+          o Registers and memory
+          o Expression evaluation and the stack 
+      Required reading:
+          o Text Chapters 1, 2, 4, Sections 5.2.1, 5.3, 5.4, 6.1 
+
+    *
+      8/28: Control flow
+          o The condition code
+          o Conditional jumps
+          o Unconditional jumps 
+      Required reading:
+          o Text Sections 4.2.6, 4.2.7, 4.2.8, 6.2 
+
+Week 2
+
+    *
+      8/31: Procedure call and return
+          o How the call and return operations use the stack
+          o Passing arguments via the stack
+          o Use of A6 to access arguments
+          o Saving and restoring state 
+      Required reading:
+          o Text Section 4.2.4, 4.2.6, 6.3, 9.4 
+
+    *
+      9/2: Program structure
+          o Allocation of program structures to memory
+          o Public symbols
+          o C naming conventions 
+      Required reading:
+          o Text Section 5.2 
+
+    *
+      9/4: Binary integer arithmetic
+          o Representation of integers
+          o Translation of numbers from decimal to binary
+          o 2's complement arithmetic
+          o Signed and unsigned numbers
+          o Signed and unsigned condition code interpretations 
+      Required reading:
+          o Text Section 3.1, 7.1, 7.2, 7.3, 7.4 
+
+Week 3
+
+    *
+      9/7: Labor Days - No Classes
+    *
+      9/9: Pointers, characters, and strings
+          o Representing things other than integers
+          o C calling conventions 
+      Required reading:
+          o Text Sections 3.4, 7.6.3 
+
+    *
+      9/11: Bit manipulation
+          o Bitwise operations
+          o Masks
+          o Shifts
+          o Decoding an instruction 
+      Required reading:
+          o Text Chapter 8 
+
+Week 4
+
+    *
+      9/14: Assembler directives
+          o How directives are used to separate data layout from code
+          o Storage reservation and data generation
+          o ORG, EQU, DC 
+      Required reading:
+          o Text Section 5.2 
+
+    *
+      9/16: Recursion
+          o Interface specifications
+          o Use of the stack for local variables
+          o The concept of an activation record
+          o Printing integer values as digit sequences 
+      Required reading:
+          o Text Section 9.4 
+
+    *
+      9/18: Modularity and separate assembly
+          o Separation of concerns and information hiding
+          o Visibility and lifetime
+          o Assembly and linkage 
+      Required reading:
+          o Text Section 9.2 
+
+Week 5
+
+    *
+      9/21: Large data aggregates
+          o Separate address spaces
+          o Contiguous address spaces 
+      Required reading:
+          o Text Sections 9.3.1, 9.3.3, 9.3.4 
+    *
+      9/23: Special instructions
+          o Decimal arithmetic
+          o Address manipulation instructions
+          o Looping instruction -- DBcc 
+      Required reading:
+          o Text Sections 3.2, 7.5, 9.1, 6.2.4 
+
+    *
+      9/25: Programming examples
+          o What would you like to see? 
+
+Week 6
+
+    *
+      9/28: Serial I/O
+          o Access to I/O devices
+          o The RS-232 interface
+          o The function of a UART 
+      Required reading:
+          o Text Sections 12.1, 12.2
+          o Tanenbaum Section 3.9.1 
+
+    *
+      9/30: Serial I/O (continued)
+          o Programming the UART
+          o Writing characters to the UART
+          o Reading characters from the UART 
+
+    *
+      10/2: Review for Exam 1
+
+Week 7
+
+    *
+      10/5: First examination, covering material through week 6
+
+    *
+      10/7: Interrupts
+          o How interrupts affect the CPU
+          o When interrupts can and cannot occur
+          o Interrupt priority 
+      Required reading:
+          o Text Chapter 11
+          o Tanenbaum Section 3.1, 3.2 
+
+    *
+      10/9: Interrupts (continued)
+          o Interrupt-driven serial I/O 
+
+Week 8
+
+    *
+      10/12: Buffering and buffer management
+          o Buffering for data-rate averaging
+          o Use of multiple buffers
+          o Circular buffers 
+      Required reading:
+          o Circular Buffers
+
+    *
+      10/14: Buffering and buffer management (continued)
+          o Circular buffer management routines 
+
+    *
+      10/16: Block transfers and DMA
+          o The cost of interrupt-driven I/O
+          o Block transfer data paths and cycle stealing
+          o Bus timing
+          o Interaction between DMA controller and device controller 
+      Required reading:
+          o Text Chapter 13
+          o Tanenbaum Section 3.1.3 
+
+Week 9
+
+    *
+      10/19: Block transfers and DMA (continued)
+          o Setup operations for block transfer
+          o Bus mastery 
+
+    *
+      10/21: Digital/Analog Conversion
+          o Sampling analog waveforms
+          o Conversion between analog and digital representations 
+      Required reading:
+          o Reading and Writing Continuous Signals
+
+    *
+      10/23: Concurrency
+          o Cooperating sequential processes
+          o Minimal assumptions about process behavior
+          o Critical sections and mutual exclusion
+          o Semaphores 
+      Required reading:
+          o Tanenbaum Sections 2.1, 2.2, 2.3
+          o Reentrancy
+
+Week 10
+
+    *
+      10/26: Time
+          o The system clock
+          o Use of timers
+          o Timer modes - auto-reset and square wave generation
+          o Timers and interrupts 
+      Required reading:
+          o Tanenbaum Sections 3.8.1, 3.8.2
+          o Counter/Timers
+
+    *
+      10/28: Time (continued)
+          o Preemptive and non-preemptive scheduling
+          o Network time protocol 
+
+    *
+      10/30: Process management
+          o Bounded and unbounded critical sections
+          o Process control blocks
+          o Queues 
+      Required reading:
+          o Tanenbaum Sections 2.4.1, 2.4.2 
+
+Week 11
+
+    *
+      11/2: Binary floating point arithmetic
+          o IEEE standard number representation
+          o Normalization
+          o What is ``roundoff'' error? 
+      Required reading:
+          o Text Section 3.3
+          o IEEE Arithmetic
+
+    *
+      11/4: Coprocessor interaction
+          o Closely-coupled processors
+          o Coding of floating-point operations
+          o Bus states
+          o CPU bus usage information 
+      Required reading:
+          o Text Section 13.2.5 
+
+    *
+      11/6: Memory management
+          o Base and limit
+          o Paging 
+      Required reading:
+          o Tanenbaum Sections 4.1, 4.2.1, 4.3.1 
+
+Week 12
+
+    *
+      11/9: Review for Exam 2
+          o This time can also be used to catch up 
+
+    *
+      11/11: Second examination, covering material through week 11
+
+    *
+      11/13: Memory management (continued)
+          o Segmentation 
+      Required reading:
+          o Tanenbaum Section 4.3.2 
+
+Week 13
+
+    *
+      11/16: Memory management (continued)
+          o Associative memory 
+
+    *
+      11/18: Introduction to caches
+          o Description of caches
+          o Cache design issues
+          o Direct Mapped Caches 
+      Required reading:
+          o Cache Organization
+
+    *
+      11/20: Introduction to caches (continued)
+          o Fully Associative Caches
+          o Set-Associative Caches 
+
+Week 14
+
+    *
+      11/23 - 11/27: Fall Break - No Classes
+
+Week 15
+
+    *
+      11/30 - 12/4: Complex Data Structures in C and Assembly
+
+Week 16
+
+    *
+      12/7 - 12/9: Complex Data Structures in C and Assembly (continued)
+    *
+      12/14: Conclusion & review for the final examination
+
+Final examination: Wednesday, December 16, 2007, 7:30pm-10:00pm.""
+",NULL,NULL
+73,Brown University,Department of Computer Science,CSCI0310. Introduction to Computer Systems,http://cs.brown.edu/courses/csci0310,71,Fall,2009,"""W-9 The Silicon Stone Representation I
+F-11 The Silicon Stone Representation II
+M-14 The Karnaugh Map Boolean gates
+W-16 Decoding the Karnaugh Map Digital Building Blocks HW1
+F-18 The Leaky Cauldron Memory Element I
+M-21 The Register Fire Memory Element II
+W-23 The Chamber of Flip Flops Memory Element III HW2 HW1
+F-25 The Deathly Diglog Diglog Help Session by TAs
+M-28 No Class
+W-30 Werewolves Moon I Part I & II HW3 HW2
+F-2 Full Moon Moon I Part III RISC
+M-5 Potions Moon II Part I RISC HELP
+W-7 Potions Moon II Part II HW4 HW3
+F-9 Fenrir Greyback Moon III
+M-12 No Lecture
+W-14 The Dark Arts MIPS I HW4
+F-16 The Dark Arts MIPS II CHARS RISC
+M-19 Apparation Subroutines
+W-21 Hu epu  Array MIDTERM
+F-23 Herbology Objects LIFE CHARS
+M-26 Memory Charms memory management LIFE HELP
+W-28 Avada Kedavra Dynamic Memory HW5
+F-30 Death Eaters Garbage Collection
+M-2 Time-Turners Concurrent Programming
+W-4 Azkaban Linking and Loading HW6 HW5
+F-6 Divination Caching
+M-9 The Marauder Map Maze Help Sessions by Tas MAZE LIFE
+W-11 The Invisibility Cloak VM I HW6
+F-13 The Invisibility Cloak VM II
+M-16 Trans guration Compiler I
+W-18 Trans guration Compiler II
+F-20 Trans guration Compiler III COMPILER HW7 MAZE
+M-23 Arithmancy Floating-point Numbers
+W-25 Thanksgiving
+F-27 Thanksgiving
+M-30 Quidditch Pipeline I HW8 HW 7
+W-2 Quidditch Pipeline II
+F-4 The Daily Prophet Networking FINAL
+M-7 Reading Period HW8
+W-9 Reading Period COMPILER
+F-18 F
+""
+","""To understand aspects of computer architecture and program performance.
+To adopt an evolutionary approach to learning by presenting fundamental concepts first in the
+context of an easy-to-understand instruction set such as MIPS, and building more complex ideas from the simpler ones.
+
+
+
+
+Includes the organization and architecture of computer systems hardware; instruction set architectures; addressing modes; register transfer notation; processor design and computer arithmetic; memory systems; hardware implementations of virtual memory, and input/output control and devices. Cross-listed as ECE 333. Prerequisite: CS 201 or 205 with a grade of C- or higher, and CS 230 with a grade of C- or higher.
+
+Study of representative digital computer organization with emphasis on control unit logic, input/output processors and devices, asynchronous processing, concurrency, and parallelism. Memory hierarchies. Prerequisite: CS 333 or proficiency in assembly language programming.
+""
+",NULL
+74,Iowa State University,Department of Computer Science,Com S 321. Introduction to Computer Architecture and Machine-Level Programming. ,http://www.cs.iastate.edu/~cs321/,72,Fall,2009,"""Topical Outline
+1. Introduction: Computer abstractions and technology
+2. Measuring and evaluating performance: Metrics of performance; Amdahl’s Law;
+Cost/benefit tradeoffs; Instruction count, CPI, Clock cycle time; Comparing and
+summarizing performance
+3. Instruction set architecture of MIPS: Signed and unsigned numbers; Representing
+instructions - the MIPS instruction set; Instructions for decision making; Supporting
+procedures - stack pointer; Arithmetic and Logical operations
+4. Processor Datapath and control: Building a datapath for R-type, I-type, and Jump
+instructions; A single cycle implementation; How control is supposed to work; A multicycle
+implementation and control
+5. Memory Hierarchy design: A framework for memory hierarchies; The basics of caches;
+Placement, replacement, and memory interaction policies; Measuring and improving cache
+performance; FIFO, LRU, write back and write through policies
+6. Enhancing performance with pipelining: Overview of pipelining; A pipelined datapath;
+Data hazards and forwarding; Data hazards and stalls; Branch hazards
+7. Exceptions and exception handling: Interrupts and exceptions; Hardware/software
+interface; Interrupt handlers""
+","""Course Objectives: To understand aspects of computer architecture and program performance.
+To adopt an evolutionary approach to learning by presenting fundamental concepts first in the
+context of an easy-to-understand instruction set such as MIPS, and building more complex ideas
+from the simpler ones.""
+","""Learning outcomes: Students will learn about computer performance, computer design, and
+tradeoffs between cost and performance as well as between hardware and software. Students will
+formulate and solve problems, understand the performance requirements of systems, and
+communicate effectively and learn to think creatively and critically, both independently and with
+others.""
+"
+75,Iowa State University,Department of Electrical and Computer Engineering,Cpr E 381. Computer Organization and Assembly Level Programming.,NULL,73,Spring,2008,"Introduction to computer organization
+
+Evaluating performance of computer systems
+
+Instruction set design
+
+Assembly level programming
+
+Arithmetic operations
+
+Control flow instructions
+
+Procedure calls
+
+Stack management
+
+Processor design
+
+Datapath and control
+
+Scalar pipelines
+
+Introduction to memory
+
+Introduction to I/O systems
+
+",NULL,NULL
+76,University of Virginia,NULL,CS/ECE 3330 Computer Architecture (333),NULL,74,NULL,NULL,NULL,NULL,NULL
+77,University of Virginia,NULL,CS/ECE 3330 Computer Architecture (333),NULL,74,NULL,NULL,NULL,NULL,NULL

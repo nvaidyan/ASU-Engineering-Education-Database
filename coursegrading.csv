@@ -1,0 +1,409 @@
+courseID,gradingDescription,projectWeight,hwWeight,examWeight
+1,"There is no final exam.
+Grading	The final grade is determined by performance on the quizzes (25 points/quiz, 125 points total), the labs and the design project (75 points total). In addition, you must have a non-zero score for each of the required labs and all the on-line lab questions must be checked off as a prerequisite for passing the course. A missing required lab will result in a failing grade; incompletes will not be given for unfinished laboratory work.
+
+Once your combined score has been computed as explained above, here's how grades will be assigned:
+
+Grade	Requirement
+A	175 <= total points
+B	155 <= total points < 175
+C	135 <= total points < 155
+D	115 <= total points < 135
+F	total points < 115, missing required lab",75,0,125
+2,"This class is offered with either letter grade or CR/NC grading option.
+Course grades will be determined using the following weights:
+     60% Coursework
+           45% Assignments
+           15% Labs
+     40% Exams
+           15% Midterm
+           25% Final",60,0,40
+3,"Grading (tentative):
+Quizzes 	45%
+Programming Assignments 	40%
+Homework Sets 	15%",40,15,45
+4,"Homeworks:			15 %
+Programming/Lab Projects:	25 %
+Midterm:			25 %
+Final:				35 %",25,15,60
+5,"Grading (tentative):
+
+    * Exam: 40%
+    * Project: 40%
+    * HW, Paper Summaries, Class Participation: 20%
+",40,20,40
+6,"   Tentative course weighting:
+       Will aim for 8 assignments (70% of grade)
+       Midterm (10% of grade)
+       Final exam (20% of grade)",70,0,30
+7,"                                          • Effort
+Grading (could change before 1st midterm)
+                                             • Attending Dan!s and TA!s office hours,
+ • 90 = 9% Labs (3 pts per 31-9)               completing all assignments, turning in HW0
+ • 140 = 14% Homework (20 points per 8-1)
+                                          • Participation
+ • 320 = 32% Projects (80 points per 4)      • Attending lecture and voting using the PRS
+                                               system
+ • 150 = 15% Midterm [can be clobbered]
+                                             • Asking great questions in discussion and
+ • 300 = 30% Final                             lecture and making it more interactive
+ • + Extra credit for EPA. What!s EPA?
+",0,0,0
+8,"Course Grading
+20%	Problem Sets
+40%	Quizzes
+40%	Labs",40,20,40
+9,"11-13 Weekly Quizzes – Open Book
+50%
+Every Wednesday
+Simulation & Programming Assignments
+20%
+ 4 to 5 
+Final Exam
+30%
+See Final Schedule
+",20,0,80
+10,NULL,0,0,0
+11,"Projects: 3% MP1 13% MP2 25% MP3
+Exams: 16% Midterm #1 16% Midterm #2 25% Final
+Other: 2% Subjective evaluation 
+",57,2,41
+12,"Machine Problems: 50% (5%, 10%, 10%, 25%)
+Exams:            15% midterm #1 15% midterm #2 15% final exam
+Other:            5% subjective evaluation
+
+",50,5,45
+13,NULL,0,0,0
+14,"Final grades will be based on the total points earned on homeworks, projects and exams. Factors such as class participation may be used to adjust your final grade, especially if it falls on a borderline. The tentative point breakdown is as follows:
+
+    * Projects 10% each = 40%
+    * Homeworks (7 assignments) = 5%
+    * Exams 2 midterms, 15% each, 1 final 25% = 55% 
+",40,5,55
+15,"30% 2 Prelims (15% + 15%)
+   ",55,15,30
+16,"5% Quizzes
+5% Homework problems
+50% Laboratory problems and programming projects
+40% Examinations (midterm and final)
+",50,5,45
+17,"The weighting of the grades for the various aspects of the course are: in-class exams - 26% (Midterm 10%, short exams each 8%), quizzes 6%, final exam - 20%, homework - 20%, and class projects - 28%. The two lowest homework grades will be dropped in the computation of the final homework grade. The two lowest quiz grades will be dropped. Homework is not be accepted late, and quizzes must be taken when given. Projects may be turned in one week late with a 20% reduction of the grade given for the content of the project.
+",28,20,52
+18,"Component  	% of final grade
+Problem Sets 	10%
+Labs 	30% (5% for each of 6 labs)
+Midterms 	30% (9% + 1% per midterm)
+Final Exam 	23% + 2%
+Subjective Evaluation 	5%
+Feedback 	0%
+",30,15,55
+19,"homeworks and programs  	30% 
+exam 1  	20% 
+exam 2  	25% 
+exam 3  	25% 
+",30,0,70
+20,"Homework 15%
+Quizzes 20%
+Mid-term exam 30%
+Final exam 35%
+",0,0,85
+21,NULL,0,0,0
+22,"10 % Homeworks (2.5% per homework)
+50 % Programming labs (12.5% per lab)
+20 % Midterm (covers first half of the course)
+20 % Final (covers second half of the course)",50,10,40
+23,"Quizzes - Bonus points up to 5%
+Homework assignments and Lab - 35 % (20% homeworks and 15% lab project)
+Final Project - 30 %
+Exam - 35%
+",45,25,35
+24,"Homework and Projects 50% See course website
+Tests 12%
+each
+Tentatively:
+Sept 28 and Nov 18
+Final Exam* 26% 10:05 ",50,0,50
+25,NULL,0,0,0
+26,"Midterm Exam					~30%
+Final Exam					~30%
+Homeworks (5)					~30%
+Class participation & pop quizzes			~10%
+",0,40,60
+27,"1 Projects 15%
+2 Homework 15%
+3 Laboratory Assignments 20%
+4 Quizzes 25%
+5 Final exam 25%
+3.3 Examinations
+",35,15,50
+28,"
+1 Three mini-projects 30%
+2 Assignments and Quizzes 20%
+3 A mid-term exam 25%
+4 A final exam 25%
+
+",30,20,50
+29,"Homework: 7 assignments, 3% each = 21%
+
+Labs: 5 assignments, 3% each = 15%
+
+Lab Quizzes: Several during the semester total = 3%
+
+Projects: First - calculator 10%, Second - computer simulator, 15%; total = 25%
+
+Exams: Three, non-cumulative, 12% each = 36%
+
+
+",40,24,36
+30,"Typically, 10% homework, 45% midterm, 45% final.
+",0,10,90
+31,"	Problem Sets (PS): 10%
+	Programming Assignments (PA): 20%
+	Quiz 1: 15%
+	Quiz 2: 15%
+	Final: 40%
+	Class Participation: 5% 
+",20,15,60
+32,"Grading
+
+In addition to the contributions below, class participation (speaking up in class, attending office hours, etc.) can raise your grade up to one notch (e.g., B to B+).
+Homework 	10% 	Homeworks will be assigned through the course. They are due on Thursdays.
+Quizzes 	10% 	Every Thursday there will be a quiz.
+Project 	15% 	Design your own ISA! See below
+Midterm 	25% 	The midterm is on November 3rd.
+Final 	35% 	The final will be cummulative.
+Class participation 	5% 	Speak up in class. Contribute to the web board. Come to office hours.
+",15,15,70
+33,"Labs 84% There are six labs of equal weight. 
+Class and Blackboard participation. 16% This includes speaking up in class, helping other folks in the lab, and posting to the Blackboard. 
+
+",84,16,0
+34,"Grading and Other Class Policies
+",9,42,49
+35,"The course will have six graded laboratory assignments. These labs along with two in-class exams, a class participation grade, and a final compose your entire grade as follows:
+	The six labs count as 60% of your final grade. Each lab is weighted equally, i.e. each lab is worth 10% of your final grade.
+	The in-class exams count as 20% of your final grade, e.g. each in-class exam is worth 10% of your final grade.
+	The final exam is worth 15% of your final grade.
+	Class participation counts towards 5% of your final grade. This grade will be based on ?",60,5,35
+36,"Exam I (about Class 14, Mon., Oct. 19) 27.5%
+Exam II (about Class 24, Mon., Nov. 23) 27.5%
+Final Exam (firm date: Wed., Dec. 16, 1:30 ",0,10,90
+37,"Projects: 40%
+",40,10,50
+38,"Midterms: two midterms 25% (equally weighted)
+Final: will be comprehensive 25%
+Programming projects: six expected coding assignments 35%
+Quizzes in discussion section or lecture 10% (equally weighted)
+Discussion section exercises done in class 5% (equally weighted)
+",35,15,50
+39,"7-8 Homeworks  7%  
+1-2 Programming Projects  25%  
+4-5 Quizzes  18% total  
+2 Midterms  25% total  
+Final  25%  
+
+",25,7,68
+40,NULL,0,0,0
+41,"40% Homework: Homework is due by the end of class at 12:15 on the date that it is due, unless otherwise specified. . The TA, Roopa, will accept assignments until the end of the day, provided you can find her. Professor Rubenstein will not collect assignments after submissions have been handed to Roopa for grading. E-mailed/faxed homework and late assignments will not be accepted unless approved in advance. Approval will only be given under extreme circumstances. You are expected to produce your work in a timely manner. You may discuss and work on questions with other students in the class. However, you should write your solutions on your own, i.e., not copy someone else's solution. 
+
+
+25% Midterm: October 22, in-class, open book, open note, no calculators. You must let Professor Rubenstein know a month in advance (i.e., by next week) if you cannot take the midterm on that date. Otherwise, only medical emergencies (with doctor's note) are acceptable reasons for scheduling an alternate date. 
+
+
+35% Final: Probably 12/21 @ 9am (by the registrar) open book, open note, no calculators. 
+",0,40,60
+42,"Grades will be based on homework (about 30%), a project (about 15%), the midterm (about
+20%) and the final (about 35%).
+",15,30,55
+43," 30% homework  
+  15% Midterm exam 
+  45% Final exam 
+  5% Quizzes 
+  5% Class Participation 
+
+",0,35,65
+44,"homework - 30% of grade 
+midterm exam - 15% of grade 
+final exam - 25% of grade 
+individual or group project (including proposals and presentations) - 30% of grade 
+
+",30,30,40
+45,"65% - Programming Labs (12% per lab)
+",65,5,35
+46,"25% Final Exam
+25% Problem Sets
+25% Hardware Lab Work
+15% Midterm
+10% Hardware Lab Exam
+",25,25,50
+47,Homeworks and/or Quiz ,50,50,0
+48,"This table lists the graded components of the class and their value toward a course grade
+55
+Two open book tests and a final. Lowest counts 15 and the other two count 20 each.
+You may use notes and books. You may not use any form of calculator or computer.
+9
+HW0 - HW8 homeworks
+not accepted late
+2
+TOOLS homework
+not accepted late
+4
+KEY homework
+taken late with penalty
+bonus for early submission
+There are three programs (P1, P2, P3) each worth 10 points toward the course grade.
+P1is broken into two parts (part A is worth 2 points and part B is worth 8 points).
+P2is broken into two parts (part A is worth 4 points and part B is worth 6 points).
+2
+P1A - ROMAN - DESIGN
+not accepted late
+8
+P1B - ROMAN - ASM
+taken late with penalty
+bonus for early submission
+4
+P2A - FOURIER - COSINE
+taken late with penalty
+bonus for early submission
+6
+P2B - FOURIER - TRANSFORM
+taken late with penalty
+bonus for early submission
+10
+P3 - LIFE
+taken late with penalty
+bonus for early submission
+100
+Total points for all work
+",30,15,55
+49,"The overall class grade will be a weighted average of the following components:
+?",10,25,65
+50,"This table lists the graded components of the class and their value toward a course grade
+55
+Two open book tests and a final. Lowest counts 15 and the other two count 20 each.
+You may use notes and books. You may not use any form of calculator or computer.
+9
+HW0 - HW8 homeworks
+not accepted late
+2
+TOOLS homework
+not accepted late
+4
+KEY homework
+taken late with penalty
+bonus for early submission
+There are three programs (P1, P2, P3) each worth 10 points toward the course grade.
+P1is broken into two parts (part A is worth 2 points and part B is worth 8 points).
+P2is broken into two parts (part A is worth 4 points and part B is worth 6 points).
+2
+P1A - ROMAN - DESIGN
+not accepted late
+8
+P1B - ROMAN - ASM
+taken late with penalty
+bonus for early submission
+4
+P2A - FOURIER - COSINE
+taken late with penalty
+bonus for early submission
+6
+P2B - FOURIER - TRANSFORM
+taken late with penalty
+bonus for early submission
+10
+P3 - LIFE
+taken late with penalty
+bonus for early submission
+100
+Total points for all work
+",30,15,55
+51,"For CSC/ECE 506 students, the course",16,24,60
+52,NULL,0,0,0
+53," Homework  12%
+  Machine Problems  18%
+  Midterm Exam  30%
+  Final Exam  40%
+",18,12,70
+54,,0,0,0
+55,NULL,0,0,0
+56,"    * Midterm: 25%
+    * Final: 35%
+    * Homework: 40%
+
+Each student is given three free extensions that may be used to turn in a homework at the next class without penalty (for example, if a homework is due on Tuesday but you turn it in Tuesday evening, Wednesday or before class on Thursday, you will be charged one extension and your grade will not be impacted). Only one extension may be used per homework. Our expectation is that most students will not need to use these extension, but they are a buffer for extraordinary circumstances.
+
+Once you're out of extentions, 50% will be deducted from your grade for each late class period. Homeworks may not be turned in after solutions have been handed out (usually one or two class periods after the due date).
+",0,40,60
+57,"    * Homeworks: 20%
+    * Midterm exams: 30%
+    * Final exam: 48%
+    * Class participation: 2%
+
+",0,22,78
+58,,80,0,20
+59,"    * Paper Reviews: 5%
+    * Homework: 15%
+    * Mid-term exam: 25%
+    * Final exam: 35%
+    * Project: 20%
+
+",20,20,60
+60,NULL,0,0,0
+61,NULL,0,0,0
+62,NULL,0,0,0
+63,NULL,0,0,0
+64,"    Homework 5%
+    Quizzes 15%
+    Labs 15%
+    Midterm 30% 
+    Final 35%
+",15,5,65
+65,NULL,0,0,0
+66,NULL,0,0,0
+67,"Grading: Letter; based on homework(10%), midterm exam(25%), final exam(35%), and project (30%).
+",30,10,60
+68,"Homework 15%
+Projects 20%
+Quizzes 30% (Quiz 1: 15%, Quiz 2: 15%)
+Final 35%
+",30,25,65
+69,NULL,0,0,0
+70,NULL,0,0,0
+71,NULL,0,0,0
+72,"The primary assessment vehicle in this course is the examinations. Each hour exam will provide 15% of your total points, and the final exam will provide 30%. Daily reading assessments via Moodle comprise 5%. Lab assignments comprise the remaining 35%. 
+",35,5,45
+73,"Homeworks (8) 10
+RISC 20
+Char 5
+Life 15
+Maze 15
+Compiler 15
+Midterm 10
+Final 10
+
+",70,10,20
+74,NULL,0,0,0
+75,"Item
+ Weight
+ 
+Homework
+ 12.0%
+ 
+Participation
+ 03.0%
+ 
+Labs/Project
+ 25.0%
+ 
+Two Midterms
+ 30.0%
+ 
+Final Examination
+ 30.0%
+ 
+Total
+ 100%
+ 
+",25,15,60
+76,NULL,0,0,0
+77,NULL,0,0,0

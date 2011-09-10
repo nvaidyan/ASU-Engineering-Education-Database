@@ -1,24 +1,26 @@
 package edu.asu.engineeringed.courses
-import edu.asu.engineeringed.publications.Textbook
 import edu.asu.engineeringed.Institution
-import edu.asu.engineeringed.Professor
 import edu.asu.engineeringed.AcademicUnit
 import edu.asu.engineeringed.DomainArea
 
 class Course {
     String title
+    String description
     String url
-    String offeringPeriod
-    Date offeringYear
     
     static belongsTo = [Institution,AcademicUnit]
+    
+    static hasMany = [
+                      offerings: CourseOffering,
+                      departments:AcademicUnit,
+                      domains:DomainArea,
+                      objectives:Objective,
+                      outcomes:Outcome
+                     ]
     static constraints = {
-        title maxSize:100
+        title blank:false, maxSize:100
+        departments()
+        description nullable:true, maxSize:65536
         url nullable:true, url:true
     }
-    
-    static hasMany = [textbooks:Textbook,
-                      professors:Professor,
-                      departments:AcademicUnit,
-                      domains:DomainArea]
 }

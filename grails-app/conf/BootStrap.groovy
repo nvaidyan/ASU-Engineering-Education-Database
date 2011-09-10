@@ -1,5 +1,6 @@
 import edu.asu.engineeringed.users.*
 import edu.asu.engineeringed.publications.*
+import edu.asu.engineeringed.courses.*
 import edu.asu.engineeringed.*
 import au.com.bytecode.opencsv.*
 import au.com.bytecode.opencsv.bean.*
@@ -11,6 +12,7 @@ class BootStrap {
         createDomainAreas()
         createProfessors()
         createTextbooks()
+        createCourses()
         createRoles()
         createUsers()
     }
@@ -38,18 +40,18 @@ class BootStrap {
     def createAcademicUnits() {
         def asu = Institution.findByName("Arizona State University")
         def maryLou = AcademicUnit.findByName("Mary Lou Fulton Teacher's College") ?:
-            new AcademicUnit(name:"Mary Lou Fulton Teacher's College", institution:asu).save(failOnError:true)
+            new AcademicUnit(name:"Mary Lou Fulton Teacher's College", owner:asu).save(failOnError:true)
         def ira = AcademicUnit.findByName("Ira A. Fulton School of Engineering") ?:
             new AcademicUnit(name:
-    "Ira A. Fulton School of Engineering", institution:asu).save(failOnError:true)
+    "Ira A. Fulton School of Engineering", owner:asu).save(failOnError:true)
         def cte = AcademicUnit.findByName("College of Technology and Innovcation") ?:
-            new AcademicUnit(name:"College of Technology and Innovcation", institution:asu).save(failOnError:true)
+            new AcademicUnit(name:"College of Technology and Innovcation", owner:asu).save(failOnError:true)
         def cidse = AcademicUnit.findByName("School of Computing, Informatics, and Decision Systems Engineering") ?:
-            new AcademicUnit(name:"School of Computing, Informatics, and Decision Systems Engineering", institution:asu).save(failOnError:true)
+            new AcademicUnit(name:"School of Computing, Informatics, and Decision Systems Engineering", owner:asu).save(failOnError:true)
         ira.addToSubUnits(cidse)
         cidse.addToParentUnits(ira)
         def semte = AcademicUnit.findByName("School for Engineering of Matter, Transport, and Energy") ?:
-            new AcademicUnit(name:"School for Engineering of Matter, Transport, and Energy", institution:asu).save(failOnError:true)
+            new AcademicUnit(name:"School for Engineering of Matter, Transport, and Energy", owner:asu).save(failOnError:true)
         ira.addToSubUnits(semte)
         semte.addToParentUnits(ira)
     }
@@ -153,6 +155,25 @@ class BootStrap {
                 authors: authors
             ).save(failOnError:true)
             textbook.addToDomains(compArch)
+        }
+    }
+    
+    def createCourses() {
+        CSVReader reader = new CSVReader(new FileReader("courses.csv"));
+        String [] nextLine;
+        nextLine = reader.readNext() //skip the header
+        def compArch = DomainArea.findByName("Computer Architecture")
+        while ((nextLine = reader.readNext()) != null) {
+        // nextLine[] is an array of values from the line
+            def institution = Institution.findByName(nextLine[1])
+            def department = AcademicUnit.findByOwnerAndName(institution, nextLine[2])?:
+                new AcademicUnit(name:nextLine[2], owner:institution).save(failOnError:true)
+            def course = Course.get(nextLine[0]) ?:
+            new Course(
+                title:nextLine[3],
+            ).save(failOnError:true)
+            course.addToDomains(compArch)
+            course.addToDepartments(department)
         }
     }
     def createRoles() {

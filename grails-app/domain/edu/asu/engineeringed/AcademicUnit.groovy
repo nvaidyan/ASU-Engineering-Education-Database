@@ -2,7 +2,7 @@ package edu.asu.engineeringed
 import edu.asu.engineeringed.courses.Course
 
 class AcademicUnit extends AbstractEntity {
-    static belongsTo = Institution
+    static belongsTo = [owner:Institution]
     Professor chair
     static constraints = {
         name blank:false
