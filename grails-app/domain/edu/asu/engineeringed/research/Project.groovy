@@ -7,8 +7,7 @@ class Project {
     Date start
     Date end
     
-    static hasOne = [lead:Investigator]
-    static hasMany = [collaborators:Investigator]
+    static hasMany = [collaborators:Investigation]
     
     static constraints = {
         name blank:false, unique:true

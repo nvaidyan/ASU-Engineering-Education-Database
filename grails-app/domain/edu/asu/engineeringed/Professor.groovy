@@ -6,19 +6,22 @@ class Professor extends Author {
     
     String email
     String homepageUrl
-    Integer yearsTeaching
+    Integer startedTeachingYear
     String position
     Boolean tenured
     String comments
     DomainArea doctoralThesis
-    Institution home
+    Institution almaMater
     
     static constraints = {
         email nullable:true, email:true
-        yearsTeaching nullable:true
+        homepageUrl nullable:true, url:true
+        startedTeachingYear nullable:true
         position nullable:true
         tenured nullable:true
         comments nullable:true, maxSize:65535
+        doctoralThesis nullable:true
+        almaMater nullable:true
     }
     
     static hasMany = [interests:DomainArea, 

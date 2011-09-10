@@ -7,9 +7,12 @@ class AcademicUnit {
     Professor chair
     static constraints = {
         name blank:false
+        chair nullable:true
     }
     static hasMany = [subUnits:AcademicUnit, 
                       parentUnits:AcademicUnit,
                       courses:Course,
                       faculty:Professor]
+    @Override
+    public String toString() { name }
 }

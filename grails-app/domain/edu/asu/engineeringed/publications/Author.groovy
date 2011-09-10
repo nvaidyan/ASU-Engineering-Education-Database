@@ -8,4 +8,7 @@ class Author {
     }
     
     static hasMany = [publications:Publication]
+    
+    @Override
+    public String toString() { name }
 }
