@@ -1,7 +1,6 @@
 package edu.asu.engineeringed
 
-class Institution {
-    String name
+class Institution extends AbstractEntity {
     String carnegieClassification
     String schedule
     static constraints = {
@@ -9,7 +8,4 @@ class Institution {
         carnegieClassification nullable:true
         schedule inList:(["semester","quarter"])
     }
-    
-    @Override
-    public String toString() { name }
 }

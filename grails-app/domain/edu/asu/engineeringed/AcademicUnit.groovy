@@ -1,9 +1,8 @@
 package edu.asu.engineeringed
 import edu.asu.engineeringed.courses.Course
 
-class AcademicUnit {
+class AcademicUnit extends AbstractEntity {
     static belongsTo = Institution
-    String name
     Professor chair
     static constraints = {
         name blank:false
@@ -13,6 +12,4 @@ class AcademicUnit {
                       parentUnits:AcademicUnit,
                       courses:Course,
                       faculty:Professor]
-    @Override
-    public String toString() { name }
 }

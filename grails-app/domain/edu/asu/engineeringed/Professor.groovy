@@ -1,10 +1,8 @@
 package edu.asu.engineeringed
-import edu.asu.engineeringed.publications.Author
 
-class Professor extends Author {
+class Professor extends AbstractPerson {
     static belongsTo = AcademicUnit
     
-    String email
     String homepageUrl
     Integer yearStartedTeaching
     String position
@@ -14,6 +12,7 @@ class Professor extends Author {
     Institution doctoralAlmaMater
     
     static constraints = {
+        name blank:false, unique:true
         email nullable:true, email:true
         homepageUrl nullable:true, url:true
         yearStartedTeaching nullable:true

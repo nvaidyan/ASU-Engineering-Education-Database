@@ -1,7 +1,7 @@
 package edu.asu.engineeringed.research
+import edu.asu.engineeringed.AbstractEntity
 
-class Project {
-    String name
+class Project extends AbstractEntity {
     String description
     String status
     Date start
@@ -20,7 +20,4 @@ class Project {
             val, obj -> val >= obj.start
         }
     }
-    
-    @Override
-    public String toString() { name }
 }

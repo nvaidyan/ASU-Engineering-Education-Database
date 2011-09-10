@@ -1,8 +1,8 @@
 package edu.asu.engineeringed.publications
+import edu.asu.engineeringed.AbstractEntity
 
-class Journal {
+class Journal extends AbstractEntity {
     static belongsTo = Organization
-    String name
     Integer volume
     Integer issue
     String url

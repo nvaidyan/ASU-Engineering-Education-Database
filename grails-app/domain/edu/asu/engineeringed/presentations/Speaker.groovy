@@ -1,14 +1,9 @@
 package edu.asu.engineeringed.presentations
+import edu.asu.engineeringed.AbstractPerson
 
-class Speaker {
-    String name
-    String email
-    
+class Speaker extends AbstractPerson {
     static constraints = {
         name blank:false, unique:true
         email blank:false, unique:true, email:true
     }
-    
-    @Override
-    public String toString() { name }
 }

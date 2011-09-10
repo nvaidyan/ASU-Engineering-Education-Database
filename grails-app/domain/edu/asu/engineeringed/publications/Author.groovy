@@ -1,14 +1,10 @@
 package edu.asu.engineeringed.publications
+import edu.asu.engineeringed.AbstractEntity
 
-class Author {
-    String name
-    
+class Author extends AbstractEntity {
     static constraints = {
         name blank:false, unique:true
     }
     
     static hasMany = [publications:Publication]
-    
-    @Override
-    public String toString() { name }
 }

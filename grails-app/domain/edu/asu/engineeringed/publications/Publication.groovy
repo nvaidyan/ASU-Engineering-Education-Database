@@ -13,9 +13,11 @@ abstract class Publication {
     
     static constraints = {
         title blank:false, unique:true
-        summary maxSize:65535
-        published(nullable:true)
+        summary maxSize:65535, nullable:true
+        published nullable:true
+        content nullable:true
     }
     
-    
+    @Override
+    public String toString() { title }
 }

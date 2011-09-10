@@ -1,9 +1,22 @@
 import edu.asu.engineeringed.users.*
+import edu.asu.engineeringed.publications.*
 import edu.asu.engineeringed.*
 import au.com.bytecode.opencsv.*
 import au.com.bytecode.opencsv.bean.*
 
 class BootStrap {
+    def init = { servletContext ->
+        createInstitutions()
+        createAcademicUnits()
+        createDomainAreas()
+        createProfessors()
+        createTextbooks()
+        createRoles()
+        createUsers()
+    }
+    def destroy = {
+    }
+    
     def createInstitutions() {
         /*def asu = Institution.findByName("Arizona State University") ?:
             new Institution(name:"Arizona State University", schedule:'semester').save(failOnError:true)
@@ -21,6 +34,7 @@ class BootStrap {
             def already = Institution.findByName(it.name) ?: it.save(failOnError:true)
         }
     }
+    
     def createAcademicUnits() {
         def asu = Institution.findByName("Arizona State University")
         def maryLou = AcademicUnit.findByName("Mary Lou Fulton Teacher's College") ?:
@@ -39,6 +53,7 @@ class BootStrap {
         ira.addToSubUnits(semte)
         semte.addToParentUnits(ira)
     }
+    
     def createDomainAreas() {
         def engEd = DomainArea.findByName("Engineering Education") ?:
             new DomainArea(name:"Engineering Education").save(failOnError:true)
@@ -64,6 +79,7 @@ class BootStrap {
             new DomainArea(name:"Software Engineering").save(failOnError:true)
         cs.addToSubAreas(swEng)
     }
+    
     def createProfessors() {
         def maryLou = AcademicUnit.findByName("Mary Lou Fulton Teacher's College")
         def ira = AcademicUnit.findByName("Ira A. Fulton School of Engineering")
@@ -92,10 +108,12 @@ class BootStrap {
         def squires = Professor.findByName("Kyle Squires") ?:
             new Professor(name:"Kyle Squires", affiliations:[ira,semte]).save(failOnError:true)
     }
+    
     def loadProfessorsFromCSV() {
         CSVReader reader = new CSVReader(new FileReader("professors.csv"));
         String [] nextLine;
         nextLine = reader.readNext() //skip the header
+        def compArch = DomainArea.findByName("Computer Architecture")
         while ((nextLine = reader.readNext()) != null) {
         // nextLine[] is an array of values from the line
             def thesisDomainArea = DomainArea.findByName(nextLine[8])
@@ -112,6 +130,29 @@ class BootStrap {
                 doctoralThesisDomain:thesisDomainArea,
                 doctoralAlmaMater:thesisInstitution
             ).save(failOnError:true)
+            prof.addToInterests(compArch)
+        }
+    }
+    
+    def createTextbooks() {
+        CSVReader reader = new CSVReader(new FileReader("textbooks.csv"));
+        String [] nextLine;
+        nextLine = reader.readNext() //skip the header
+        def compArch = DomainArea.findByName("Computer Architecture")
+        while ((nextLine = reader.readNext()) != null) {
+        // nextLine[] is an array of values from the line
+            def authors = nextLine[2].split(",")
+            authors = authors.collect {
+                Author.findByName(it) ?: new Author(name:it).save(failOnError:true)
+            }
+            def textbook = Textbook.findByIsbn(nextLine[0]) ?:
+            new Textbook(
+                isbn:nextLine[0],
+                title:nextLine[1],
+                edition:nextLine[3],
+                authors: authors
+            ).save(failOnError:true)
+            textbook.addToDomains(compArch)
         }
     }
     def createRoles() {
@@ -168,15 +209,5 @@ class BootStrap {
         UserRole.create(wunmi, Role.findByAuthority('ROLE_USER'))
         UserRole.create(carl, Role.findByAuthority('ROLE_USER'))
         UserRole.create(patrick, Role.findByAuthority('ROLE_USER'))
-    }
-    def init = { servletContext ->
-        createInstitutions()
-        createAcademicUnits()
-        createDomainAreas()
-        createProfessors()
-        createRoles()
-        createUsers()
-    }
-    def destroy = {
     }
 }

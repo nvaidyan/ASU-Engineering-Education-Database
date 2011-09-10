@@ -1,7 +1,7 @@
 package edu.asu.engineeringed.publications
+import edu.asu.engineeringed.AbstractEntity
 
-class Organization {
-    String name
+class Organization extends AbstractEntity {
     String url
     Date established
     
