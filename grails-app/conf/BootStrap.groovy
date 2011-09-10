@@ -26,11 +26,18 @@ class BootStrap {
         def maryLou = AcademicUnit.findByName("Mary Lou Fulton Teacher's College") ?:
             new AcademicUnit(name:"Mary Lou Fulton Teacher's College", institution:asu).save(failOnError:true)
         def ira = AcademicUnit.findByName("Ira A. Fulton School of Engineering") ?:
-            new AcademicUnit(name:"Ira A. Fulton School of Engineering", institution:asu).save(failOnError:true)
+            new AcademicUnit(name:
+    "Ira A. Fulton School of Engineering", institution:asu).save(failOnError:true)
+        def cte = AcademicUnit.findByName("College of Technology and Innovcation") ?:
+            new AcademicUnit(name:"College of Technology and Innovcation", institution:asu).save(failOnError:true)
         def cidse = AcademicUnit.findByName("School of Computing, Informatics, and Decision Systems Engineering") ?:
             new AcademicUnit(name:"School of Computing, Informatics, and Decision Systems Engineering", institution:asu).save(failOnError:true)
         ira.addToSubUnits(cidse)
         cidse.addToParentUnits(ira)
+        def semte = AcademicUnit.findByName("School for Engineering of Matter, Transport, and Energy") ?:
+            new AcademicUnit(name:"School for Engineering of Matter, Transport, and Energy", institution:asu).save(failOnError:true)
+        ira.addToSubUnits(semte)
+        semte.addToParentUnits(ira)
     }
     def createDomainAreas() {
         def engEd = DomainArea.findByName("Engineering Education") ?:
@@ -60,12 +67,52 @@ class BootStrap {
     def createProfessors() {
         def maryLou = AcademicUnit.findByName("Mary Lou Fulton Teacher's College")
         def ira = AcademicUnit.findByName("Ira A. Fulton School of Engineering")
+        def cte = AcademicUnit.findByName("College of Technology and Innovcation")
+        def cidse = AcademicUnit.findByName("School of Computing, Informatics, and Decision Systems Engineering")
+        def semte = AcademicUnit.findByName("School for Engineering of Matter, Transport, and Energy")
+        loadProfessorsFromCSV()
         def ganesh = Professor.findByName("Tirupalavanam Ganesh") ?:
-            new Professor(name:"Tirupalavanam Ganesh", affiliations:[maryLou, ira]).save(failOnError:true)
+            new Professor(name:"Tirupalavanam Ganesh", affiliations:[maryLou, ira,semte]).save(failOnError:true)
         def dale = Professor.findByName("Dale Baker") ?:
             new Professor(name:"Dale Baker", affiliations:[maryLou]).save(failOnError:true)
         def collofello = Professor.findByName("James Collofello") ?:
-            new Professor(name:"James Collofello", affiliations:[ira]).save(failOnError:true)
+            new Professor(name:"James Collofello", affiliations:[ira,cidse]).save(failOnError:true)
+        def odesma = Professor.findByName("Odesma Dalrymple") ?:
+            new Professor(name:"Odesma Dalrymple", affiliations:[cte]).save(failOnError:true)
+        def krause = Professor.findByName("Stephen Krause") ?:
+            new Professor(name:"Stephen Krause", affiliations:[ira,semte]).save(failOnError:true)
+        def mcKenna = Professor.findByName("Ann McKenna") ?:
+            new Professor(name:"Ann McKenna", affiliations:[cte]).save(failOnError:true)
+        def middleton = Professor.findByName("James Middleton") ?:
+            new Professor(name:"James Middleton", affiliations:[ira]).save(failOnError:true)
+        def ramakrishna = Professor.findByName("B Ramakrishna") ?:
+            new Professor(name:"B Ramakrishna", affiliations:[ira,semte]).save(failOnError:true)
+        def chell = Professor.findByName("Chell Roberts") ?:
+            new Professor(name:"Chell Roberts", affiliations:[cte]).save(failOnError:true)
+        def squires = Professor.findByName("Kyle Squires") ?:
+            new Professor(name:"Kyle Squires", affiliations:[ira,semte]).save(failOnError:true)
+    }
+    def loadProfessorsFromCSV() {
+        CSVReader reader = new CSVReader(new FileReader("professors.csv"));
+        String [] nextLine;
+        nextLine = reader.readNext() //skip the header
+        while ((nextLine = reader.readNext()) != null) {
+        // nextLine[] is an array of values from the line
+            def thesisDomainArea = DomainArea.findByName(nextLine[8])
+            def thesisInstitution = Institution.findByName(nextLine[7])
+            def prof = Professor.findByName(nextLine[1]) ?:
+            new Professor(
+                name:nextLine[1],
+                email:nextLine[2],
+                homepageUrl:(nextLine[3] !="NULL") ? nextLine[3] : null,
+                yearStartedTeaching:(nextLine[4] != "NULL") ? nextLine[4] : null,
+                position:nextLine[5],
+                tenured:(nextLine[6] == "1") ? true : false,
+                comments:nextLine[9],
+                doctoralThesisDomain:thesisDomainArea,
+                doctoralAlmaMater:thesisInstitution
+            ).save(failOnError:true)
+        }
     }
     def createRoles() {
         def adminRole = Role.findByAuthority('ROLE_ADMIN') ?:

@@ -9,4 +9,7 @@ class Institution {
         carnegieClassification nullable:true
         schedule inList:(["semester","quarter"])
     }
+    
+    @Override
+    public String toString() { name }
 }
