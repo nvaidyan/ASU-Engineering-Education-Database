@@ -198,9 +198,33 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* =============================================================================
    Primary styles
-   Author: 
+   Author: Nicholas Vaidyanathan
    ========================================================================== */
+body {
+    color:#161616;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#topMenu {
+    background-color:#FFB310;
+    margin-top:2%;
+    padding:1%;
+    color:white;
+}
 
+#topMenu li {
+    display:inline;
+    padding:5%;
+}
+
+#topMenu a {
+    color:maroon;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#topMenu a:hover {
+    color:white;
+}
 
 
 

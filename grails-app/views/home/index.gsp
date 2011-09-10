@@ -1,12 +1,18 @@
 <html>
   <head>
     <meta name="layout" content="html5boilerplate">
-    <title>Welcome to the ASU Engineering Education Research Portal</title>
+    <title>
+      <g:message code="default.welcome" 
+                 default="Welcome to the ASU Engineering Education Research Portal" />
+    </title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>
+      <g:message code="default.welcome" 
+                 default="Welcome to the ASU Engineering Education Research Portal" />
+    </h1>
     <p>
-      To login, click <g:link controller="login" action="auth">here</g:link>
+      Welcome to our engineering education curricular analysis database.
     </p>
   </body>
 </html>

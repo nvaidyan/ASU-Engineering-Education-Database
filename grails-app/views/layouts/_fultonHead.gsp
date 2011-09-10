@@ -1,4 +1,3 @@
-<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/3.0/css/header_compressed.css" />
 <div id="asu_hdr" class="asu_hdr_gold"> 
 	<div id="asu_logo"> 
           <a target="_top" 
@@ -8,7 +7,7 @@
                  alt="Ira A. Fulton Schools of Engineering at Arizona State University" 
                  height="32" 
                  width="203" 
-                 title="Ira A. Fulton Schools of Engineering at Arizona State University">
+                 title="Ira A. Fulton Schools of Engineering at Arizona State University" />
           </a> 
 	</div> 
 	<div id="asu_nav_wrapper"> 

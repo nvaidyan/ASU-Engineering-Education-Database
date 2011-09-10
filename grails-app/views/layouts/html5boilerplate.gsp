@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" media="all" 
+          href="https://www.asu.edu/asuthemes/3.0/css/header_compressed.css" />
 
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
   <g:layoutHead/>
@@ -22,9 +24,18 @@
 
   <div id="container">
     <header role="banner">
+      <script type="text/javascript">
+      // <![CDATA[
+      // Declare the ASUHeader namespace, if it doesn't already exist.
+      if (!ASUHeader) {
+              var ASUHeader = {};
+      }
+      // ]]>
+      </script>
       <g:render template="/layouts/fultonHead" />
     </header>
     <div id="main" role="main">
+      <g:render template="/layouts/menus/top" />
       <g:layoutBody/>
     </div>
     <footer role="contentinfo">
@@ -51,7 +62,9 @@
           <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
           <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
-  <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+  <div id="spinner" class="spinner" style="display:none;">
+    <g:message code="spinner.alt" default="Loading&hellip;"/>
+  </div>
 <g:javascript library="application"/>
 </body>
 </html>

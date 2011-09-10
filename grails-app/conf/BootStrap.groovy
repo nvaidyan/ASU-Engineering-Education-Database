@@ -1,7 +1,10 @@
-import edu.asu.engineeringed.users.User
-import edu.asu.engineeringed.users.Role
-import edu.asu.engineeringed.users.UserRole
+import edu.asu.engineeringed.users.*
+import edu.asu.engineeringed.*
 class BootStrap {
+    def createInstitutions() {
+        def asu = Institution.findByName("Arizona State University") ?:
+            new Institution(name:"Arizona State University").save(failOnError:true)
+    }
     def createRoles() {
         def adminRole = Role.findByAuthority('ROLE_ADMIN') ?:
                        new Role(authority:'ROLE_ADMIN').save(failOnError:true)
@@ -11,7 +14,7 @@ class BootStrap {
                        new Role(authority:'ROLE_USER').save(failOnError:true)
     }
     
-    def createPeople(){
+    def createUsers(){
         def password = "password"
         def ganesh = User.findByUsername("ganesh") ?:
         new User(username:"ganesh", 
@@ -58,8 +61,9 @@ class BootStrap {
         UserRole.create(patrick, Role.findByAuthority('ROLE_USER'))
     }
     def init = { servletContext ->
+        createInstitutions()
         createRoles()
-        createPeople()
+        createUsers()
     }
     def destroy = {
     }
