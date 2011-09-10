@@ -1,4 +1,4 @@
-package edu.asu.engineeringed
+package edu.asu.engineeringed.users
 
 import org.apache.commons.lang.builder.HashCodeBuilder
 

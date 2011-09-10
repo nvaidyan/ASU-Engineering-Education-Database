@@ -1,4 +1,4 @@
-package edu.asu.engineeringed
+package edu.asu.engineeringed.users
 
 class User {
 
