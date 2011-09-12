@@ -10,10 +10,12 @@ class User {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-
+        Integer points = 0
+        
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+                points min:0
 	}
 
 	static mapping = {
