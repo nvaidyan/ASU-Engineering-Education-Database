@@ -21,7 +21,7 @@ class Media {
     }
     
     @Override
-    public String toString() { return "${name}.${extension}" }
+    public String toString() { return "${name}" }
 
     public void setFileData(byte[] data)
     {

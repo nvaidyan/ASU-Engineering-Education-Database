@@ -11,7 +11,11 @@ import org.junit.*
 @TestFor(Media)
 class MediaTests {
 
-    void testSomething() {
-
+    void testName() {
+        String fileName = "ASU_Eg_Ed_Seminar_10.22.10.pdf"
+        byte[] dummy = [146, 238, 122]
+        def media = Media(name:fileName,description:"fake",fileData:mediaData)
+        assertEquals "pdf", media.extension
+        assertEquals "ASU_Eg_Ed_Seminar_10.22.10", media.name
     }
 }

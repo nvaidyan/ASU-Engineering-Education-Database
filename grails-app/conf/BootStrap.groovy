@@ -8,7 +8,7 @@ class BootStrap {
     def init = { servletContext ->
         BasicCreation.loadData()
         ProfessorCreation.loadData()
-        //PresentationCreation.loadData()
+        PresentationCreation.loadData()
         CourseCreation.loadData()
         UserCreation.loadData()
     }
