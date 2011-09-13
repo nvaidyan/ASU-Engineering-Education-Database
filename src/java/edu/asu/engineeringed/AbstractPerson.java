@@ -11,4 +11,14 @@ public abstract class AbstractPerson extends AbstractEntity implements InternetP
         this.email = email;
     }
     public String getEmail() { return email; }
+    
+    public String getLastName() { 
+        String[] splitNames = getName().split(" ");
+        return splitNames[splitNames.length-1];
+    }
+    
+    public String getFirstName() { 
+        String[] splitNames = getName().split(" ");
+        return splitNames[0];
+    }
 }

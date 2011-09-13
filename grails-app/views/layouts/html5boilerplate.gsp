@@ -13,11 +13,8 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" media="all" 
-          href="https://www.asu.edu/asuthemes/3.0/css/header_compressed.css" />
-
-    <script src="js/libs/modernizr-2.0.6.min.js"></script>
+    <r:require modules="core" />
+    <r:layoutResources />
   <g:layoutHead/>
 </head>
 <body>
@@ -33,31 +30,19 @@
       // ]]>
       </script>
       <g:render template="/layouts/fultonHead" />
+      <img id="logo" 
+           src="${resource(dir:'images', file:'engineeringEducationPhD.png')}"
+           alt="Engineering Education PhD" />
+      <g:render template="/layouts/menus/top" />
     </header>
     <div id="main" role="main">
-      <g:render template="/layouts/menus/top" />
       <g:layoutBody/>
     </div>
     <footer role="contentinfo">
       <g:render template="/layouts/fultonFoot" />
     </footer>
   </div> <!--! end of #container -->
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <!-- end scripts-->
-
-  <script>
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-
+  
   <!--[if lt IE 7 ]>
           <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
           <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
@@ -65,6 +50,6 @@
   <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>
   </div>
-<g:javascript library="application"/>
+<r:script library="application"/>
 </body>
 </html>

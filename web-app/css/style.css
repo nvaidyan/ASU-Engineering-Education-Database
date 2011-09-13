@@ -206,11 +206,13 @@ body {
 }
 #topMenu {
     background-color:#FFB310;
-    margin-top:2%;
     padding:1%;
     color:white;
 }
-
+#logo {
+    margin-left: 20%;
+    margin-right: 20%;
+}
 #topMenu li {
     display:inline;
     padding:5%;
@@ -225,11 +227,6 @@ body {
 #topMenu a:hover {
     color:white;
 }
-
-
-
-
-
 
 /* =============================================================================
    Non-semantic helper classes

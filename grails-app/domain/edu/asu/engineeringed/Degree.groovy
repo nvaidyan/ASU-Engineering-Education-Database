@@ -12,11 +12,11 @@ class Degree extends AbstractEntity {
         person()
         name blank:false
         type inList:["Bachelor's", "Master's", "PhD"]
-        primary()
+        primary nullable:true
         grantor()
         yearConferred min:1930, nullable:true
     }
     
     @Override
-    public String toString(){ "${name}-${grantor}}"}
+    public String toString(){ "${type}, ${grantor}, ${yearConferred}"}
 }

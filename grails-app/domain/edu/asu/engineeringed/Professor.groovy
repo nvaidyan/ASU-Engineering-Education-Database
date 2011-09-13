@@ -1,9 +1,9 @@
 package edu.asu.engineeringed
 
 class Professor extends AbstractPerson {
-    static belongsTo = AcademicUnit
     
     String homepageUrl
+    String headshotUrl
     Integer yearStartedTeaching
     String position
     Boolean tenured
@@ -14,6 +14,7 @@ class Professor extends AbstractPerson {
         name blank:false, unique:true
         email nullable:true, email:true
         homepageUrl nullable:true, url:true
+        headshotUrl nullable:true, url:true
         yearStartedTeaching nullable:true
         position nullable:true
         tenured nullable:true
@@ -22,7 +23,7 @@ class Professor extends AbstractPerson {
     }
     
     static hasMany = [ interests:DomainArea, 
-                       affiliations:AcademicUnit,
+                       affiliations:UnitFaculty,
                        degrees:Degree
                      ]
 }

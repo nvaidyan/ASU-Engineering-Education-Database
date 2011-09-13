@@ -3,13 +3,13 @@ import edu.asu.engineeringed.courses.Course
 
 class AcademicUnit extends AbstractEntity {
     static belongsTo = [ owner : Institution ]
-    Professor chair
+    
     static constraints = {
         name blank:false
-        chair nullable:true
     }
+    SortedSet faculty
     static hasMany = [subUnits:AcademicUnit, 
                       parentUnits:AcademicUnit,
                       courses:Course,
-                      faculty:Professor]
+                      faculty:UnitFaculty]
 }
