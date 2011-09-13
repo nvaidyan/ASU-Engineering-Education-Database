@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="0" name="AcademicUnitControllerTests" package="edu.asu.engineeringed" tests="1" time="0.516" timestamp="2011-09-13T04:16:12">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.AcademicUnitControllerTests" name="testSomething" time="0.446" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="1" name="AcademicUnitTests" package="edu.asu.engineeringed" tests="1" time="0.399" timestamp="2011-09-13T04:16:12">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.AcademicUnitTests" name="testSomething" time="0.386">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="2" name="DomainAreaControllerTests" package="edu.asu.engineeringed" tests="1" time="0.033" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.DomainAreaControllerTests" name="testSomething" time="0.02" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="3" name="DomainAreaTests" package="edu.asu.engineeringed" tests="1" time="0.107" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.DomainAreaTests" name="testSomething" time="0.088">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="4" name="HomeControllerTests" package="edu.asu.engineeringed" tests="1" time="0.038" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.HomeControllerTests" name="testSomething" time="0.021" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="5" name="InstitutionControllerTests" package="edu.asu.engineeringed" tests="1" time="0.03" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.InstitutionControllerTests" name="testSomething" time="0.018" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="6" name="InstitutionTests" package="edu.asu.engineeringed" tests="1" time="0.105" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.InstitutionTests" name="testSomething" time="0.088">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="7" name="MediaControllerTests" package="edu.asu.engineeringed" tests="1" time="0.031" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.MediaControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="8" name="MediaTests" package="edu.asu.engineeringed" tests="1" time="0.069" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.MediaTests" name="testSomething" time="0.053">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="9" name="ProfessorControllerTests" package="edu.asu.engineeringed" tests="1" time="0.029" timestamp="2011-09-13T04:16:15">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.ProfessorControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="10" name="ProfessorServiceTests" package="edu.asu.engineeringed" tests="1" time="0.084" timestamp="2011-09-13T04:16:15">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.ProfessorServiceTests" name="testGetASUEngineeringEducationFaculty" time="0.072">
+          <error message="No signature of method: edu.asu.engineeringed.AcademicUnit.addToFaculty() is applicable for argument types: (edu.asu.engineeringed.Professor) values: [Tirupalavanam Ganesh]&#xa;Possible solutions: getFaculty()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: edu.asu.engineeringed.AcademicUnit.addToFaculty() is applicable for argument types: (edu.asu.engineeringed.Professor) values: [Tirupalavanam Ganesh]
+Possible solutions: getFaculty()
+	at edu.asu.engineeringed.ProfessorServiceTests.testGetASUEngineeringEducationFaculty(ProfessorServiceTests.groovy:18)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testGetASUEngineeringEducationFaculty--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testGetASUEngineeringEducationFaculty--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="11" name="ProfessorTests" package="edu.asu.engineeringed" tests="1" time="0.054" timestamp="2011-09-13T04:16:15">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.ProfessorTests" name="testSomething" time="0.036">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="12" name="AssignmentTests" package="edu.asu.engineeringed.courses" tests="1" time="0.192" timestamp="2011-09-13T04:16:13">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.AssignmentTests" name="testSomething" time="0.173">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="13" name="CourseControllerTests" package="edu.asu.engineeringed.courses" tests="1" time="0.036" timestamp="2011-09-13T04:16:13">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.CourseControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="14" name="CourseOfferingTests" package="edu.asu.engineeringed.courses" tests="1" time="0.247" timestamp="2011-09-13T04:16:13">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.CourseOfferingTests" name="testSomething" time="0.234">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="15" name="CourseTests" package="edu.asu.engineeringed.courses" tests="1" time="0.394" timestamp="2011-09-13T04:16:13">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.CourseTests" name="testSomething" time="0.381">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="16" name="ObjectiveTests" package="edu.asu.engineeringed.courses" tests="1" time="0.093" timestamp="2011-09-13T04:16:13">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.ObjectiveTests" name="testSomething" time="0.08">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="17" name="OutcomeTests" package="edu.asu.engineeringed.courses" tests="1" time="0.089" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.courses.OutcomeTests" name="testSomething" time="0.07">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="18" name="PresentationTests" package="edu.asu.engineeringed.presentations" tests="1" time="0.241" timestamp="2011-09-13T04:16:14">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.presentations.PresentationTests" name="testSomething" time="0.228">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="19" name="SpeakerTests" package="edu.asu.engineeringed.presentations" tests="1" time="0.431" timestamp="2011-09-13T04:16:15">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.presentations.SpeakerTests" name="testSomething" time="0.414" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="20" name="AuthorControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.032" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.AuthorControllerTests" name="testSomething" time="0.02" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="21" name="AuthorTests" package="edu.asu.engineeringed.publications" tests="1" time="0.056" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.AuthorTests" name="testSomething" time="0.04">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="22" name="ConferenceControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.034" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.ConferenceControllerTests" name="testSomething" time="0.018" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="23" name="ConferencePaperControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.031" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.ConferencePaperControllerTests" name="testSomething" time="0.02" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="24" name="ConferencePaperTests" package="edu.asu.engineeringed.publications" tests="1" time="0.073" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.ConferencePaperTests" name="testSomething" time="0.061">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="25" name="ConferenceTests" package="edu.asu.engineeringed.publications" tests="1" time="0.052" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.ConferenceTests" name="testSomething" time="0.037">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="26" name="JournalArticleControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.031" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.JournalArticleControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="27" name="JournalArticleTests" package="edu.asu.engineeringed.publications" tests="1" time="0.06" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.JournalArticleTests" name="testSomething" time="0.045">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="28" name="JournalControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.029" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.JournalControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="29" name="JournalTests" package="edu.asu.engineeringed.publications" tests="1" time="0.122" timestamp="2011-09-13T04:16:16">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.JournalTests" name="testSomething" time="0.106">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="30" name="OrganizationControllerTests" package="edu.asu.engineeringed.publications" tests="1" time="0.031" timestamp="2011-09-13T04:16:17">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.OrganizationControllerTests" name="testSomething" time="0.02" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="31" name="OrganizationTests" package="edu.asu.engineeringed.publications" tests="1" time="0.529" timestamp="2011-09-13T04:16:17">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.OrganizationTests" name="testSomething" time="0.518">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="32" name="PublicationTests" package="edu.asu.engineeringed.publications" tests="1" time="0.194" timestamp="2011-09-13T04:16:17">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.PublicationTests" name="testSomething" time="0.183">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="33" name="TextbookTests" package="edu.asu.engineeringed.publications" tests="1" time="0.195" timestamp="2011-09-13T04:16:18">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.publications.TextbookTests" name="testSomething" time="0.185">
+          <error message="No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: MAX_SIZE for class: org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder
+	at edu.asu.engineeringed.Media$__clinit__closure1.doCall(Media.groovy:16)
+	at org.grails.datastore.mapping.config.groovy.MappingConfigurationBuilder.evaluate(MappingConfigurationBuilder.groovy:70)
+	at org.grails.datastore.mapping.config.AbstractGormMappingFactory.createMappedForm(AbstractGormMappingFactory.java:53)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:35)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.GormKeyValueMappingFactory.createMappedForm(GormKeyValueMappingFactory.java:25)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:44)
+	at org.grails.datastore.mapping.keyvalue.mapping.config.KeyValuePersistentEntity$KeyValueClassMapping.getMappedForm(KeyValuePersistentEntity.java:38)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:105)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="34" name="InvestigationTests" package="edu.asu.engineeringed.research" tests="1" time="0.086" timestamp="2011-09-13T04:16:18">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.research.InvestigationTests" name="testSomething" time="0.075">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="35" name="ProjectTests" package="edu.asu.engineeringed.research" tests="1" time="0.091" timestamp="2011-09-13T04:16:18">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.research.ProjectTests" name="testSomething" time="0.081">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="phy-psf-487-1" id="36" name="ResearcherTests" package="edu.asu.engineeringed.research" tests="1" time="0.245" timestamp="2011-09-13T04:16:18">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.research.ResearcherTests" name="testSomething" time="0.235">
+          <error message="Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property" type="org.grails.datastore.mapping.model.IllegalMappingException">org.grails.datastore.mapping.model.IllegalMappingException: Mapped identifier [id] for class [edu.asu.engineeringed.AbstractEntity] is not a valid property
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getIdentity(GormMappingConfigurationStrategy.java:635)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:79)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:102)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishDomainClassRelationship(GormMappingConfigurationStrategy.java:528)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:190)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getOrCreateAssociatedEntity(GormMappingConfigurationStrategy.java:545)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.establishRelationshipForCollection(GormMappingConfigurationStrategy.java:381)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:182)
+	at org.grails.datastore.mapping.model.config.GormMappingConfigurationStrategy.getPersistentProperties(GormMappingConfigurationStrategy.java:134)
+	at org.grails.datastore.mapping.model.AbstractPersistentEntity.initialize(AbstractPersistentEntity.java:81)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntityInternal(AbstractMappingContext.java:127)
+	at org.grails.datastore.mapping.model.AbstractMappingContext.addPersistentEntity(AbstractMappingContext.java:115)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:110)
+	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="37" name="AccomplishmentTests" package="edu.asu.engineeringed.users" tests="1" time="0.037" timestamp="2011-09-13T04:16:18">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.users.AccomplishmentTests" name="testSomething" time="0.023" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="38" name="RoleControllerTests" package="edu.asu.engineeringed.users" tests="1" time="0.048" timestamp="2011-09-13T04:16:19">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.users.RoleControllerTests" name="testSomething" time="0.038" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="39" name="UserAccomplishmentTests" package="edu.asu.engineeringed.users" tests="1" time="0.065" timestamp="2011-09-13T04:16:19">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.users.UserAccomplishmentTests" name="testSomething" time="0.05" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="40" name="UserControllerTests" package="edu.asu.engineeringed.users" tests="1" time="0.036" timestamp="2011-09-13T04:16:19">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.users.UserControllerTests" name="testSomething" time="0.019" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="phy-psf-487-1" id="41" name="UserRoleControllerTests" package="edu.asu.engineeringed.users" tests="1" time="0.026" timestamp="2011-09-13T04:16:19">
+      <properties />
+
+      <testcase classname="edu.asu.engineeringed.users.UserRoleControllerTests" name="testSomething" time="0.024" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

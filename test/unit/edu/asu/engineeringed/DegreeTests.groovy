@@ -1,4 +1,4 @@
-package edu.asu.engineeringed.courses
+package edu.asu.engineeringed
 
 
 
@@ -8,8 +8,8 @@ import org.junit.*
 /**
  * See the API for {@link grails.test.mixin.domain.DomainUnitTestMixin} for usage instructions
  */
-@TestFor(Textbook)
-class TextbookTests {
+@TestFor(Degree)
+class DegreeTests {
 
     void testSomething() {
 

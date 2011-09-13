@@ -3,7 +3,7 @@ import edu.asu.engineeringed.Professor
 import edu.asu.engineeringed.publications.Textbook
 
 class CourseOffering {
-    static belongsTo = [Course]
+    static belongsTo = [ course: Course ]
     Professor instructor
     Date start
     Date end

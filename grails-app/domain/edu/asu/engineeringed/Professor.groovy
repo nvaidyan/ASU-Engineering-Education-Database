@@ -7,9 +7,8 @@ class Professor extends AbstractPerson {
     Integer yearStartedTeaching
     String position
     Boolean tenured
+    String researchInterests
     String comments
-    DomainArea doctoralThesisDomain
-    Institution doctoralAlmaMater
     
     static constraints = {
         name blank:false, unique:true
@@ -18,11 +17,12 @@ class Professor extends AbstractPerson {
         yearStartedTeaching nullable:true
         position nullable:true
         tenured nullable:true
+        researchInterests nullable:true
         comments nullable:true, maxSize:65535
-        doctoralThesisDomain nullable:true
-        doctoralAlmaMater nullable:true
     }
     
-    static hasMany = [interests:DomainArea, 
-                      affiliations:AcademicUnit]
+    static hasMany = [ interests:DomainArea, 
+                       affiliations:AcademicUnit,
+                       degrees:Degree
+                     ]
 }
