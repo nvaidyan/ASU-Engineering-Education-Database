@@ -25,8 +25,8 @@
 	<ul id="asu_login_module" class="hidden" style="display: inline-block; "> 
 	  	      <li id="asu_hdr_ssi" class="end"> 
 	        <a target="_top" href="https://weblogin.asu.edu/cgi-bin/login?callapp=##w.l##" onmouseover="this.href = ASUHeader.alterLoginHref(this.href);" onfocus="this.href = ASUHeader.alterLoginHref(this.href);" onclick="this.href = ASUHeader.alterLoginHref(this.href);">SIGN IN</a> 
-	      </li> -->
-	      </ul> 
+	      </li> 
+	      </ul> -->
  
     <script type="text/javascript"> 
 // <![CDATA[
@@ -100,7 +100,7 @@ ASUHeader.checkSSOCookie = function() {
         }
     }
     // unhide the links
-    document.getElementById('asu_login_module').style.display = 'inline-block';
+    //document.getElementById('asu_login_module').style.display = 'inline-block';
 }
  
 if (typeof(jQuery) != 'undefined') {
