@@ -7,6 +7,7 @@ class BasicCreation {
         createInstitutions()
         createAcademicUnits()
         createDomainAreas()
+        createASUEngEdStudents()
     }
     
     private static void createInstitutions() {
@@ -77,6 +78,40 @@ class BasicCreation {
         def swEng = DomainArea.findByName("Software Engineering") ?:
             new DomainArea(name:"Software Engineering").save(failOnError:true)
         cs.addToSubAreas(swEng)
+    }
+    
+    private static void createASUEngEdStudents(){
+        def engineeringEd = AcademicUnit.findByName("Engineering Education")
+        def students = [
+            "katie" : [name:"Katherine Muto-Nelson", 
+                       email:"kmuto@asu.edu",
+                       yearInSchool:"PhD",
+                      ],
+            "chrissy" : [name:"Christina Hobson-Foster", 
+                       email:"Christina.Hobson@asu.edu",
+                       yearInSchool:"PhD",
+                      ],
+            "wunmi" : [name:"Omowunmi.Isaacs-Sodeye", 
+                       email:"Omowunmi.Isaacs-Sodeye@asu.edu",
+                       yearInSchool:"PhD",
+                      ],
+            "carl" : [name:"Carl Whitesel", 
+                       email:"cwhitese@asu.edu",
+                       yearInSchool:"PhD",
+                      ],
+            "patrick" : [name:"Patrick Schwab", 
+                       email:"pschwab@asu.edu",
+                       yearInSchool:"PhD",
+                      ],
+        ]
+        students.each { k,v ->
+            def student = Student.findByName(v.name) ?:
+                          new GraduateStudent(name:v.name,
+                                      email:v.email,
+                                      yearInSchool:v.yearInSchool
+                                     ).save(failOnError:true)
+            engineeringEd.addToStudents(student)
+        }
     }
 }
 

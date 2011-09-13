@@ -8,6 +8,7 @@ class CourseCreation {
     public static void loadData(){
         createTextbooks()
         createCourses()
+        createASUEngEdCourses()
     }
     
     private static void createTextbooks() {
@@ -49,6 +50,38 @@ class CourseCreation {
             course.addToDomains(compArch)
             course.addToDepartments(department)
         }
+    }
+    
+    private static void createASUEngEdCourses(){
+        def asu = Institution.findByName("Arizona State University")
+        def engEd = "Engineering Education"
+        def unit = AcademicUnit.findByOwnerAndName(asu, engEd )
+        def domain = DomainArea.findByName(engEd)
+        def courses = [
+            "ene701" : [
+                         title:"Fundamentals of Engineering Education",
+                         description:"Equity in Science Education, Fundamentals of Engineering ED, Assessment & Evaluation in Engineering Education, Research Methods in Engineering Education.  A small class emphasizing discussion, presentations by students, and written research papers",
+                         url:"https://webapp4.asu.edu/catalog/app?component=%24DirectLink&page=Course&service=direct&session=T&sp=SWEST&sp=SENE&sp=S+691&sp=S2117&sp=SED216&sp=S83831"
+                       ],
+            "ene702" : [
+                         title:"Assessment & Evaluation in Engineering Education",
+                         description:"A small class emphasizing discussion, presentations by students, and written research papers",
+                         url:"https://webapp4.asu.edu/catalog/app?component=%24DirectLink&page=Course&service=direct&session=T&sp=SWEST&sp=SENE&sp=S+691&sp=S2117&sp=SED250&sp=S83833"
+                       ],
+            "ene703" : [
+                         title:"Research Methods in Engineering Education",
+                         description:"A small class emphasizing discussion, presentations by students, and written research papers",
+                         url:"https://webapp4.asu.edu/catalog/app?component=%24DirectLink&page=Course&service=direct&session=T&sp=SWEST&sp=SENE&sp=S+691&sp=S2117&sp=SED216&sp=S83834"
+                       ],
+        ]
+       courses.each { k,v ->
+           def course = Course.findByTitle(v.title) ?:
+                        new Course(title:v.title, 
+                                   description:v.description,
+                                   url:v.url).save(failOnError:true)
+           course.addToDomains(domain)
+           unit.addToCourses(course)
+       }
     }
     
 }

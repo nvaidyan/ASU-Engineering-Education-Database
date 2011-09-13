@@ -8,8 +8,11 @@ class AcademicUnit extends AbstractEntity {
         name blank:false
     }
     SortedSet faculty
-    static hasMany = [subUnits:AcademicUnit, 
-                      parentUnits:AcademicUnit,
-                      courses:Course,
-                      faculty:UnitFaculty]
+    static hasMany = [
+                        subUnits:AcademicUnit, 
+                        parentUnits:AcademicUnit,
+                        courses:Course,
+                        faculty:UnitFaculty,
+                        students:Student
+                     ]
 }
