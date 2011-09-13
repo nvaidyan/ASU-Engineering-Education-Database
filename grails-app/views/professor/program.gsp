@@ -15,8 +15,8 @@
              target="_blank">
             <img src="${facultyInstance.headshotUrl}"
                  alt="${facultyInstance}'s headshot"
-                 width="150"
-                 height="150" />
+                 width="100"
+                 height="100" />
             <h3>${facultyInstance}</h3>
           </a>
           <p class="position">${facultyInstance.position}</p>

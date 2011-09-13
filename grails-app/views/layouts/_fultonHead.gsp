@@ -21,11 +21,11 @@
       <li><a target="_top" href="http://www.asu.edu/map/">Map</a></li> 
 	</nav> 
         
-    <h2 class="hidden">Sign In / Sign Out</h2> 
+    <!-- <h2 class="hidden">Sign In / Sign Out</h2> 
 	<ul id="asu_login_module" class="hidden" style="display: inline-block; "> 
 	  	      <li id="asu_hdr_ssi" class="end"> 
 	        <a target="_top" href="https://weblogin.asu.edu/cgi-bin/login?callapp=##w.l##" onmouseover="this.href = ASUHeader.alterLoginHref(this.href);" onfocus="this.href = ASUHeader.alterLoginHref(this.href);" onclick="this.href = ASUHeader.alterLoginHref(this.href);">SIGN IN</a> 
-	      </li> 
+	      </li> -->
 	      </ul> 
  
     <script type="text/javascript"> 

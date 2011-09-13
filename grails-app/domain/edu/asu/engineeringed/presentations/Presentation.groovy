@@ -21,4 +21,8 @@ class Presentation {
         title blank:false
         description blank:false
     }
+    
+    static mapping = {
+        description type:'text'
+    }
 }

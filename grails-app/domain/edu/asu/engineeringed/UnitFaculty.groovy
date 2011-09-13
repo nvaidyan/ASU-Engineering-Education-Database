@@ -18,7 +18,8 @@ class UnitFaculty implements Serializable, Comparable {
     }
 
     int compareTo(obj) {
-       (isChair) ? 1 : professor.lastName.compareToIgnoreCase(obj.professor.lastName)
+       (isChair) ? 1 : 
+       professor.lastName.compareToIgnoreCase(obj.professor.lastName)
     }
     int hashCode() {
             def builder = new HashCodeBuilder()
