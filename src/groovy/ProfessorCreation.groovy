@@ -55,9 +55,9 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/37224",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=37224",
                           researchInterests:"engineering education, qualitative research methods, curriculum studies").save(failOnError:true)
-        UnitFaculty.create(ganesh,maryLou)
-        UnitFaculty.create(ganesh,ira)
-        UnitFaculty.create(ganesh,semte)
+        UnitFaculty.create(ganesh,maryLou,true)
+        UnitFaculty.create(ganesh,ira,true)
+        UnitFaculty.create(ganesh,semte,true)
         UnitFaculty.create(ganesh,engineeringEd,true,true)
         def institution = Institution.findByName("Arizona State University")
         def degree = new Degree(name:"Doctorate of Philosophy", 
@@ -74,8 +74,8 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/14845",
                           headshotUrl:"http://engineeringed.asu.edu/images/dale_baker.jpg",
                           researchInterests:"Science, gender, equity and assessment").save(failOnError:true)
-        UnitFaculty.create(dale,maryLou)
-        UnitFaculty.create(dale,engineeringEd)
+        UnitFaculty.create(dale,maryLou,true)
+        UnitFaculty.create(dale,engineeringEd,true)
         institution = Institution.findByNameLike("Rutgers")?: 
         new Institution(name:"Rutgers, The State University of New Jersey", schedule:'semester').save(failOnError:true)
         degree = new Degree(name:"Doctorate of Philosophy", 
@@ -92,9 +92,9 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/25234",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=25234",
                           researchInterests:"software engineering, undergraduate engineering education").save(failOnError:true)
-        UnitFaculty.create(collofello,ira)
-        UnitFaculty.create(collofello,cidse)
-        UnitFaculty.create(collofello,engineeringEd)
+        UnitFaculty.create(collofello,ira,true)
+        UnitFaculty.create(collofello,cidse,true)
+        UnitFaculty.create(collofello,engineeringEd,true)
         institution = Institution.findByNameLike("Northwestern%")
         degree = new Degree(name:"Doctorate of Philosophy",
                             type:"PhD",grantor:institution,
@@ -109,8 +109,8 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/1468223",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=1468223",
                           researchInterests:"engineering education, reverse engineering, electrical and computer engineering, influence of informal experience on engineering learning").save(failOnError:true)
-        UnitFaculty.create(odesma,cte)
-        UnitFaculty.create(odesma,engineeringEd)
+        UnitFaculty.create(odesma,cte,true)
+        UnitFaculty.create(odesma,engineeringEd,true)
         institution = Institution.findByNameLike("Purdue%")
         degree = new Degree(name:"Doctorate of Philosophy",
                             type:"PhD",
@@ -126,9 +126,9 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/57601",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=57601",
                           researchInterests:"materials science and engineering, k-12 engineering education, concept inventories").save(failOnError:true)
-        UnitFaculty.create(krause,ira)
-        UnitFaculty.create(krause,semte)
-        UnitFaculty.create(krause,engineeringEd)
+        UnitFaculty.create(krause,ira,true)
+        UnitFaculty.create(krause,semte,true)
+        UnitFaculty.create(krause,engineeringEd,true)
         institution = Institution.findByNameLike("University of Michigan%")
         degree = new Degree(name:"Doctorate of Philosophy", 
                             type:"PhD",grantor:institution, 
@@ -143,8 +143,8 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/1625925",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=1625915",
                           researchInterests:"cognitive and social processes of design, design teaching and learning, adaptive expertise in design and innovation, teaching approaches of engineering faculty, diffusion and impact of curricular innovations").save(failOnError:true)
-        UnitFaculty.create(mcKenna,cte)
-        UnitFaculty.create(mcKenna,engineeringEd)
+        UnitFaculty.create(mcKenna,cte,true)
+        UnitFaculty.create(mcKenna,engineeringEd,true)
         institution = Institution.findByNameLike("University of California-Berkeley%")
         degree = new Degree(name:"Doctorate of Philosophy", 
                             type:"PhD",grantor:institution, 
@@ -159,8 +159,8 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/49406",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=49406",
                           researchInterests:"mathematics, learning psychology, curriculum development, middle school mathematics").save(failOnError:true)
-        UnitFaculty.create(middleton,ira)
-        UnitFaculty.create(middleton,engineeringEd)
+        UnitFaculty.create(middleton,ira,true)
+        UnitFaculty.create(middleton,engineeringEd,true)
         institution = Institution.findByNameLike("University of Wisconsin%")
         degree = new Degree(name:"Doctorate of Philosophy", 
                             type:"PhD",
@@ -176,9 +176,9 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/83829",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=83829",
                           researchInterests:"biomineralization, nano biotechnology, k-12 science and engineering education").save(failOnError:true)
-        UnitFaculty.create(ramakrishna,ira)
-        UnitFaculty.create(ramakrishna,semte)
-        UnitFaculty.create(ramakrishna,engineeringEd)
+        UnitFaculty.create(ramakrishna,ira,true)
+        UnitFaculty.create(ramakrishna,semte,true)
+        UnitFaculty.create(ramakrishna,engineeringEd,true)
         
         institution = Institution.findByNameLike("Indian Institute of Technology%")?:
         new Institution(name:"Indian Institute of Technology", schedule:'semester').save(failOnError:true)
@@ -196,8 +196,8 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/35735",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=35735",
                           researchInterests:"engineering design and curriculum, engineering education, industrial engineering").save(failOnError:true)
-        UnitFaculty.create(chell,cte)
-        UnitFaculty.create(chell,engineeringEd)
+        UnitFaculty.create(chell,cte,true)
+        UnitFaculty.create(chell,engineeringEd,true)
         institution = Institution.findByNameLike("Virginia %tech%")
         degree = new Degree(name:"Doctorate of Philosophy", 
                             type:"PhD",grantor:institution, 
@@ -212,9 +212,9 @@ class ProfessorCreation {
                           homepageUrl:"https://webapp4.asu.edu/directory/person/94222",
                           headshotUrl:"https://webapp4.asu.edu/directory/photo?user=94222",
                           researchInterests:"computational science and engineering, fluid mechanics").save(failOnError:true)
-        UnitFaculty.create(squires,ira)
-        UnitFaculty.create(squires,semte)
-        UnitFaculty.create(squires,engineeringEd)
+        UnitFaculty.create(squires,ira,true)
+        UnitFaculty.create(squires,semte,true)
+        UnitFaculty.create(squires,engineeringEd,true)
         institution = Institution.findByNameLike("Stanford%")
         degree = new Degree(name:"Doctorate of Philosophy",
                             type:"PhD",

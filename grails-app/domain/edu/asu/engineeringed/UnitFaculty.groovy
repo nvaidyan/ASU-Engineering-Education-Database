@@ -34,11 +34,11 @@ class UnitFaculty implements Serializable, Comparable {
                     [professorId: professorId, unitId: unitId]
     }
 
-    static UnitFaculty create(Professor professor, AcademicUnit unit, boolean flush = false) {
+    static UnitFaculty create(Professor professor, AcademicUnit unit, boolean flush = true) {
             new UnitFaculty(professor: professor, unit: unit).save(flush: flush, insert: true)
     }
     
-    static UnitFaculty create(Professor professor, AcademicUnit unit, Boolean isChair, boolean flush = false) {
+    static UnitFaculty create(Professor professor, AcademicUnit unit, Boolean isChair, boolean flush = true) {
             new UnitFaculty(professor: professor, unit: unit, isChair:isChair).save(flush: flush, insert: true)
     }
 
