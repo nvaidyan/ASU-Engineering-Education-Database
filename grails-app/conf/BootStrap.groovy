@@ -3,6 +3,7 @@ import PresentationCreation
 import UserCreation
 import BasicCreation
 import CourseCreation
+import ResearchCreation
 
 class BootStrap {
     def init = { servletContext ->
@@ -11,6 +12,7 @@ class BootStrap {
         PresentationCreation.loadData()
         CourseCreation.loadData()
         UserCreation.loadData()
+        ResearchCreation.loadData()
     }
     def destroy = {
     }
