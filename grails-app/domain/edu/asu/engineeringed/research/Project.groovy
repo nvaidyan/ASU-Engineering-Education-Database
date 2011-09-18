@@ -20,4 +20,8 @@ class Project extends AbstractEntity {
             val, obj -> val >= obj.start
         }
     }
+    
+    static mapping = {
+        description type:'text'
+    }
 }
