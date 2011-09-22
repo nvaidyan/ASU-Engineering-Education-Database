@@ -86,7 +86,35 @@ class ResearchCreation {
         }
     }
     private static void createProjects(){
+        def projects = [
+            "Constructs": [start:new SimpleDateFormat("MM/dd/yyyy").parse("08/18/2011"), 
+                                end:new SimpleDateFormat("MM/dd/yyyy").parse("12/10/2011"),
+                                description:"""We're developing a database/glossary of common constructs found
+                                       when conducting an in-depth lierature review of the available engineering education literature.
+                                       This will also empower new researchers to enter the field 
+                                       and view a "10,000 ft map" of what the most important concepts are,  
+                                       who are the key players, etc""",
+                               status:"Execution"
+                               ],
+            "Measurement": [start:new SimpleDateFormat("MM/dd/yyyy").parse("02/01/2011"), 
+                                end:new SimpleDateFormat("MM/dd/yyyy").parse("05/31/2012"),
+                                description:"""In this project, we analyze the question banks available to 
+                                        instructors in many engineering textbooks and assess them on principles
+                                        of validity, reliability, and basic measurement theory""",
+                               status:"Execution"
+                               ],
+        ]
         
+        projects.each { key,value -> 
+            def project = Project.findByName(key) ?:
+            new Project(name:key,
+                        start:value.start,
+                        end:value.end,
+                        description:value.description,
+                       status:value.status  
+                       ).save()
+         //Investigation.create(nick, project, true).save()
+        }
     }
     
     private static void createInvestigations(){

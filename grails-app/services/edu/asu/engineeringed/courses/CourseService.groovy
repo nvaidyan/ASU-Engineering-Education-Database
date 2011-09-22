@@ -9,4 +9,9 @@ class CourseService {
         def unit = AcademicUnit.findByOwnerAndName(asu, engEd )
         unit.courses
     }
+    
+    def getSoftwareEngineeringCourses(){
+        def swEng = DomainArea.findByName("Software Engineering")
+        def courses = Course.findAllByDomains(swEng)
+    }
 }
