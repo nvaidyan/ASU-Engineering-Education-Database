@@ -13,5 +13,9 @@ modules = {
         resource url: 'css/faculty.css'
         resource url: 'js/faculty.js'
     }
+    projectList {
+        dependsOn 'core'
+        resource url: 'css/projects.css'
+    }
 }
 
