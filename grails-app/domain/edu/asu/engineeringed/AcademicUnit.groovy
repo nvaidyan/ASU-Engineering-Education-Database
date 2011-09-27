@@ -11,7 +11,7 @@ class AcademicUnit extends AbstractEntity {
     static hasMany = [
                         subUnits:AcademicUnit, 
                         parentUnits:AcademicUnit,
-                        courses:Course,
+                        courses:UnitCourse,
                         faculty:UnitFaculty,
                         students:Student
                      ]

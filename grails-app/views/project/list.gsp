@@ -15,7 +15,14 @@
     <g:each in="${projectInstanceList}" var="project" status="i">
       <article>
         <h1>
-          <g:fieldValue bean="${project}" field="name" />
+          <g:if test="${project.name.equals('Course Analysis')}">
+            <g:link controller="courseAnalysis">
+              <g:fieldValue bean="${project}" field="name" />
+            </g:link>
+          </g:if>
+          <g:else>
+            <g:fieldValue bean="${project}" field="name" />
+          </g:else>
         </h1>
         <details>
           <label for="collaborators">

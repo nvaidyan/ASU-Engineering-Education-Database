@@ -41,14 +41,16 @@ class CourseCreation {
         while ((nextLine = reader.readNext()) != null) {
         // nextLine[] is an array of values from the line
             def institution = Institution.findByName(nextLine[1])
-            def department = AcademicUnit.findByOwnerAndName(institution, nextLine[2])?:
+            def unit = AcademicUnit.findByOwnerAndName(institution, nextLine[2])?:
                 new AcademicUnit(name:nextLine[2], owner:institution).save(failOnError:true)
             def course = Course.get(nextLine[0]) ?:
             new Course(
                 title:nextLine[3],
             ).save(failOnError:true)
             course.addToDomains(compArch)
-            course.addToDepartments(department)
+            def department = UnitCourse.get(course.id, unit.id) ?: UnitCourse.create(course, unit)
+            /*course.addToDepartments(department)
+            unit.addToCourses(department)*/
         }
     }
     
@@ -80,7 +82,8 @@ class CourseCreation {
                                    description:v.description,
                                    url:v.url).save(failOnError:true)
            course.addToDomains(domain)
-           unit.addToCourses(course)
+           //unit.addToCourses(course)
+           def department = UnitCourse.get(course.id, unit.id) ?: UnitCourse.create(course, unit)
        }
     }
     

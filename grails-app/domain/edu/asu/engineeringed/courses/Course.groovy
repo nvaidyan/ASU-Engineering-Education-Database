@@ -1,6 +1,5 @@
 package edu.asu.engineeringed.courses
-import edu.asu.engineeringed.Institution
-import edu.asu.engineeringed.AcademicUnit
+import edu.asu.engineeringed.UnitCourse
 import edu.asu.engineeringed.DomainArea
 
 class Course {
@@ -8,14 +7,13 @@ class Course {
     String description
     String url
     
-    static belongsTo = [Institution,AcademicUnit]
-    
     static hasMany = [
                       offerings: CourseOffering,
-                      departments:AcademicUnit,
+                      departments:UnitCourse,
                       domains:DomainArea,
                       objectives:Objective,
                       outcomes:Outcome
+                      
                      ]
     static constraints = {
         title blank:false, maxSize:100
@@ -23,4 +21,7 @@ class Course {
         description nullable:true, maxSize:65536
         url nullable:true, url:true
     }
+    
+    @Override
+    public String toString() { title }
 }
