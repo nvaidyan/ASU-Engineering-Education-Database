@@ -20,7 +20,9 @@
             <g:render template="courses" collection="${courses}" />
           </tbody>
           <tfoot>
-            <g:link action="create" controller="course">Add a new Course</g:link>
+            <tr>
+              <td><g:link action="create" controller="course">Add a new Course</g:link></td>
+            </tr>
           </tfoot>
         </table>
       </g:if>
@@ -32,7 +34,7 @@
       <g:if test="${professors}">
         <ul id="professorList">
           <g:render template="professors" collection="${professors}" />
-        </ul>
+        </ul> 
       </g:if>
       <g:else>
         <span class="noneFound">There are no professors currently in the system</span>
