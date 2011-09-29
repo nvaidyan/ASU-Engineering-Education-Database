@@ -15,4 +15,7 @@ class AcademicUnit extends AbstractEntity {
                         faculty:UnitFaculty,
                         students:Student
                      ]
+    public Collection<Course> getAllCoursesForUnit(){
+            courses.collect{ it.course }
+    }
 }
