@@ -74,6 +74,7 @@ class UnitCourse implements Serializable, Comparable {
             version false
     }
     
+    public Institution getOwningInstitution() { unit.owner }
     @Override
     public String toString(){ "${unit.owner} ${unit} ${course}"}
 }

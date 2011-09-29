@@ -14,7 +14,6 @@
             <tr>
               <th>Institution</th>
               <th>Course Title</th>
-              <th>Description</th>
             </tr>
           </thead>
           <tbody>
