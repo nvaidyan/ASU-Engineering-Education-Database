@@ -2,7 +2,7 @@ import edu.asu.engineeringed.*
 import edu.asu.engineeringed.presentations.*
 import java.text.SimpleDateFormat
 
-class PresentationCreation {
+class PresentationCreation implements CreationAlgorithm {
 
     public static void loadData(){
         createAnn()

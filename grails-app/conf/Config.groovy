@@ -91,7 +91,7 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
-
+grails.plugins.cloudfoundry.appname = "engineeringeducationresearch.cloudfoundry.me"
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'edu.asu.engineeringed.users.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'edu.asu.engineeringed.users.UserRole'

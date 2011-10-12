@@ -1,3 +1,5 @@
+package edu.asu.engineeringed.users
+
 import grails.converters.JSON
 
 import javax.servlet.http.HttpServletResponse

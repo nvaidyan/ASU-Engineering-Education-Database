@@ -1,6 +1,6 @@
 import edu.asu.engineeringed.users.*
 
-class UserCreation {
+class UserCreation implements CreationAlgorithm {
     public static void loadData(){
         createRoles()
         createUsers()

@@ -1,3 +1,5 @@
+package edu.asu.engineeringed.users
+
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 class LogoutController {

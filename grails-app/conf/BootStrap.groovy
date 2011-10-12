@@ -13,6 +13,8 @@ class BootStrap {
         CourseCreation.loadData()
         UserCreation.loadData()
         ResearchCreation.loadData()
+        MediaCreation.loadData()
+        AccomplishmentCreation.loadData()
     }
     def destroy = {
     }

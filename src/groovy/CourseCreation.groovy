@@ -4,7 +4,7 @@ import au.com.bytecode.opencsv.bean.*
 import edu.asu.engineeringed.publications.*
 import edu.asu.engineeringed.courses.*
 
-class CourseCreation {
+class CourseCreation implements CreationAlgorithm {
     public static void loadData(){
         createTextbooks()
         createCourses()

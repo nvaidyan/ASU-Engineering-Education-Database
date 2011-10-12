@@ -1,7 +1,8 @@
 import edu.asu.engineeringed.research.*
 import edu.asu.engineeringed.*
 import java.text.SimpleDateFormat
-class ResearchCreation {
+
+class ResearchCreation implements CreationAlgorithm {
     private static final ProfessorService professorService = new ProfessorService()
     private static final StudentService studentService = new StudentService()
     

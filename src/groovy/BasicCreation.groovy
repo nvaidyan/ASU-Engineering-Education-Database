@@ -2,7 +2,7 @@ import edu.asu.engineeringed.*
 import au.com.bytecode.opencsv.*
 import au.com.bytecode.opencsv.bean.*
 
-class BasicCreation {
+class BasicCreation implements CreationAlgorithm {
     public static void loadData(){
         createInstitutions()
         createAcademicUnits()
